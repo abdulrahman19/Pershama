@@ -1,5 +1,5 @@
 * [Git configuration](#git-configuration)
-    * [Add/show your confg](#Add/show-your-confg)
+    * [Add/show your confg](#addshow-your-confg)
 
 # Git configuration:
 System
