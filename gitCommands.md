@@ -25,11 +25,11 @@ git config --list
 Or
 git config user.name
 ```
-TO show messages on specific editor.
+To show messages on specific editor.
 ```bash
 git config --global core.editor "bla bla bla"
 ```
-TO color terminal.
+To color terminal.
 ```bash
 git config --global color.ui true
 ```
