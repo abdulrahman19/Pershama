@@ -7,6 +7,9 @@
     * [First commit](#first-commit)
     * [Commit message best practices](#commit-message-best-practices)
     * [Git log](#git-log)
+* Chapter three (Git Concepts and Architecture)
+    * [How git save commits (Architecture)](#how-git-save-commits-architecture)
+    * [HEAD pointer](#head-pointer)
 
 # Git configuration:
 System
@@ -104,3 +107,10 @@ Log by searching using regular expression on commit messages.
 ```bash
 git log --grep="bla bla bla"
 ```
+# How git save commits (Architecture)
+![How git save commits](./images/3-2-commit-refer.jpg)
+
+# HEAD pointer
+Pointer to "tip" of current branch in repo.
+![git HEAD](./images/3-4-head.jpg)
+git save HEAD pointer on .git/HEAD file, and from this file it'll navigate you to the commit it refer on it.
