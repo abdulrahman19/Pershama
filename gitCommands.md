@@ -5,7 +5,7 @@
 * Chapter two (Getting Started)
     * [Git initializing](#git-initializing)
     * [First commit](#first-commit)
-    * [Commit message best practices](#commit-Message-best-practices)
+    * [Commit message best practices](#commit-message-best-practices)
     * [Git log](#git-log)
 
 # Git configuration:
