@@ -1,4 +1,5 @@
 * [13-Intro to PDO](#13-intro-to-pdo)
+* [14-PDO Refactoring and Collaborators](#14-pdo-refactoring-and-collaborators)
 
 # 13-Intro to PDO:
 We can connect to PDO by use following syntax.
@@ -47,3 +48,16 @@ class Task
 }
 ```
 Each row form database now will has isCompleted method.
+
+# 14-PDO Refactoring and Collaborators
+Jeffrey explain single responsible and how can apply it.
+
+[Tips] We can return values from other file we required.
+```php
+// fileOne.php
+$val = 1;
+return $val;
+// fileTwo.php
+$val = require 'fileOne.php';
+echo $val; // 1
+```
