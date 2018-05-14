@@ -11,7 +11,14 @@
     * [How git save commits (Architecture)](#how-git-save-commits-architecture)
     * [HEAD pointer](#head-pointer)
 * Chapter four (Making Changes to Files)
-    * [Adding Files](#adding-files)
+    * [Adding files](#adding-files)
+    * [Viewing changes](#viewing-changes)
+    * [Deleting files](#deleting-files)
+    * [Moving / renaming files](#moving-renaming-files)
+
+---
+# Installing Git
+---
 
 # Git configuration:
 System
@@ -53,7 +60,12 @@ To show specific command manual.
 ```bash
 git help log
 ```
-#Git initializing
+
+---
+# Getting Started
+---
+
+# Git initializing
 ```bash
 git init
 ```
@@ -109,12 +121,59 @@ Log by searching using regular expression on commit messages.
 ```bash
 git log --grep="bla bla bla"
 ```
+
+---
+# Git Concepts and Architecture
+---
+
 # How git save commits (Architecture)
 ![How git save commits](./images/3-2-commit-refer.jpg)
 
 # HEAD pointer
 Pointer to "tip" of current branch in repo.
 ![git HEAD](./images/3-4-head.jpg)
-git save HEAD pointer on .git/HEAD file, and from this file it'll navigate you to the commit it refer on it.
+Git save HEAD pointer on .git/HEAD file, and from this file it'll navigate you to the commit it refer on it.
 
-# Adding Files
+---
+# Making Changes to Files
+---
+
+# Adding files
+* Any new files git doesn't know about them, will show them in (Untracked files).
+```bash
+git add file_name.txt
+# or
+git add . # dot for current directory
+# or
+git add file_* # * for any files begin with (file_)
+```
+
+# Viewing changes
+We can compare between the changes in working directory and last changes in stage & repo.
+```bash
+git diff
+```
+Or changes on specific file.
+```bash
+git diff file_name.txt
+```
+For show changes on the stage area against repo use following command.
+```bash
+git diff --staged
+```
+# Deleting files
+Just press delete or drag and drop files on trash :), To add removed file to stage area use following command.
+```bash
+git rm deleted_file.txt
+```
+[NOTE] With new git versions you can simply use (git add).
+OR short the holy steps by only use (git rm) to do both things delete the files and put them in stage area.
+
+# Moving / renaming files
+We can renaming any file by regular operation, rename the file with OS. And It'll show on git there's a file deleted and another added.
+Or we can use git to short the process.
+```bash
+git mv old_file_name.txt new_file_name.txt
+```
+Same thing for moving files.
+[NOTE] On moving case It'll show moving process as a renaming process!
