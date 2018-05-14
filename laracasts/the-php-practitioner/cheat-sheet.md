@@ -48,11 +48,12 @@ class Task
 }
 ```
 Each row form database now will has isCompleted method.
+
 [From episode 15] use
 ```php
 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ```
-To show all exceptions [more here.]('http://php.net/manual/en/pdo.setattribute.php')
+To show all exceptions [more here.](http://php.net/manual/en/pdo.setattribute.php)
 
 # 14-PDO Refactoring and Collaborators
 Jeffrey explain single responsible and how can apply it.
