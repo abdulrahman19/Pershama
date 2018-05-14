@@ -14,7 +14,7 @@
     * [Adding files](#adding-files)
     * [Viewing changes](#viewing-changes)
     * [Deleting files](#deleting-files)
-    * [Moving / renaming files](#moving-renaming-files)
+    * [Moving / renaming files](#moving--renaming-files)
 
 # Installing Git
 
