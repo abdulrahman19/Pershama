@@ -16,11 +16,9 @@
     * [Deleting files](#deleting-files)
     * [Moving / renaming files](#moving-renaming-files)
 
----
 # Installing Git
----
 
-# Git configuration:
+## Git configuration:
 System
 ```bash
 git config --system
@@ -52,7 +50,7 @@ To color terminal.
 ```bash
 git config --global color.ui true
 ```
-# Git help:
+## Git help:
 ```bash
 git help
 ```
@@ -61,15 +59,13 @@ To show specific command manual.
 git help log
 ```
 
----
 # Getting Started
----
 
-# Git initializing
+## Git initializing
 ```bash
 git init
 ```
-# First commit
+## First commit
 First you need add all changes you did on stage area.
 ```bash
 # . for current directory.
@@ -82,7 +78,7 @@ git commit -m "My first commit"
 ```
 HOORAY your first commit is done.
 
-# Commit Message best practices
+## Commit Message best practices
 Those are some point you need to be aware about them when you write a message.
 * short single-line summary (less 50 characters).
 * optionally followed by a blank line and more complete description.
@@ -96,7 +92,7 @@ Those are some point you need to be aware about them when you write a message.
 Example for a good commit message.
 ![Good commit message](./images/2-4-commit-msgs.jpg)
 
-# Git log
+## Git log
 To show all log commits.
 ```bash
 git log
@@ -122,23 +118,19 @@ Log by searching using regular expression on commit messages.
 git log --grep="bla bla bla"
 ```
 
----
 # Git Concepts and Architecture
----
 
-# How git save commits (Architecture)
+## How git save commits (Architecture)
 ![How git save commits](./images/3-2-commit-refer.jpg)
 
-# HEAD pointer
+## HEAD pointer
 Pointer to "tip" of current branch in repo.
 ![git HEAD](./images/3-4-head.jpg)
 Git save HEAD pointer on .git/HEAD file, and from this file it'll navigate you to the commit it refer on it.
 
----
 # Making Changes to Files
----
 
-# Adding files
+## Adding files
 * Any new files git doesn't know about them, will show them in (Untracked files).
 ```bash
 git add file_name.txt
@@ -148,7 +140,7 @@ git add . # dot for current directory
 git add file_* # * for any files begin with (file_)
 ```
 
-# Viewing changes
+## Viewing changes
 We can compare between the changes in working directory and last changes in stage & repo.
 ```bash
 git diff
@@ -161,7 +153,7 @@ For show changes on the stage area against repo use following command.
 ```bash
 git diff --staged
 ```
-# Deleting files
+## Deleting files
 Just press delete or drag and drop files on trash :), To add removed file to stage area use following command.
 ```bash
 git rm deleted_file.txt
@@ -169,7 +161,7 @@ git rm deleted_file.txt
 [NOTE] With new git versions you can simply use (git add).
 OR short the holy steps by only use (git rm) to do both things delete the files and put them in stage area.
 
-# Moving / renaming files
+## Moving / renaming files
 We can renaming any file by regular operation, rename the file with OS. And It'll show on git there's a file deleted and another added.
 Or we can use git to short the process.
 ```bash
