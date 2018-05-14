@@ -158,7 +158,7 @@ Just press delete or drag and drop files on trash :), To add removed file to sta
 ```bash
 git rm deleted_file.txt
 ```
-[NOTE] With new git versions you can simply use (git add).
+> With new git versions you can simply use (git add).
 OR short the holy steps by only use (git rm) to do both things delete the files and put them in stage area.
 
 ## Moving / renaming files
@@ -168,4 +168,4 @@ Or we can use git to short the process.
 git mv old_file_name.txt new_file_name.txt
 ```
 Same thing for moving files.
-[NOTE] On moving case It'll show moving process as a renaming process!
+> On moving case It'll show moving process as a renaming process!
