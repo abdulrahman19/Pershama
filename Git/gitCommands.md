@@ -10,6 +10,8 @@
 * Chapter three (Git Concepts and Architecture)
     * [How git save commits (Architecture)](#how-git-save-commits-architecture)
     * [HEAD pointer](#head-pointer)
+* Chapter four (Making Changes to Files)
+    * [Adding Files](#adding-files)
 
 # Git configuration:
 System
@@ -114,3 +116,5 @@ git log --grep="bla bla bla"
 Pointer to "tip" of current branch in repo.
 ![git HEAD](./images/3-4-head.jpg)
 git save HEAD pointer on .git/HEAD file, and from this file it'll navigate you to the commit it refer on it.
+
+# Adding Files
