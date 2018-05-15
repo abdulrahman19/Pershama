@@ -15,6 +15,9 @@
     * [Viewing changes](#viewing-changes)
     * [Deleting files](#deleting-files)
     * [Moving / renaming files](#moving--renaming-files)
+* Chapter five (Using Git with a Real Project)
+    * [Good tips when using git diff command](#good-tips-when-using-git-diff-command)
+    * [Shortcut for add and commit in the same step](#shortcut-for-add-and-commit-in-the-same-step)
 
 # Installing Git
 
@@ -169,3 +172,19 @@ git mv old_file_name.txt new_file_name.txt
 ```
 Same thing for moving files.
 > On moving case It'll show moving process as a renaming process!
+
+# Using Git with a Real Project
+
+## Good tips when using git diff command
+* You can do the (word wrap) on a terminal when you use (git diff) command by following:
+
+    Press minus then shift+s then return key, do the same for remove word wrap.
+* You can only colored the changes words by following:
+```bash
+git diff --color-words file_name.txt
+```
+
+## Shortcut for add all and commit in the same step
+```bash
+git commit -am "bla bla bla"
+```
