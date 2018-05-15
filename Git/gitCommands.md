@@ -17,7 +17,7 @@
     * [Moving / renaming files](#moving--renaming-files)
 * Chapter five (Using Git with a Real Project)
     * [Good tips when using git diff command](#good-tips-when-using-git-diff-command)
-    * [Shortcut for add and commit in the same step](#shortcut-for-add-and-commit-in-the-same-step)
+    * [Shortcut for add and commit in the same step](#shortcut-for-add-all-and-commit-in-the-same-step)
 
 # Installing Git
 
