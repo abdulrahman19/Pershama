@@ -257,9 +257,9 @@ Now it'll do the opposite of this commit. if something added it'll be deleted if
 Git reset it like cassette recorder, you'll move the HEAD to a point and star record form it.
 It's a powerful tool you must use it wisely : )
 
-There's a three different options to do that:
-1- --soft (It doesn't change staging index or working dir).
-2- --mixed the default option (Changes staging index to match repo & doesn't change working dir).
+There's a three different options to do that:<br>
+1- --soft (It doesn't change staging index or working dir).<br>
+2- --mixed the default option (Changes staging index to match repo & doesn't change working dir).<br>
 3- --hard (Changes staging index and working dir to match repo).
 
 * Reset soft
