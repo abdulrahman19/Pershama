@@ -18,6 +18,13 @@
 * Chapter five (Using Git with a Real Project)
     * [Good tips when using git diff command](#good-tips-when-using-git-diff-command)
     * [Shortcut for add and commit in the same step](#shortcut-for-add-all-and-commit-in-the-same-step)
+* Chapter six (Undoing Changes)
+    * [Undo working dir](#undo-working-dir)
+    * [Unstaging files](#unstaging-files)
+    * [Amend commits](#amend-commits)
+    * [Retrieving old versions](#retrieving-old-versions)
+    * [Using reset](#using-reset)
+    * [Remove untracked](#remove-untracked)
 
 # Installing Git
 
@@ -165,13 +172,13 @@ git rm deleted_file.txt
 OR short the holy steps by only use (git rm) to do both things delete the files and put them in stage area.
 
 ## Moving / renaming files
-We can renaming any file by regular operation, rename the file with OS. And It'll show on git there's a file deleted and another added.
+We can renaming any file by regular operation, rename the file with OS. And it'll show on git there's a file deleted and another added.
 Or we can use git to short the process.
 ```bash
 git mv old_file_name.txt new_file_name.txt
 ```
 Same thing for moving files.
-> On moving case It'll show moving process as a renaming process!
+> On moving case it'll show moving process as a renaming process!
 
 # Using Git with a Real Project
 
@@ -187,4 +194,103 @@ git diff --color-words file_name.txt
 ## Shortcut for add all and commit in the same step
 ```bash
 git commit -am "bla bla bla"
+```
+
+# Undoing Changes
+
+## Undo working dir
+To undo things we did in our working dir simply to following:
+```bash
+git checkout file_name.txt
+# or dir like current dir
+git checkout .
+# or by dir name
+git checkout dir_name
+```
+But if there a branch with same name of dir it'll checkout the branch, for that, the best practice is put -- before file or dir we want to undo it.
+```bash
+git checkout -- file_name.txt
+```
+## Unstaging files
+We can unstaging files to working dir by following:
+```bash
+git reset HEAD file_name.txt
+```
+## Amend commits
+If we wanna amend to commit in the repo, we have a problem!, that commit SHA is use to be parent to another commit, and if we change that commit is SHA will change too and the next commit to it will be broken. And so on!.
+
+![Commit parent for next commit will be broken if we change commit itself](./images/6-3-amend-commits.jpg)
+
+And also it'll change next commit SHA because git use all data to generate SHA, if we change anything the SHA will change too.
+
+![Next commit SHA will change if we change its parent](./images/6-3-2-amend-commits.jpg)
+
+But last commit because nothing depend on it we can amend it by using amend option.
+```bash
+git commit --amend -m "bla bla bla"
+```
+That's will (merge) amend the new changes to the last commit in our repo.
+
+> You can use this command if you wanna change commit message.
+
+## Retrieving old versions
+If we wanna change/remove commit in the middle of other commits (undo), that we can't use amend option with it (check the previous section).
+
+First way, we gonna checkout the commit's parent for get the old state we wanna undo to it, or the commit itself for change small pieces or something.
+```bash
+git checkout 4d2333dsqw -- file_name.txt
+# that's a parent commit/commit SHA we wanna change to it 4d2333dsqw
+# -- for current branch
+# file_name.txt the file we wanna change it form the commit.
+```
+Then we'll find it on our staging area, from this point we can do what we want like reset HEAD to move it to working dir, and checkout it form working dir to remove it totally, or change thing and commit it again, it's up for you for what you want.
+
+> The best practice if you gonna commit other changes again, that you put commit SHA in the new commit message to keep others know that's a retrieving commit.
+
+And for undo the commit totally, git provide command for that.
+```bash
+git revert 4d2333dsqw
+```
+Now it'll do the opposite of this commit. if something added it'll be deleted if something delete it'll be added and so on.
+
+## Using reset
+Git reset it like cassette recorder, you'll move the HEAD to a point and star record form it.
+It's a powerful tool you must use it wisely : )
+
+There's a three different options to do that:
+1- --soft (It doesn't change staging index or working dir).
+2- --mixed the default option (Changes staging index to match repo & doesn't change working dir).
+3- --hard (Changes staging index and working dir to match repo).
+
+* Reset soft
+```bash
+git reset --soft 324kkdf323
+# 324kkdf323 the SHA for commit we wanna reset to it.
+```
+Now the HEAD will reset to the commit we write its SHA above, but nothing in our staging or working dir will change, all staff will be there and that's the safest choose.
+
+> Please note the commits content after reset your head will find them in staging area.
+
+* Reset mixed
+```bash
+git reset --mixed 324kkdf323
+```
+Everything will be like soft choose but the different here, you will find all staff on working dir only, nothing on staging area.
+
+* Reset hard
+If you wanna lose everything after specific commit then use reset hard.
+```bash
+git reset --hard 324kkdf323
+```
+Now git will move HEAD to commit you want and you'll find you staging and working dir clean.
+
+> If you wanna back again even after use reset hard, that's possible but you must remember SHA for the commit to reset it.
+
+## Remove untracked
+If we want remove untracked file all on one we can use following command:
+```bash
+git clean -nf
+# -n for show what file will remove
+# -f to force remove 
+# the both will delete all untracked files.
 ```
