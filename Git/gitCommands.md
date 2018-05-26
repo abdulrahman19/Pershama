@@ -13,6 +13,7 @@
 * Chapter four (Making Changes to Files)
     * [Adding files](#adding-files)
     * [Viewing changes](#viewing-changes)
+        * Look also at [Comparing commits](#comparing-commits)
     * [Deleting files](#deleting-files)
     * [Moving / renaming files](#moving--renaming-files)
 * Chapter five (Using Git with a Real Project)
@@ -30,6 +31,12 @@
     * [Global ignoring](#global-ignoring)
     * [Ignore tracked](#ignore-tracked)
     * [Track empty dirs](#track-empty-dirs)
+* Chapter eight (Navigating the Commit Tree)
+    * [Reference commits](#reference-commits)
+    * [Tree listings](#tree-listings)
+    * [Commit log](#commit-log)
+    * [View commits](#view-commits)
+    * [Comparing commits](#comparing-commits)
 
 # Installing Git
 
@@ -124,6 +131,15 @@ Show commits before specific date.
 ```bash
 git log --until=2018-05-10
 ```
+And we can merge between them to get commits in specific period.
+Also we can use not only date but phrases like
+```bash
+git log --until="2 weeks ago"
+# or
+git log --until=2.weeks
+# or
+git log --until=2.days
+```
 Show commits for specific author (you can put only part form his name).
 ```bash
 git log --author="bla"
@@ -131,6 +147,51 @@ git log --author="bla"
 Log by searching using regular expression on commit messages.
 ```bash
 git log --grep="bla bla bla"
+```
+To list commits in one line use following
+```bash
+git log --oneline
+# that's will return small SHA
+git log --format=oneline
+# that's will return long SHA
+```
+you can get range of commits by put first point SHA and last point SHA
+```bash
+git log 42423..23443 --oneline
+# .. for go forward to up.
+```
+You can ask it for log changes in specific file
+```bash
+git log file_name.txt
+# or from specific commit
+git log 324234.. file_name.txt
+```
+To see what happen in each commit with log use -p option
+```bash
+git log -p
+# you can mix them
+git log -p 324234.. file_name.txt
+# that's will show all log and what happened in it form specific commit and up for specific file.
+```
+To show summary for each commit
+```bash
+git log --stat --summary
+```
+We can use --format to show different informations like
+```bash
+git log --format=raw
+# that's will show raw information that store in git.
+git log --format=email
+# to show log as email format.
+# you can messing up with format option.
+```
+One important command is log commits graph
+```bash
+git log --graph
+```
+We can show log in nice way like
+```bash
+git log --oneline --graph --all --decorate
 ```
 
 # Git Concepts and Architecture
@@ -262,9 +323,12 @@ Now it'll do the opposite of this commit. if something added it'll be deleted if
 Git reset it like cassette recorder, you'll move the HEAD to a point and star record form it.
 It's a powerful tool you must use it wisely : )
 
-There's a three different options to do that:<br>
-1- --soft (It doesn't change staging index or working dir).<br>
-2- --mixed the default option (Changes staging index to match repo & doesn't change working dir).<br>
+There's a three different options to do that:
+
+1- --soft (It doesn't change staging index or working dir).
+
+2- --mixed the default option (Changes staging index to match repo & doesn't change working dir).
+
 3- --hard (Changes staging index and working dir to match repo).
 
 * Reset soft
@@ -332,5 +396,99 @@ That command will remove files from staging index so git will ignore them in the
 > After using last command you will find those files staged as deleted files, that's ok, that's how git stop tracking files, and also other contributors will understand that git delete those files so it'll not track them anymore. But all files on working dir and repo will still there.
 
 ## Track empty dirs
-Git is designed to be a file-tracking system, so it'll not track those dirs they not have any files at all.<br>
-If you want git track empty dirs you need cheat on it by put any kind of files inside it to let git track this dir, and (.gitkeep) make the trick.
+Git is designed to be a file-tracking system, so it'll not track those dirs they not have any files at all.
+
+If you want git track empty dirs you need cheat on it by put any kind of files inside it to let git track this dir, and (.gitkeep) makes the trick.
+
+# Navigating the Commit Tree
+
+## Reference commits
+Now we need to know a new concept on git called Tree-ish, we know about tree, tree is structure file in git repo.
+
+Tree-ish is something that references part of the tree, it like your directory in your file system.
+
+In another word Tree-ish is a reference for a commit.
+
+Tree-ish can be:
+* Full SHA-1 hash.
+* Short SHA-1 hash.
+* HEAD pointer.
+* Branch reference, tag reference.
+* Ancestry
+    * parent commit
+        - HEAD^, 4rt283ff^, master^
+        - HEAD~1, HEAD~
+    * grandparent commit
+        - HEAD^^, 4rt283ff^^, master^^
+        - HEAD~2
+    * great-grandparent commit
+        - HEAD^^^, 4rt283ff^^^, master^^^
+        - HEAD~3
+
+## Tree listings
+In Linux file system you can use command to list dir content (dir tree)
+```bash
+ls -al
+```
+And also you can use Tree-ish to do same thing, list commit content
+```bash
+git ls-tree HEAD
+# Now I use HEAD to show HEAD list, you can use whatever you want to target the point you want.
+git ls-tree HEAD dir/
+# We can list specific dir content from the snapshot.
+git ls-tree HEAD^ dir/
+# Now we can compare between current snapshot (above command) and previous snapshot (current command).
+```
+When you list commit content you will find two kind of content blob and tree, blob is a file and tree is a dir, and every file or dir has a unique SHA.
+
+## View commits
+To show commit changes
+```bash
+git show 214ds33
+```
+We can show short format
+```bash
+git show --format=oneline HEAD
+```
+Show option can do the same like ls-tree command, it can show blob, tree, tag or commit content.
+```bash
+git show 211rr323
+# this 211rr323 SHA can be for dir or file
+# you can get this SHA by use ls-tree command
+```
+
+## Comparing commits
+We can compare between working dir and old commit.
+```bash
+git diff 211rr323
+```
+And we can be more specific and show difference on one file.
+```bash
+git diff 211rr323 file_name.txt
+```
+You can compare between two commits.
+```bash
+git diff 211rr323..3432fddsw
+# for specific file
+git diff 211rr323..3432fddsw file_name.txt
+```
+We can use also Tree-ish instead of commit SHA.
+
+We can use several options with diff command.
+
+For example we can see a brief about the changes between HEAD and old commit.
+```bash
+git diff --stat --summary 211rr323..HEAD
+```
+And we can show the deferent and ignore if someone change one white space to two spaces.
+```bash
+git diff --ignore-space-change 211rr323..HEAD
+# shortcut
+git diff -b 211rr323..HEAD
+```
+Or ignore all white spaces.
+```bash
+git diff --ignore-all-space 211rr323..HEAD
+# shortcut
+git diff -w 211rr323..HEAD
+```
