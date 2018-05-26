@@ -1,69 +1,8 @@
-* [13-Intro to PDO](#13-intro-to-pdo)
-* [14-PDO Refactoring and Collaborators](#14-pdo-refactoring-and-collaborators)
+# The PHP Practitioner
+Jeffrey Way in this series try to gives us an idea about how to build MVC framework.
+> Please note I'll not document all the series content here, but only highlight points or things in need to remember later, because I already know many things in this series before.
 
-# 13-Intro to PDO:
-We can connect to PDO by use following syntax.
-```php
-try {
-    $pdo = new PDO('mysql:host=127.0.0.1;dbname=bla', 'user', 'pass')
-} catch (PDOException $e) {
-    die('Could not connect.');
-}
-```
-Or you can show default php error message.
-```php
-die($e->getMessage());
-```
-After the connected, we need to prepare our query.
-```php
-$statement = $pdo->prepare('SELECT * FROM bla');
-```
-After that execute the query and fetch the result.
-```php
-$statement->execute();
-var_dump($statement->fetchAll()); // for dump the result.
-// fetchAll will returns both numeric and associative index in the same array.
-```
-We can fetch the data as an object.
-```php
-var_dump($statement->fetchAll(PDO::FETCH_OBJ));
-// or single row
-var_dump($statement->fetch(PDO::FETCH_OBJ));
-```
-We can fetch the result into a class.
-```php
-var_dump($statement->fetchAll(PDO::FETCH_CLASS, 'Task'));
-```
-Now after fetch the data on the class, and we can manipulate them as we want.
-```php
-class Task 
-{
-    public $description;
-    public $completed;
-
-    public function isCompleted()
-    {
-        return ($this->completed) ? 'completed' : 'not completed';
-    }
-}
-```
-Each row form database now will has isCompleted method.
-
-[From episode 15] use
-```php
-PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-```
-To show all exceptions [more here.](http://php.net/manual/en/pdo.setattribute.php)
-
-# 14-PDO Refactoring and Collaborators
-Jeffrey explain single responsible and how can apply it.
-
-[Tips] We can return values from other file we required.
-```php
-// fileOne.php
-$val = 1;
-return $val;
-// fileTwo.php
-$val = require 'fileOne.php';
-echo $val; // 1
-```
+### 13- [Intro to PDO](docs/13-intro-to-pdo.md)
+Here you will know how to connect to database using PDO and fetch date.
+### 14- [PDO Refactoring and Collaborators](docs/14-pdo-refactoring-and-collaborators.md)
+Jeffrey here explains single responsible and how can apply it.
