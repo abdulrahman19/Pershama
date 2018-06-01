@@ -1,0 +1,48 @@
+# Git
+Hello here.
+
+This is my personal git summary, to remember things and make a reference if need.
+
+### Why you write a personal one? you can read or use any other resources?
+Yes, that's right. <br>
+But I believe in something, what you write is hard to forget, plus that you write it in your own way :smiley:.
+
+### Can I help?
+If you have any suggestion or Edit, don't be shy :smile:.
+
+# Resources
+* Git Essential Training (Lynda).
+
+# Index
+> This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.
+
+### Do it Local
+* **[Installing Git](./docs/1-installing-git.md)** <br>
+Ready, Steady... <br>
+<code>^config</code> <code>help</code>
+* **[Getting Started](./docs/2-getting-started.md)** <br>
+Fire your engine. <br>
+<code>init</code> <code>add</code> <code>commit</code> <code>^log</code>
+* **[Git Concepts and Architecture](./docs/3-git-concepts-and-architecture.md)** <br>
+Discover the alien.
+* **[Making Changes to Files](./docs/4-making-changes-to-files.md)** <br>
+Let's do our crystal blue meth. <br>
+<code>^add</code> <code>diff</code> <code>rm</code> <code>mv</code>
+* **[Undoing Changes](./docs/5-undoing-changes.md)** <br>
+Fix it Felix. <br>
+<code>checkout</code> <code>^reset</code> <code>--amend</code> <code>revert</code> <code>clean</code>
+* **[Ignoring Files](./docs/6-ignoring-files.md)** <br>
+No Heart. <br>
+<code>config</code> <code>rm</code>
+* **[Navigating the Commit Tree](./docs/7-navigating-the-commit-tree.md)** <br>
+Finding Nemo <small>مع السلامة يا ذوق</small>. <br>
+<code>^ls-tree</code> <code>^show</code> <code>^diff</code>
+* **[Branching](./docs/8-branching.md)** <br>
+Expecto Patronum. <br>
+<code>^branch</code> <code>diff</code>
+* **[Merging Branches](./docs/9-merging-branches.md)** <br>
+Tobe Tobe Grendizer. <br>
+<code>^merge</code> <code>mergetool</code>
+* **[Stashing Changes](./docs/10-stashing-changes.md)** <br>
+**Don't** let her go. <br>
+<code>^stash</code>
