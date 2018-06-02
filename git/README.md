@@ -44,5 +44,16 @@ Expecto Patronum. <br>
 Tobe Tobe Grendizer. <br>
 <code>^merge</code> <code>mergetool</code>
 * **[Stashing Changes](./docs/10-stashing-changes.md)** <br>
-**Don't** let her go. <br>
+<em>Don't</em> let her go. <br>
 <code>^stash</code>
+
+### Share with world
+* **[Remotes](./docs/11-remotes.md)** <br>
+Hello from the other side. <br>
+<code>^remote</code> <code>clone</code> <code>log</code> <code>^branch</code> <code>fetch</code> <code>merge</code> <code>pull</code> <code>^push</code> <code>checkout</code>
+
+# Todo
+- [ ] What happen if I fetch from remote branch and after that reject the edit? I'll merge them and edit them, or I'll ask who made them to edit them or I'll make a hole different thing!!
+- [ ] Rebase
+- [ ] Explore GitHub
+- [ ] GitHub Fork (the work flow)
