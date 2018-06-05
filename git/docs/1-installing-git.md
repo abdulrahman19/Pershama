@@ -38,6 +38,12 @@ To color terminal.
 ```bash
 git config --global color.ui true
 ```
+You can make aliases to your git commands
+```bash
+git config --global alias.logg "log --oneline --graph --all --decorate --abbrev-commit"
+```
+Now when you write <code>git logg</code> it'll active all options above, and no need to write them again and again.
+
 ## Git help:
 ```bash
 git help

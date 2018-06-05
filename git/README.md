@@ -12,6 +12,8 @@ If you have any suggestion or Edit, don't be shy :smile:.
 
 # Resources
 * Git Essential Training (Lynda).
+* Bitbucket Tutorials.
+* Youtube Videos.
 
 # Index
 > This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.
@@ -40,9 +42,9 @@ Finding Nemo <small>مع السلامة يا ذوق</small>. <br>
 * **[Branching](./docs/8-branching.md)** <br>
 Expecto Patronum. <br>
 <code>^branch</code> <code>diff</code>
-* **[Merging Branches](./docs/9-merging-branches.md)** <br>
+* **[Merging & Rebase Branches](./docs/9-merging-rebase-branches.md)** <br>
 Tobe Tobe Grendizer. <br>
-<code>^merge</code> <code>mergetool</code>
+<code>^merge</code> <code>mergetool</code> <code>rebase</code>
 * **[Stashing Changes](./docs/10-stashing-changes.md)** <br>
 <em>Don't</em> let her go. <br>
 <code>^stash</code>
@@ -52,8 +54,11 @@ Tobe Tobe Grendizer. <br>
 Hello from the other side. <br>
 <code>^remote</code> <code>clone</code> <code>log</code> <code>^branch</code> <code>fetch</code> <code>merge</code> <code>pull</code> <code>^push</code> <code>checkout</code>
 
+# Cheat Sheet
+* **[Cheat Sheet](./docs/cheat-sheet.md)** <br>
+
 # Todo
-- [ ] What happen if I fetch from remote branch and after that reject the edit? I'll merge them and edit them, or I'll ask who made them to edit them or I'll make a hole different thing!!
-- [ ] Rebase
+- [ ] Best practice followed to make a correct workflow
+- [ ] Advanced Rebase options
 - [ ] Explore GitHub
 - [ ] GitHub Fork (the work flow)

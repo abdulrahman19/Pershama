@@ -3,6 +3,7 @@
 * [Merging](#merging)
 * [Fast forward vs real](#fast-forward-vs-real)
 * [Merge conflicts](#merge-conflicts)
+* [Rebase](#rebase)
 
 ## Merging
 Now after we test our feature and it succeeded, we need to **mrege** it. <br>
@@ -59,3 +60,28 @@ git mergetool
 
 To **reduce conflicts** here's some tips.
 ![reduce conflicts](./images/10-5-reduce-conflicts.jpg)
+
+## Rebase
+The first thing to understand about <code>git rebase</code> is that it solves the same problem as <code>git merge</code>. Both of these commands are designed to integrate changes from one branch into another branch they just do it in very different ways.
+
+Rebase solves problem of un-clean history that's made by merge in active projects. <br>
+The main idea in rebase is "rebase" first branch commit (older one) on last master (or any other branches) commit (newest one), that allows us to make <code>fast forward</code> merge, in this way the history will be totally clean even in active projects.
+![rabse explain image one](./images/9-2-rabse-explain.svg)
+![rabse explain image two](./images/9-2-2-rabse-explain.svg)
+
+To do the <code>rebase</code> checkout the branch you want rebase it on <code>master</code> branch for example, then write
+```bash
+git rebase master
+```
+In this way you "rebased" your branch on last commit in <code>master</code> branch, If there any conflict you can solve it then <code>add</code> it to staging area then
+```bash
+# after solving the conflict if found.
+git add .
+# then
+git rebase --continue
+```
+Now the rebase done, <code>checkout</code> your <code>master</code> branch again, then merge.
+```bash
+git merge branch-name
+```
+You mast find now a <code>fast forward</code> merge happened.
