@@ -53,6 +53,9 @@ Tobe Tobe Grendizer. <br>
 * **[Remotes](./docs/11-remotes.md)** <br>
 Hello from the other side. <br>
 <code>^remote</code> <code>clone</code> <code>log</code> <code>^branch</code> <code>fetch</code> <code>merge</code> <code>pull</code> <code>^push</code> <code>checkout</code>
+* **[GitHub](./docs/12-github.md)** <br>
+The matrix.:octocat:<br>
+<code>Fork</code>
 
 # Cheat Sheet
 * **[Cheat Sheet](./docs/cheat-sheet.md)** <br>
@@ -61,4 +64,3 @@ Hello from the other side. <br>
 - [ ] Best practice followed to make a correct workflow
 - [ ] Advanced Rebase options
 - [ ] Explore GitHub
-- [ ] GitHub Fork (the work flow)

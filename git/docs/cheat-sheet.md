@@ -91,6 +91,7 @@ git log --format=raw
 git log --format=email
 git log --graph
 git log --oneline --graph --all --decorate --abbrev-commit
+got log --no-merges # see log without merges commits
 ```
 
 ## diff
@@ -111,6 +112,7 @@ git diff --color-words file_name.txt
 git diff master..new_branch # compare branches
 git diff --color-words master..new_branch^ # use Tree-ish
 git diff origin/branch-name..branch-name
+git diff --name-only --diff-filter=U # show conflict files only
 ```
 
 ## rm
@@ -229,6 +231,7 @@ git fetch origin branch-name # fetch branch
 ## push
 ```bash
 git push # if branch tracked
+git push --all # push every thing branches and commits
 git push -u origin master
 git push -f origin branch-name
 git push -f origin branch-name:branch-name
@@ -241,4 +244,6 @@ git push origin :branch-name
 ```bash
 git pull # if branch tracked
 git pull origin branch-name
+git pull --rebase upstream master 
+# that's will rebase your work above last commit in Fork/master branch so you able to do fast forward merge. check rebase section.
 ```
