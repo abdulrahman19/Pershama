@@ -1,4 +1,5 @@
 # 13- Intro to PDO:
+
 We can connect to PDO by use following syntax.
 ```php
 try {
