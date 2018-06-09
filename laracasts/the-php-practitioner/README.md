@@ -20,4 +20,6 @@ In this episode Jeffrey talks about how to dry the views, by separate the view i
 * **19- Forms, Request Types, and Routing** <br>
 The idea of this episode is the past router class works only with <code>GET</code> requests, and it doesn't able to differentiate between <code>GET</code> and <code>POST</code> requests, so we'll fix that.
 
-* **20- Dynamic Inserts With PDO** <br>
+* **20- Dynamic Inserts With PDO**
+* **21- Composer Autoloading**
+* **22- Your First DI Container**
