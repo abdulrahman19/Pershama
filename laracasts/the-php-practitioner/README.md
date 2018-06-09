@@ -22,4 +22,7 @@ The idea of this episode is the past router class works only with <code>GET</cod
 
 * **20- Dynamic Inserts With PDO**
 * **21- Composer Autoloading**
-* **22- Your First DI Container**
+* **22- Your First DI Container** <br>
+Here will create App class and collect all config information inside it.
+* **23- Refactoring to Controller Classes** <br>
+Here will remove all PHPs files and create a class with methods, and edit our router to call those methods instead of call a normal PHPs files.
