@@ -17,5 +17,7 @@ In this episode we'll create a simply router.
 * **17- Dry Up Your Views** <br>
 In this episode Jeffrey talks about how to dry the views, by separate the view into pieces, to not repeat ourself.
 
-* **18- Forms, Request Types, and Routing** <br>
+* **19- Forms, Request Types, and Routing** <br>
 The idea of this episode is the past router class works only with <code>GET</code> requests, and it doesn't able to differentiate between <code>GET</code> and <code>POST</code> requests, so we'll fix that.
+
+* **20- Dynamic Inserts With PDO** <br>
