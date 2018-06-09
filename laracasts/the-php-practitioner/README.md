@@ -1,6 +1,9 @@
 # The PHP Practitioner
 Jeffrey Way in this series try to gives us an idea about how to build MVC framework.
-> Please note I'll not document all the series content here, but only highlight points or things in need to remember later, because I already know many things in this series before.
+> Please note I'll not document all the series content here, but only highlight points or things I need to remember later, because I already know many things in this series before.
+
+# Index
+> If you find a link in episode title that means there's some explanations in there, otherwise the episode summary you will find them in the code, you can use commits to know what happened specifically.
 
 * **[13- Intro to PDO](docs/13-intro-to-pdo.md)** <br>
 Here you will know how to connect to database using PDO and fetch date.
@@ -12,4 +15,7 @@ Jeffrey here explains single responsible and how can apply it.
 In this episode we'll create a simply router.
 
 * **17- Dry Up Your Views** <br>
-In this episode Jeffrey talks about how to dry the view, by separate the view into pieces, to not repeat ourself.
+In this episode Jeffrey talks about how to dry the views, by separate the view into pieces, to not repeat ourself.
+
+* **18- Forms, Request Types, and Routing** <br>
+The idea of this episode is the past router class works only with <code>GET</code> requests, and it doesn't able to differentiate between <code>GET</code> and <code>POST</code> requests, so we'll fix that.
