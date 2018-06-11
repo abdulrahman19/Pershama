@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+use App\Models\Users;
+
 /**
  * 
  */
@@ -7,7 +12,7 @@ class PageController
 {
     public function home()
     {
-        $users = App::get('database')->selectAll('users');
+        $users = Users::getAll();
         return view('index', ['users'=>$users]);
     }
 
@@ -23,9 +28,8 @@ class PageController
 
     public function insert()
     {
-        App::get('database')->insert('users', [
+        Users::insert([
             'name' => $_POST['name']
         ]);
-        header('Location: /');
     }
 }

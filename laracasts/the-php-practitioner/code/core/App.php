@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 /**
  * App class
  */

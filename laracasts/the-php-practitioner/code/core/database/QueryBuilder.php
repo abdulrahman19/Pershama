@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core\Database;
+
+use PDO;
+
 class QueryBuilder
 {
     protected $pdo;
@@ -31,7 +35,7 @@ class QueryBuilder
             $statement = $this->pdo->prepare($sql);
 
             $statement->execute($parameters); # we can pass paras here instead of using bindParam()
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             //
         }
     }
