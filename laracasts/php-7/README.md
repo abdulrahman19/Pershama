@@ -17,3 +17,4 @@ This summary will cover two courses from <code>Laracasts</code>:
 * **[6- Anonymous Classes](docs/6-anonymous-classes.md)** <br>
 ### PHP 7.1
 * **[7- Symmetric Array Destructuring](docs/7-symmetric-array-destructuring.md)** <br>
+* **[8- Nullable and Void Types](docs/8-nullable-void-types.md)** <br>

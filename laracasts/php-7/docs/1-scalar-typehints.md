@@ -7,7 +7,7 @@ function bla(array $value)
     # code...
 }
 ```
-But with PHP-7 we can hint more types like <code>int</code>, <code>float</code>, <code>string</code> and <code>bool</code>.
+But with PHP-7 we can hint more types like <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code> and <code>void >> 7.1</code>.
 ```php
 function bla(int $value)
 {
