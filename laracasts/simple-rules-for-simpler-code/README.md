@@ -7,3 +7,4 @@ Here I'll document simple rules for simpler code course.
 
 * **[1- No Abbreviations](docs/1-no-abbreviations.md)** <br>
 * **[2- Don't Use "Else"](docs/2-dont-use-else.md)** <br>
+* **[3- One Level of Indentation](docs/3-one-level-indentation.md)** <br>
