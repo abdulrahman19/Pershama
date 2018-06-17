@@ -1,5 +1,7 @@
 # Summaries:
-Let's begin use Laravel.
+Let's begin using Laravel. :blue_heart:
 
 # Index
-* **[The PHP Practitioner](./laracasts/the-php-practitioner/)** <br>
+> If you find a link in episode title that means there are some explanations in there, otherwise the episode summary you will find them in the code, you can use commits history to know what happened specifically.
+
+* **1- Basic Routing and Views.** <br>
