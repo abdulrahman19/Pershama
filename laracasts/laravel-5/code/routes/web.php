@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $tasks = [
+        'task 1',
+        'task 2',
+        'task 3'
+    ];
+    return view('home', compact('tasks'));
 
-Route::get('/about', function () {
-    return view('about');
+    // return view('home', [
+    //     'name' => 'Abdulrahman'
+    // ]);
+
+    //return view('home')->with('name','world');
 });
