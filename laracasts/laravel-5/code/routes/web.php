@@ -12,16 +12,19 @@
 */
 
 Route::get('/', function () {
-    $tasks = [
-        'task 1',
-        'task 2',
-        'task 3'
-    ];
-    return view('home', compact('tasks'));
+    return view('home');
+});
 
-    // return view('home', [
-    //     'name' => 'Abdulrahman'
-    // ]);
+Route::get('/tasks', function () {
+    $tasks = DB::table('tasks')->get();
 
-    //return view('home')->with('name','world');
+    return view('tasks.index', compact('tasks'));
+});
+
+Route::get('/tasks/{id}', function ($id) {
+    $task = DB::table('tasks')->find($id);
+
+    // dd($tasks);
+
+    return view('tasks.show', compact('task'));
 });

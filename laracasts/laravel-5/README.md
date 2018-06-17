@@ -6,3 +6,4 @@ Let's begin using Laravel. :blue_heart:
 
 * **1- Basic Routing and Views.** <br>
 * **2- Pass Data to Your Views.** <br>
+* **3- Working With the Query Builder.** <br>
