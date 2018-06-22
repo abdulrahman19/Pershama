@@ -40,15 +40,18 @@ Expecto Patronum. <br>
 * **[Merging & Rebase Branches](./docs/9-merging-rebase-branches.md)** <br>
 Tobe Tobe Grendizer. <br>
 <code>^merge</code> <code>mergetool</code> <code>rebase</code>
-* **[Stashing Changes](./docs/10-stashing-changes.md)** <br>
+* **[Git Tags](./docs/10-git-tags.md)** <br>
+Totem. <br>
+<code>^tags</code>
+* **[Stashing Changes](./docs/11-stashing-changes.md)** <br>
 <em>Don't</em> let her go. <br>
 <code>^stash</code>
 
 ### Share with world
-* **[Remotes](./docs/11-remotes.md)** <br>
+* **[Remotes](./docs/12-remotes.md)** <br>
 Hello from the other side. <br>
 <code>^remote</code> <code>clone</code> <code>log</code> <code>^branch</code> <code>fetch</code> <code>merge</code> <code>pull</code> <code>^push</code> <code>checkout</code>
-* **[GitHub](./docs/12-github.md)** <br>
+* **[GitHub](./docs/13-github.md)** <br>
 The matrix.:octocat:<br>
 <code>Fork</code>
 

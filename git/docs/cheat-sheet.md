@@ -19,6 +19,7 @@
 * [branch](#branch)
 * [merge](#merge)
 * [rebase](#rebase)
+* [tag](#tag)
 * [stash](#stash)
 * [remote](#remote)
 * [clone](#clone)
@@ -202,6 +203,24 @@ git merge --abort
 git rebase master
 git rebase --continue
 git rebase HEAD~3 -i # to change commit message
+```
+
+## tag
+```bash
+git tag tag_name
+git tag tag_name 324dsa
+git tag -a tag_name -m "bla bla bla" # annotated tags
+git tag # show all tags
+git tag -l "v1.*"
+git show tag_name
+git push --tags
+git push origin tag_name
+git tag -d tag_name
+git tag -d tag_name tag_name2 tag_name3
+git push origin -d tag_name
+git push origin :tag_name
+git checkout tag_name
+git checkout -b branch_name tag_name
 ```
 
 ## stash
