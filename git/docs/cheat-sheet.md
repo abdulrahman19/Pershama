@@ -3,6 +3,7 @@
 * [help](#help)
 * [config](#config)
 * [init](#init)
+* [status](#status)
 * [add](#add)
 * [commit](#commit)
 * [log](#log)
@@ -49,6 +50,11 @@ git config --global core.excludesfile ~/.gitignore_global
 ## init
 ```bash
 git init
+```
+## status
+```bash
+git status
+git status -u # list of untracked files
 ```
 
 ## add
@@ -129,7 +135,7 @@ git mv old_file_name.txt new_file_name.txt
 ## checkout
 ```bash
 git checkout -- . # remove from working dir
-git checkout -- file_name.txt # remove from working dir 
+git checkout -- file_name.txt # remove from working dir
 git checkout -- dir_name/ # remove from working dir
 git checkout 4d2333dsqw -- file_name.txt # change file content to changes in commit SHA
 git checkout new_branch # change branch
@@ -195,6 +201,7 @@ git merge --abort
 ```bash
 git rebase master
 git rebase --continue
+git rebase HEAD~3 -i # to change commit message
 ```
 
 ## stash
@@ -244,6 +251,6 @@ git push origin :branch-name
 ```bash
 git pull # if branch tracked
 git pull origin branch-name
-git pull --rebase upstream master 
+git pull --rebase upstream master
 # that's will rebase your work above last commit in Fork/master branch so you able to do fast forward merge. check rebase section.
 ```

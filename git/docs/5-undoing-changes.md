@@ -3,6 +3,7 @@
 * [Undo working dir](#undo-working-dir)
 * [Unstaging files](#unstaging-files)
 * [Amend commits](#amend-commits)
+* [Rebase to change message](#rebase-to-change-message)
 * [Retrieving old versions](#retrieving-old-versions)
 * [Using reset](#using-reset)
 * [Remove untracked](#remove-untracked)
@@ -42,6 +43,19 @@ git commit --amend -m "bla bla bla"
 That's will (merge) amend the new changes to the last commit in our repo.
 
 > You can use this command if you wanna change last commit message too.
+
+## Rebase to change message
+Like I explained on previous section if you wanna change last commit message you can use <code>amend</code> option, but what if you want change older commit message!
+
+You can use rebase! <br>
+Rebase to commit you wanna change its message
+```bash
+git rebase HEAD~3 -i
+# lets say it's third older one form the HEAD.
+```
+You can now see the last 3 commits. <br>
+Find the commit with the bad commit message and change <code>pick</code> to <code>reword</code>. <br>
+You can now edit the message with your editor and git will update the commits.
 
 ## Retrieving old versions
 If we wanna change/remove commit in middle of other commits (undo), that we can't use amend option with it (check the previous section).
@@ -109,7 +123,7 @@ If we want remove untracked file all on one we can use following command:
 ```bash
 git clean -nf
 # -n for show what file will remove
-# -f to force remove 
+# -f to force remove
 # the both will delete all untracked files.
 git clean -n -d
 # to clean dirs.

@@ -10,11 +10,6 @@ But I believe in something, what you write is hard to forget, plus that you writ
 ### Can I help?
 If you have any suggestion or Edit, don't be shy :smile:.
 
-# Resources
-* Git Essential Training (Lynda).
-* Bitbucket Tutorials.
-* Youtube Videos.
-
 # Index
 > This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.
 
@@ -24,7 +19,7 @@ Ready, Steady... <br>
 <code>^config</code> <code>help</code>
 * **[Getting Started](./docs/2-getting-started.md)** <br>
 Fire your engine. <br>
-<code>init</code> <code>add</code> <code>commit</code> <code>^log</code>
+<code>init</code> <code>^status</code> <code>add</code> <code>commit</code> <code>^log</code>
 * **[Git Concepts and Architecture](./docs/3-git-concepts-and-architecture.md)** <br>
 Discover the alien.
 * **[Making Changes to Files](./docs/4-making-changes-to-files.md)** <br>
@@ -32,7 +27,7 @@ Let's do our crystal blue meth. <br>
 <code>^add</code> <code>diff</code> <code>rm</code> <code>mv</code>
 * **[Undoing Changes](./docs/5-undoing-changes.md)** <br>
 Fix it Felix. <br>
-<code>checkout</code> <code>^reset</code> <code>--amend</code> <code>revert</code> <code>clean</code>
+<code>checkout</code> <code>^reset</code> <code>--amend</code> <code>rebase</code> <code>revert</code> <code>clean</code>
 * **[Ignoring Files](./docs/6-ignoring-files.md)** <br>
 No Heart. <br>
 <code>config</code> <code>rm</code>
@@ -60,8 +55,12 @@ The matrix.:octocat:<br>
 # Cheat Sheet
 * **[Cheat Sheet](./docs/cheat-sheet.md)** <br>
 
+# Resources
+* Git Essential Training (Lynda).
+* Bitbucket Tutorials.
+* Youtube Videos.
+
 # Todo
 - [ ] Best practice followed to make a correct workflow
-- [ ] Rebase to rename files
 - [ ] Advanced Rebase options
 - [ ] Explore GitHub

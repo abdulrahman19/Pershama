@@ -1,6 +1,7 @@
 # Getting Started
 
 * [Git initializing](#git-initializing)
+* [Tracked and untracked files](#tracked-and-untracked-files)
 * [First commit](#first-commit)
 * [Commit message best practices](#commit-message-best-practices)
 * [Git log](#git-log)
@@ -11,6 +12,23 @@ Navigating to your working dir and write.
 ```bash
 git init
 ```
+## Tracked and untracked files
+To show what changes happened use.
+```bash
+git status
+```
+It'll list all changes you made on working dir.
+
+Please note: when you run <code>git status</code> you will find two sections, first one for tracked files and those for files you commit them before and you make a new changes on them. <br>
+The other section for untracked files, and those for files you add them to your working dir for first time and never commit any changes on them.
+
+To show list of all untracked files use
+```bash
+git status -u
+```
+
+For more info also please read this section [Ignoring files](./6-ignoring-files.md)
+
 ## First commit
 First you need add all changes you did on stage area.
 ```bash
