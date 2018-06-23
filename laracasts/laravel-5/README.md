@@ -11,3 +11,4 @@ Let's begin using Laravel. :blue_heart:
 * **5- Controllers.** <br>
 * **6- Route Model Binding.** <br>
 * **7- Layouts and Structure.** <br>
+* **[8- Form Request Data and CSRF.](./docs/8-form-request.md)** <br>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>{{ $task->body }}</h1>
+    <h1 class="title">{{ $task->body }}</h1>
     <p>{{ $task->created_at }}</p>
 @endsection

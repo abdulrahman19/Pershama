@@ -1,17 +1,21 @@
-@extends('layouts.master') @section('content')
-<h1 class="title">Tasks</h1>
+@extends('layouts.master')
+@section('content')
+<h1 class="title">Posts</h1>
+<div class="hlinks">
+    <a href="/posts/create" type="button" class="btn btn-dark">New post</a>
+</div>
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">Task</th>
+            <th scope="col">Title</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($tasks as $task)
+        @foreach ($posts as $post)
         <tr>
-            <th scope="row"><a href="/tasks/{{$task->id}}">{{$task->body}}</a></th>
+            <th scope="row"><a href="/posts/{{$post->id}}">{{$post->title}}</a></th>
             <td><a href="#">Edit</a></td>
             <td><a href="#">Delete</a></td>
         </tr>
