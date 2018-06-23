@@ -6,3 +6,11 @@
 .hlinks {
     margin-bottom: 15px;
 }
+
+.alert-margin {
+    margin-top: 16px;
+}
+
+.alert-margin ul {
+    margin: 0;
+}

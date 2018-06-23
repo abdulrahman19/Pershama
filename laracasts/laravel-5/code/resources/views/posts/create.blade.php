@@ -1,6 +1,8 @@
 @extends('layouts.master')
 @section('content')
+
 <h1 class="title">Publish a Post</h1>
+
 <form method="POST" action="/posts">
     @csrf
     <div class="form-group">
@@ -13,4 +15,5 @@
     </div>
     <button type="submit" class="btn btn-primary">Publish</button>
 </form>
+
 @endsection
