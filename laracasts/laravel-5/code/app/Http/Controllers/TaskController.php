@@ -45,9 +45,9 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Task $task)
     {
-        $task = Task::find($id);
+        // $task must be the same name on route file.
         return view('tasks.show', compact('task'));
     }
 
