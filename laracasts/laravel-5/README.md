@@ -10,3 +10,4 @@ Let's begin using Laravel. :blue_heart:
 * **[4- Eloquent 101.](./docs/4-eloquent.md)** <br>
 * **5- Controllers.** <br>
 * **6- Route Model Binding.** <br>
+* **7- Layouts and Structure.** <br>

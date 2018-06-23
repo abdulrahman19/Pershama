@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ $task->body }}</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
     <h1>{{ $task->body }}</h1>
     <p>{{ $task->created_at }}</p>
-</body>
-</html>
+@endsection

@@ -7,6 +7,7 @@ You can create model with migration file at once
 php artisan make:model Task -m
 # -m for migration
 # -c for controller
+php artisan make:model Task -mc
 ```
 
 You can fetch data by several ways
