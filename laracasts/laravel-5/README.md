@@ -8,3 +8,4 @@ Let's begin using Laravel. :blue_heart:
 * **2- Pass Data to Your Views.** <br>
 * **3- Working With the Query Builder.** <br>
 * **[4- Eloquent 101.](./docs/4-eloquent.md)** <br>
+* **5- Controllers.** <br>
