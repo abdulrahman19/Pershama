@@ -15,3 +15,4 @@ Let's begin using Laravel. :blue_heart:
 * **9- Form Validation 101.** <br>
 * **10- Rendering Posts.** <br>
 * **11- Eloquent Relationships and Comments.** <br>
+* **12- Add Comments.** <br>

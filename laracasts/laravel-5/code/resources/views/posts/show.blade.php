@@ -4,10 +4,20 @@
 <h1 class="title">{{ $post->title }}</h1>
 <p class="mb-5">{{ $post->body }}</p>
 
-@if (count($post->comments))
-<div class="comments border border-secondary rounded px-2">
+
+<div class="comments border-top border-secondary py-2 mb-3">
     <h3 class="mt-3"><strong>Comments</strong></h3>
-    <hr>
+    <form class="form-inline mt-4" method="POST" action="/posts/{{ $post->id }}/comments">
+        @csrf
+        <div class="form-group mb-2 mr-2">
+            <label for="comment" class="mr-2">Add a comment: </label>
+            <input  name="body" type="text" required class="form-control" id="comment" placeholder="bla bla bla...">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Add</button>
+    </form>
+</div>
+
+@if (count($post->comments))
     @foreach ($post->comments as $comment)
     <div class="card mb-4">
         <div class="card-header">
@@ -18,8 +28,6 @@
         </div>
     </div>
     @endforeach
-</div>
 @endif
-
 
 @endsection
