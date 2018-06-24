@@ -17,3 +17,4 @@ Let's begin using Laravel. :blue_heart:
 * **11- Eloquent Relationships and Comments.** <br>
 * **12- Add Comments.** <br>
 * **13- Rapid Authentication and Configuration.** <br>
+* **14- Associating With Users.** <br>

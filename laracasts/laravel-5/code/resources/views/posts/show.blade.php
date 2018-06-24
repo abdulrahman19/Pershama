@@ -2,6 +2,7 @@
 @section('content')
 
 <h1 class="title">{{ $post->title }}</h1>
+<div class="user-name">By: <em>{{ $post->user->name }}</em></div>
 <p class="mb-5">{{ $post->body }}</p>
 
 
@@ -21,7 +22,7 @@
     @foreach ($post->comments as $comment)
     <div class="card mb-4">
         <div class="card-header">
-            <span class="badge badge-primary">User</span> bla | <span class="badge badge-primary">Date</span> {{ $comment->created_at->diffForHumans() }}
+            <span class="badge badge-primary">User</span> {{ $comment->user->name }} | <span class="badge badge-primary">Date</span> {{ $comment->created_at->diffForHumans() }}
         </div>
         <div class="card-body">
             <p>{{ $comment->body }}</p>

@@ -36,17 +36,21 @@ class PostsController extends Controller
      */
     public function store()
     {
-        // $post = new Post;
-        // $post->title = Request('title');
-        // $post->body = Request('body');
-        // $post->save();
-
         $this->validate(Request(), [
             'title' => 'required',
             'body'  => 'required',
         ]);
 
-        Post::create(Request(['title', 'body']));
+        // $post = new Post;
+        // $post->title = Request('title');
+        // $post->body = Request('body');
+        // $post->save();
+
+        // Post::create(Request(['title', 'body']));
+
+        // auth()->user()->publish(Request(['title', 'body'])); << for save
+
+        auth()->user()->publish(new Post(Request(['title', 'body']))); // << for create
 
         return redirect('/posts');
     }
