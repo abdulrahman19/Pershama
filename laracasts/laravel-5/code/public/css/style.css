@@ -1,3 +1,29 @@
+/* Laravel style */
+html, body {
+    height: 100vh;
+}
+.full-height {
+    height: 90vh;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.position-ref {
+    position: relative;
+}
+.content {
+    text-align: center;
+}
+.welcome-title {
+    font-size: 84px;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+/* my style */
 .title {
     margin: 30px 0;
     font-weight: bold;

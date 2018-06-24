@@ -14,13 +14,25 @@
 Route::get('/', function () {
     return view('home');
 });
-# Tasks
-Route::get('/tasks', 'TaskController@index');
-Route::get('/tasks/{task}', 'TaskController@show');
-# Posts
-Route::get('/posts', 'PostsController@index');
-Route::get('/posts/create', 'PostsController@create');
-Route::get('/posts/{post}', 'PostsController@show');
-Route::post('/posts', 'PostsController@store');
-# Comments
-Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+Auth::routes();
+
+# Administrator
+Route::middleware(['auth'])->group(function () {
+    # Admin home
+    Route::get('/admin', 'AdminController@index')->name('admin');
+
+    # Tasks
+    Route::get('/tasks', 'TaskController@index')->name('tasks');
+    Route::get('/tasks/{task}', 'TaskController@show');
+
+    # Posts
+    Route::get('/posts', 'PostsController@index')->name('posts');
+    Route::get('/posts/create', 'PostsController@create');
+    Route::get('/posts/{post}', 'PostsController@show');
+    Route::post('/posts', 'PostsController@store');
+
+    # Comments
+    Route::post('/posts/{post}/comments', 'CommentsController@store');
+});
+
