@@ -19,3 +19,4 @@ Let's begin using Laravel. :blue_heart:
 * **13- Rapid Authentication and Configuration.** <br>
 * **14- Associating With Users.** <br>
 * **15- Archives.** <br>
+* **16- View Composers.** <br>

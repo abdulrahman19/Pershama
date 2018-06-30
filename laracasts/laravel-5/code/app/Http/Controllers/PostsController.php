@@ -18,13 +18,7 @@ class PostsController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
 
-        $archive = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
-            ->groupBy('year', 'month')
-            ->orderByRaw('min(created_at) DESC')
-            ->get()
-            ->toArray();
-
-        return view('posts.index', compact('posts', 'archive'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -73,6 +67,8 @@ class PostsController extends Controller
     public function show(Post $post)
     {
         // $post must be the same name on route file.
+        // $archive = Post::archives();
+
         return view('posts.show', compact('post'));
     }
 
