@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Repositories\Posts;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -12,11 +13,9 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Posts $posts)
     {
-        $posts = Post::latest()
-            ->filter(request(['month', 'year']))
-            ->get();
+        $posts = $posts->all();
 
         return view('posts.index', compact('posts'));
     }

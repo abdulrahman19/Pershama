@@ -21,3 +21,4 @@ Let's begin using Laravel. :blue_heart:
 * **15- Archives.** <br>
 * **16- View Composers.** <br>
 * **17- Testing 101.** <br>
+* **18- DI, Auto-Resolution, and Repositories.** <br>
