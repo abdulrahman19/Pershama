@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Repositories\Posts;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
 {
@@ -36,12 +37,14 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(PostRequest $request)
     {
-        $this->validate(Request(), [
-            'title' => 'required',
-            'body'  => 'required',
-        ]);
+        // $this->validate(Request(), [
+        //     'title' => 'required',
+        //     'body'  => 'required',
+        // ]);
+
+        // $request->doSomestaff();
 
         // $post = new Post;
         // $post->title = Request('title');
