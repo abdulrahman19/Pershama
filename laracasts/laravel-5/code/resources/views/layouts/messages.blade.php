@@ -7,3 +7,10 @@
     </ul>
 </div>
 @endif
+
+
+@if ($flash = session('message'))
+<div class="alert alert-success alert-margin" role="alert">
+    {{ $flash }}
+</div>
+@endif
