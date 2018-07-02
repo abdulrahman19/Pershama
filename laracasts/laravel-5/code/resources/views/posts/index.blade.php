@@ -14,6 +14,7 @@
                 <th scope="col">Title</th>
                 <th scope="col">User</th>
                 <th scope="col">Publish date</th>
+                <th scope="col">tags</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -24,6 +25,11 @@
                 <th scope="row"><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></th>
                 <th scope="row">{{ $post->user->name }}</th>
                 <td>{{ $post->created_at->toFormattedDateString() }}</td>
+                <td>
+                    @foreach ($post->tags as $tag)
+                        <span class="badge badge-primary">{{ $tag->name }}</span>
+                    @endforeach
+                </td>
                 <td><a href="#">Edit</a></td>
                 <td><a href="#">Delete</a></td>
             </tr>

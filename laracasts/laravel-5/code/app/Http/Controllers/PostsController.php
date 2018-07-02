@@ -55,6 +55,9 @@ class PostsController extends Controller
 
         // auth()->user()->publish(Request(['title', 'body'])); << for save
 
+        // $tags = $post->tags()->attach($tag); << to save a post tags
+        // $tags = $post->tags()->detach($tag); << to remove a post tags
+
         auth()->user()->publish(new Post(Request(['title', 'body']))); // << for create
 
         session()->flash('message', 'The post published');

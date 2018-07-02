@@ -24,4 +24,5 @@ Let's begin using Laravel. :blue_heart:
 * **18- DI, Auto-Resolution, and Repositories.** <br>
 * **19- The Service providers Container.** <br>
 * **20- Form Requests and Form Objects.** <br>
-* **21- Session Handling and Flash Messaging. <br>
+* **21- Session Handling and Flash Messaging.** <br>
+* **22- Tags and Pivot Tables** <br>

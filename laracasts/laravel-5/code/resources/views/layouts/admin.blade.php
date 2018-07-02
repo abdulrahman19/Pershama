@@ -15,7 +15,7 @@
     @include('layouts.nav')
 
     <div class="container">
-        @include('layouts.errors')
+        @include('layouts.messages')
         @yield('content')
     </div>
 
