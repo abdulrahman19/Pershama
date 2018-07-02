@@ -10,7 +10,7 @@
         <div class="col-9">
             @yield('posts_content')
         </div>
-        <div class="col-2 offset-md-1 text-center">
+        <div class="col-2 offset-md-1">
             @include('posts.sidebar')
         </div>
     </div>

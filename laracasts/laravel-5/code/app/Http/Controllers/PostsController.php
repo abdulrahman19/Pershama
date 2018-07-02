@@ -75,7 +75,6 @@ class PostsController extends Controller
     {
         // $post must be the same name on route file.
         // $archive = Post::archives();
-
         return view('posts.show', compact('post'));
     }
 

@@ -34,5 +34,8 @@ Route::middleware(['auth'])->group(function () {
 
     # Comments
     Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+    # Tags
+    Route::get('/posts/tags/{tag}', 'TagsController@index');
 });
 

@@ -9,14 +9,19 @@ class Post extends Model
 {
     protected $fillable = ['title', 'body', 'user_id'];
 
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function addComment($body, $user_id)
@@ -42,10 +47,5 @@ class Post extends Model
             ->orderByRaw('min(created_at) desc')
             ->get()
             ->toArray();
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
     }
 }

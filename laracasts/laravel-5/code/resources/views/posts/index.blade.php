@@ -27,7 +27,7 @@
                 <td>{{ $post->created_at->toFormattedDateString() }}</td>
                 <td>
                     @foreach ($post->tags as $tag)
-                        <span class="badge badge-primary">{{ $tag->name }}</span>
+                        <span class="badge badge-primary"><a href="/posts/tags/{{ $tag->name }}" class="text-light">{{ $tag->name }}</a></span>
                     @endforeach
                 </td>
                 <td><a href="#">Edit</a></td>
