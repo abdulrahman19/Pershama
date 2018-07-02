@@ -27,3 +27,6 @@ Let's begin using Laravel. :blue_heart:
 * **21- Session Handling and Flash Messaging.** <br>
 * **22- Tags and Pivot Tables** <br>
 * **23- Sorting Posts By Tags** <br>
+
+# Course Implementation
+![Laravel 5.4](./docs/images/laravel-5-implementation.png)
