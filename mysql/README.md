@@ -12,6 +12,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 ## Data Modeling
 * **[Simple Data Modeling Concepts](./docs/data-modeling/modeling-concepts.md)** <br>
 * **[Database Normalization](./docs/data-modeling/database-normalization.md)** <br>
+* **[First Normal Form](./docs/data-modeling/first-normal-form.md)** <br>
 
 ## MySQL Basics
 

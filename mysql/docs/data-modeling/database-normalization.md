@@ -7,7 +7,7 @@
     * Search and Sort Issues
 * [Definition of Normalization](#definition-of-normalization)
 
-`Database normalization` is process used to organize a database into tables and columns.
+`Database normalization` is process used to organize a database into tables and columns. Which minimize data redundancy.
 
 ### Reasons for Normalization
 There are three main reasons to normalize a database.
