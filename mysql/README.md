@@ -10,3 +10,4 @@ Let's understand MySQL in depth. :mag_right: :floppy_disk:
 * **[SELECT](./docs/data-manipulation/select.md)** <br>
 * **[WHERE](./docs/data-manipulation/where.md)** <br>
 * **[Aliases](./docs/data-manipulation/aliases.md)** <br>
+* **[ORDER BY](./docs/data-manipulation/order-by.md)** <br>
