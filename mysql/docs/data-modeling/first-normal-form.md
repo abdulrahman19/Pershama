@@ -4,7 +4,7 @@
 * [Apply In Our Example](#apply-in-our-example)
 
 ### First Normal Form Definition
-The table be in the N1 if:
+The table be in the 2N if:
 * Each column contains `atomic` values.
 * There are not `repeating groups` of columns.
 * The table stores information in rows and columns where one or more columns, called the `primary key`, uniquely identify each row.
