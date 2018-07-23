@@ -6,9 +6,26 @@
 ### Second Normal Form Definition
 The table be in the 2N if:
 * The table is in `1st normal form`.
-* All the non-key columns are dependent on the table’s primary key `partial dependency`.
+* All the non-key columns are **fully** dependent on the table’s primary key / keys, if not this is called `partial dependency`.
+
+<pre>
+                                          not dependent on any primary keys
+                                          ??
+                                          |
+    |- key -|                             v
+    CourseID    CourseName    Semester    UniversityManager
+</pre>
+Or
+<pre>
+                                          |--- dependent on one key ---|
+                                          |------------|---------------|
+    |- key -|                             |- key -|    v               v
+    CourseID    CourseName    Semester    SubjectID    SubjectName    SubjectGrade
+</pre>
 
 ![Table Not Normalized](../images/data-modeling/N2-summary.png)
+
+> Main purpose from 2N is make a single purpose table to avoid modification anomalies.
 
 ### Apply In Our Example
 

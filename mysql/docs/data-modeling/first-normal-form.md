@@ -13,6 +13,8 @@ The table be in the 2N if:
 
 Once a table is in first normal form it is easier to `search`, `filter`, and `sort` the information.
 
+> Main purpose from 1N is eliminate data redundancy.
+
 ### Apply In Our Example
 ![Table Not Normalized](../images/data-modeling/Intro-Table-Not-Normalized.png)
 
