@@ -11,6 +11,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 
 ## Data Modeling
 * **[Simple Data Modeling Concepts](./docs/data-modeling/modeling-concepts.md)** <br>
+* **[Functional Dependency](./docs/data-modeling/functional-dependency.md)** <br>
 * **[Database Normalization](./docs/data-modeling/database-normalization.md)** <br>
 * **[First Normal Form](./docs/data-modeling/first-normal-form.md)** <br>
 * **[Second Normal Form](./docs/data-modeling/second-normal-form.md)** <br>
