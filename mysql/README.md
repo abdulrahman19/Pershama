@@ -10,6 +10,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 > If you find a link in episode title that means there are some explanations in there, otherwise the episode summary you will find them in the code, you can use commits history to know what happened specifically.
 
 ## Data Modeling
+* **[Database Keys](./docs/data-modeling/database-keys.md)** <br>
 * **[Simple Data Modeling Concepts](./docs/data-modeling/modeling-concepts.md)** <br>
 * **[Functional Dependency](./docs/data-modeling/functional-dependency.md)** <br>
 * **[Database Normalization](./docs/data-modeling/database-normalization.md)** <br>
