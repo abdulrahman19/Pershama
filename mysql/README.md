@@ -16,6 +16,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 * **[First Normal Form](./docs/data-modeling/first-normal-form.md)** <br>
 * **[Second Normal Form](./docs/data-modeling/second-normal-form.md)** <br>
 * **[Third Normal Form](./docs/data-modeling/third-normal-form.md)** <br>
+* **[Boyce-Codd Normal Form - 3.5NF](./docs/data-modeling/boyce-codd-normal-form.md)** <br>
 
 ## MySQL Basics
 
