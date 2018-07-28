@@ -8,6 +8,7 @@
 * [BETWEEN](#between) <br>
 * [LIKE](#like) <br>
     * MySQL LIKE with ESCAPE clause
+* [IS NULL / IS NOT NULL](#is-null--is-not-null) <br>
 
 ### MySQL WHERE
 We use MySQL `WHERE` clause with `SELECT`, `UPDATE` and `DELETE` statements to filter rows in the result set.
@@ -161,4 +162,22 @@ FROM
     products
 WHERE
     productCode LIKE '%$_20%' ESCAPE '$';
+```
+
+### IS NULL / IS NOT NULL
+```sql
+SELECT
+    c.customerNumber,
+    c.customerName,
+    orderNumber,
+    o.status
+FROM
+    customers c
+        LEFT JOIN
+    orders o ON c.customerNumber = o.customerNumber
+WHERE
+    orderNumber IS NULL;
+    # or
+    orderNumber IS NOT NULL;
+
 ```

@@ -28,3 +28,4 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 * **[Aliases](./docs/data-manipulation/aliases.md)** <br>
 * **[ORDER BY](./docs/data-manipulation/order-by.md)** <br>
 * **[LIMIT](./docs/data-manipulation/limit.md)** <br>
+* **[JOIN](./docs/data-manipulation/join.md)** <br>
