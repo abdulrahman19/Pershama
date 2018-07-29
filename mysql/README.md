@@ -30,3 +30,4 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 * **[LIMIT](./docs/data-manipulation/limit.md)** <br>
 * **[JOINs](./docs/data-manipulation/join.md)** <br>
 * **[GROUP BY And HAVING](./docs/data-manipulation/group-by.md)** <br>
+* **[SubQuery](./docs/data-manipulation/subquery.md)** <br>
