@@ -5,7 +5,7 @@
 * [Simulate INTERSECT](#simulate-intersect) <br>
 
 There are some basic rules that you must follow in general:
-* First, the number and the orders of columns that appear in all `SELECT` statements must be the same.
+* First, the **number** and the **orders** of columns that appear in all `SELECT` statements must be the same.
 * Second, the data types of columns must be the **same or convertible**.
 
 ### UNION
@@ -23,7 +23,7 @@ SELECT column_list
 ![MySQL UNION](./images/MySQL-UNION.png)
 
 **Example** <br>
-We have those table.
+We have those tables.
 <pre>
   T1          T2
 +----+      +----+

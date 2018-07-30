@@ -2,6 +2,7 @@
 
 ## Index
 
+* **[MySQL Statements Execution Order](./statements-execution.md)** <br>
 * **[SELECT](./select.md)** <br>
 * **[WHERE](./where.md)** <br>
 * **[Aliases](./aliases.md)** <br>
@@ -11,8 +12,8 @@
 * **[GROUP BY And HAVING](./group-by.md)** <br>
 * **[SubQuery](./subquery.md)** <br>
 * **[UNION & simulate (MINUS / INTERSECT) Operations](./union.md)** <br>
+* **[UNION / JOIN Summary](./union-join-summary.md)** <br>
 
 # ToDo
-- [ ] EXISTS vs IN
+- [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.
 - [ ] JOIN in deeps
-- [ ] JOIN vs SubQuery

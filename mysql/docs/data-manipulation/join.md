@@ -117,7 +117,7 @@ ORDER BY customerName;
 ![mysql right join example](./images/MySQL-RIGHT-JOIN-example.png)
 
 ### CROSS JOIN
-The `CROSS JOIN` clause returns the Cartesian product of rows from the joined tables.
+The `CROSS JOIN` clause returns the `Cartesian product` of rows from the joined tables.
 
 ```sql
 SELECT *

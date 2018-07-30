@@ -4,7 +4,7 @@
 * [GROUP BY with HAVING clause](#group-by-with-having-clause) <br>
 
 ### GROUP BY
-Use MySQL `GROUP BY` to group rows into subgroups based on values of columns or expressions.
+Use MySQL `GROUP BY` to group rows into subgroups based on values of columns or expressions (aggregation function).
 
 ```sql
 SELECT
@@ -42,7 +42,7 @@ WHERE
 GROUP BY YEAR(orderDate);
 ```
 
-Standard SQL does not allow you to use an `alias` in the `GROUP BY` clause, however, MySQL supports this.
+`Standard SQL` does not allow you to use an `Aliases` in the `GROUP BY` clause, however, `MySQL` supports this.
 
 So you can edit previous query to
 
@@ -59,7 +59,7 @@ WHERE
 GROUP BY year;
 ```
 
-MySQL also allows you to sort the groups in ascending or descending orders while the standard SQL does not.
+`MySQL` also allows you to sort the groups in ascending or descending orders while the `standard SQL` does not.
 
 ```sql
 SELECT
@@ -87,3 +87,4 @@ GROUP BY ordernumber, status
 HAVING status = 'Shipped' AND total > 1500;
 ```
 
+Use `HAVING` only to filter results return by `GROUP BY` statement, because `HAVING` executing before send back the query results to the client, While `WHERE` executing before `SELECT` statement, for that it is so important to run the query faster because the filtering happened from the beginning.

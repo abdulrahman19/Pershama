@@ -22,7 +22,7 @@ WHERE
 ```
 
 Operator | Description
---- | --- | ---
+--- | --- |
 `=` | Equal to. You can use it with almost any data types.
 `<>` or `!=` | Not equal to.
 `<` | Less than. You typically use it with numeric and date/time data types.
@@ -53,6 +53,7 @@ JOIN bla ON boolean_expression_1 OR boolean_expression_2
 MySQL uses `short-circuit evaluation` for the `OR` operator.
 
 **Operator precedence**
+
 When you use more than one logical operator in an expression, MySQL evaluates the `OR` operators after the `AND` operators. <br>
 To change the order of evaluation, you use the parentheses.
 ```sql

@@ -1,10 +1,5 @@
 # LIMIT
 
-* [Introduction](#introduction) <br>
-    * Using MySQL LIMIT to get the first N rows
-    * Using MySQL LIMIT to get the nth highest value
-
-### Introduction
 ```sql
 SELECT
     column1,column2,...
@@ -13,8 +8,8 @@ FROM
 LIMIT offset , count;
 ```
 Let’s examine the LIMIT clause parameters:
-* The offset specifies the offset of the first row to return. The offset of the first row is 0, not 1.
-* The count specifies the maximum number of rows to return.
+* The `offset` specifies the offset of the first row to return. The offset of the first row is 0, not 1.
+* The `count` specifies the maximum number of rows to return.
 
 **Using MySQL LIMIT to get the first N rows**
 ```sql
