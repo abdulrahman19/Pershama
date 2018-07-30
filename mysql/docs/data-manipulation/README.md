@@ -1,4 +1,6 @@
-# Index
+# DATA MANIPULATION
+
+## Index
 
 * **[SELECT](./select.md)** <br>
 * **[WHERE](./where.md)** <br>
@@ -8,3 +10,9 @@
 * **[JOINs](./join.md)** <br>
 * **[GROUP BY And HAVING](./group-by.md)** <br>
 * **[SubQuery](./subquery.md)** <br>
+* **[UNION & simulate (MINUS / INTERSECT) Operations](./union.md)** <br>
+
+# ToDo
+- [ ] EXISTS vs IN
+- [ ] JOIN in deeps
+- [ ] JOIN vs SubQuery

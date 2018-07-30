@@ -1,4 +1,6 @@
-# Index
+# Data Modeling
+
+## Index
 
 * **[Database Keys](./database-keys.md)** <br>
 * **[Simple Data Modeling Concepts](./modeling-concepts.md)** <br>

@@ -24,15 +24,15 @@ The table be in the 3N if:
 
 Here the `TeacherName` is dependent on `CourseID` **through / and** `TeacherID`, and the `TeacherID` not a primary key ... this is a `transitive dependency`.
 
-![Table Not Normalized](../images/data-modeling/N3-summary.png)
+![Table Not Normalized](./images/N3-summary.png)
 
 > Main purpose from 3N is avoid transfer the table to partial dependency and avoid update anomalies like update `TeacherID` without update `TeacherName`.
 
 ### Apply In Our Example
-![Table Not Normalized](../images/data-modeling/ThirdNormalFormIssues.png)
+![Table Not Normalized](./images/ThirdNormalFormIssues.png)
 
-![Table Not Normalized](../images/data-modeling/ThirdNormalFormDataModel.png)
+![Table Not Normalized](./images/ThirdNormalFormDataModel.png)
 
-![Table Not Normalized](../images/data-modeling/ThirdNormalFormSampleData1.png)
+![Table Not Normalized](./images/ThirdNormalFormSampleData1.png)
 
-![Table Not Normalized](../images/data-modeling/ThirdNormalFormSampleData2.png)
+![Table Not Normalized](./images/ThirdNormalFormSampleData2.png)

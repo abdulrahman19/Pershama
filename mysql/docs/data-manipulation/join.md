@@ -10,7 +10,7 @@
 ### INNER JOIN
 The MySQL `INNER JOIN` clause matches rows in one table with rows in other tables and allows you to query rows that contain columns from both tables.
 
-![mySQL INNER JOIN Venn Diagram](../images/data-manipulation/MySQL-INNER-JOIN-Venn-Diagram.png)
+![mySQL INNER JOIN Venn Diagram](./images/MySQL-INNER-JOIN-Venn-Diagram.png)
 
 ```sql
 SELECT column_list
@@ -23,7 +23,7 @@ WHERE where_conditions;
 
 **Example**
 
-![Products And Product Lines Tables](../images/data-manipulation/products_and_product_lines_tables.png)
+![Products And Product Lines Tables](./images/products_and_product_lines_tables.png)
 
 ```sql
 SELECT
@@ -38,16 +38,16 @@ FROM
     productlines USING (productline);
 ```
 
-![My SQL INNER JOIN Products Data Example](../images/data-manipulation/MySQL-INNER-JOIN-Products-Data-Example.jpg)
+![My SQL INNER JOIN Products Data Example](./images/MySQL-INNER-JOIN-Products-Data-Example.jpg)
 
 ### LEFT JOIN
 The `LEFT JOIN` keyword returns all records from the left table (table1), and the matched records from the right table (table2). The result is `NULL` from the right side, if there is no match.
 
-![mysql left join Venn diagram](../images/data-manipulation/mysql-left-join-Venn-diagram.png)
+![mysql left join Venn diagram](./images/mysql-left-join-Venn-diagram.png)
 
 **Example**
 
-![customers orders tables](../images/data-manipulation/customers_orders_tables.png)
+![customers orders tables](./images/customers_orders_tables.png)
 
 ```sql
 SELECT
@@ -60,7 +60,7 @@ FROM
 LEFT JOIN orders USING (customerNumber);
 ```
 
-![mysql left join example](../images/data-manipulation/MySQL-LEFT-JOIN-example.png)
+![mysql left join example](./images/MySQL-LEFT-JOIN-example.png)
 
 ### Condition in WHERE vs ON
 When use the condition in `ON` clause, that's means you want the join happened only when the conditions is true. Otherwise returns `NULL`.
@@ -77,7 +77,7 @@ FROM
                    AND o.orderNumber = 10123;
 ```
 
-![mysql left join condition in on clause](../images/data-manipulation/MySQL-LEFT-JOIN-Condition-in-ON-clause.png)
+![mysql left join condition in on clause](./images/MySQL-LEFT-JOIN-Condition-in-ON-clause.png)
 
 But when use the condition with `WHERE`, That's means you want to **(filter) limit the result**.
 
@@ -94,7 +94,7 @@ WHERE
     orderNumber = 10123;
 ```
 
-![mysql left join condition in where clause](../images/data-manipulation/MySQL-LEFT-JOIN-Condition-in-WHERE-clause.png)
+![mysql left join condition in where clause](./images/MySQL-LEFT-JOIN-Condition-in-WHERE-clause.png)
 
 > Notice that for `INNER JOIN` clause, the condition in the `ON` clause is equivalent to the condition in the `WHERE` clause.
 
@@ -114,7 +114,7 @@ RIGHT JOIN
 ORDER BY customerName;
 ```
 
-![mysql right join example](../images/data-manipulation/MySQL-RIGHT-JOIN-example.png)
+![mysql right join example](./images/MySQL-RIGHT-JOIN-example.png)
 
 ### CROSS JOIN
 The `CROSS JOIN` clause returns the Cartesian product of rows from the joined tables.
