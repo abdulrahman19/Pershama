@@ -14,6 +14,7 @@
 * **[UNION & Simulate (MINUS / INTERSECT) Operations](./union.md)** <br>
 * **[UNION / JOIN Summary](./union-join-summary.md)** <br>
 * **[INSERT](./insert.md)** <br>
+* **[UPDATE](./update.md)** <br>
 
 # ToDo
 - [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.
