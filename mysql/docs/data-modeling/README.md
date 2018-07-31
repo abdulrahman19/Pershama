@@ -11,3 +11,4 @@
 * **[Third Normal Form](./third-normal-form.md)** <br>
 * **[Boyce-Codd Normal Form - 3.5NF](./boyce-codd-normal-form.md)** <br>
 * **[Final Example](./final-example.md)** <br>
+* **[Interview Cheat Sheet](./interview-cheat-sheet.md)** <br>
