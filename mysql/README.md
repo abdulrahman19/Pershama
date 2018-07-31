@@ -11,4 +11,4 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 
 * [Data Modeling](./docs/data-modeling)
 * **MySQL Basics**
-    * [DATA MANIPULATION](./docs/data-manipulation)
+    * [Data Manipulation](./docs/data-manipulation)

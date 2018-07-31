@@ -11,8 +11,9 @@
 * **[JOINs](./join.md)** <br>
 * **[GROUP BY And HAVING](./group-by.md)** <br>
 * **[SubQuery](./subquery.md)** <br>
-* **[UNION & simulate (MINUS / INTERSECT) Operations](./union.md)** <br>
+* **[UNION & Simulate (MINUS / INTERSECT) Operations](./union.md)** <br>
 * **[UNION / JOIN Summary](./union-join-summary.md)** <br>
+* **[INSERT](./insert.md)** <br>
 
 # ToDo
 - [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.
