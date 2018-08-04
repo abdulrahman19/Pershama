@@ -1,4 +1,4 @@
-# DATA MANIPULATION
+# Data Manipulation
 
 ## Index
 
@@ -17,6 +17,7 @@
 * **[UPDATE](./update.md)** <br>
 * **[DELETE](./delete.md)** <br>
 * **[REPLACE](./replace.md)** <br>
+* **[Interview Cheat Sheet](./interview-cheat-sheet.md)** <br>
 
 # ToDo
 - [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.

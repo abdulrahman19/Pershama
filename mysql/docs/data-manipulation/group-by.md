@@ -4,7 +4,7 @@
 * [GROUP BY with HAVING clause](#group-by-with-having-clause) <br>
 
 ### GROUP BY
-Use MySQL `GROUP BY` to group rows into subgroups based on values of columns or expressions (aggregation function).
+Use MySQL `GROUP BY` to group rows into subgroups based on values of columns [with aggregation function] or expressions.
 
 ```sql
 SELECT

@@ -59,7 +59,7 @@ MySQL returns the number of affected rows based on the action it performed.
 
 ```sql
 INSERT INTO devices(name) VALUES ('Printer')
-ON DUPLICATE KEY UPDATE name = 'Printer';
+ON DUPLICATE KEY UPDATE name = 'Keyboard';
 ```
 
 To reuse the values of the `INSERT` part in the `DUPLICATE KEY UPDATE` clause, you use the `VALUES()` function.
