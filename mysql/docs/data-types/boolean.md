@@ -4,8 +4,11 @@
 * [INSERT And SELECT BOOLEAN Value](#insert-and-select-boolean-value)
     * BOOLEAN Operators
 
-
 ### Declare BIT Value
+Min | Max | Length | Unit | Note
+---|---|---|---|---|
+0 | 1 | 1 | bit | -
+
 MySQL does not have built-in `BOOLEAN` type. However, it uses `TINYINT(1)` instead. To make it more convenient, MySQL provides `BOOLEAN` or `BOOL` **as the synonym of** `TINYINT(1)`.
 
 In MySQL, zero is considered as `FALSE`, and non-zero value is considered as `TRUE`. To use Boolean literals, you use the constants `TRUE` and `FALSE` that evaluate to `1` and `0` respectively.

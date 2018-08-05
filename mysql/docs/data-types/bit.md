@@ -3,8 +3,11 @@
 * [Declare BIT Value](#declare-bit-value)
 * [INSERT And SELECT BIT Value](#insert-and-select-bit-value)
 
-
 ### Declare BIT Value
+Min | Max | Length | Unit | Note
+---|---|---|---|---|
+1 | 64 | 64 | bit | -
+
 MySQL provides the `BIT` type that allows you to store bit values. The `BIT(m)` can store up to m-bit values, which m can range from **1 to 64**.
 
 ```sql

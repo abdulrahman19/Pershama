@@ -4,6 +4,10 @@
 * [INSERT And SELECT CHAR Value](#insert-and-select-char-value)
 
 ### Declare CHAR Value
+Min | Max | Length | Unit | Note
+---|---|---|---|---|
+0 | 255 | 255 | characters | -
+
 The `CHAR` data type is a fixed-length character type in MySQL. `CHAR(20)` can hold up to 20 characters. The length of the `CHAR` data type can be any value from **0 to 255**.
 
 When you store a `CHAR` value, MySQL pads its value with spaces to the length that you declared. Also When you query the `CHAR` value MySQL **removes the trailing spaces**.
@@ -15,6 +19,7 @@ CREATE TABLE mysql_char_test (
     status CHAR(3)
 );
 ```
+Whatever the value stored on `status` column, even empty string it'll take **3 bytes**. In single-byte character set such as `latin1`.
 
 ### INSERT And SELECT CHAR Value
 ```sql
