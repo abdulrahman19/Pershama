@@ -9,14 +9,14 @@
 * **[INT](./int.md)** <br>
 * **[BIGINT](./bigint.md)** <br>
 ---
-* **[* DECIMAL](./decimal.md)** <br>
-* **[* FLOAT](./float.md)** <br>
-* **[* DOUBLE](./double.md)** <br>
-* **[* REAL](./real.md)** <br>
+* **[DECIMAL](./decimal.md)** <br>
+* **[FLOAT](./float.md)** <br>
+* **[DOUBLE](./double.md)** <br>
+* **[REAL](./real.md)** <br>
 ---
 * **[BIT](./bit.md)** <br>
 * **[BOOLEAN](./boolean.md)** <br>
-* **[* SERIAL](./serial.md)** <br>
+* **[SERIAL](./serial.md)** <br>
 
 ### Date And Time
 * **[* DATE](./date.md)** <br>
