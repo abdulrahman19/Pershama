@@ -22,7 +22,7 @@
 * **[DATE](./date.md)** <br>
 * **[DATETIME](./datetime.md)** <br>
 * **[TIMESTAMP](./timestamp.md)** <br>
-* **[* TIME](./time.md)** <br>
+* **[TIME](./time.md)** <br>
 * **[* YEAR](./year.md)** <br>
 
 ### String
