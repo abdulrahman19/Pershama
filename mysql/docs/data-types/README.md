@@ -19,7 +19,7 @@
 * **[SERIAL](./serial.md)** <br>
 
 ### Date And Time
-* **[* DATE](./date.md)** <br>
+* **[DATE](./date.md)** <br>
 * **[* DATETIME](./datetime.md)** <br>
 * **[* TIMESTAMP](./timestamp.md)** <br>
 * **[* TIME](./time.md)** <br>

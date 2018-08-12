@@ -1,0 +1,44 @@
+# MySQL Functions
+
+## Index
+
+## functions
+* LAST_INSERT_ID
+* COUNT
+* AVG
+* SUM
+* MAX
+* MIN
+* ROUND
+* FLOOR
+* CONCAT_WS
+* CONCAT
+* IFNULL
+* CAST
+
+====
+
+* NOW
+* DATE
+* TIME
+* CURDATE
+* DATE_FORMAT
+* DATEDIFF
+* DATE_ADD
+* DATE_SUB
+* YEAR
+* QUARTER
+* MONTH
+* WEEK
+    * WEEKDAY
+    * WEEKOFYEAR
+* DAY
+* HOUR
+* MINUTE
+* SECOND
+
+====
+
+* USING
+* RAND
+* FIELD
