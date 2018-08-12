@@ -25,6 +25,15 @@ Fractional Seconds Precision | Storage (Bytes)
 5,6 | 3
 
 ```sql
+# with up to microseconds (6 digits) precision.
+t1  DATETIME(2)
+# formate
+YYYY-MM-DD HH:MM:SS.FFFFFF
+```
+
+**Create a table:**
+
+```sql
 CREATE TABLE timestamp_n_datetime (
     id INT AUTO_INCREMENT PRIMARY KEY,
     dt DATETIME
@@ -49,6 +58,17 @@ FROM
 | 2018-08-12 08:52:19  |
 +----------------------+
 </pre>
+
+**Automatic initialization and updating for DATETIME columns**
+
+```sql
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+```
 
 ### DATETIME vs. TIMESTAMP
 
