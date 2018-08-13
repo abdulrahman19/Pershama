@@ -6,20 +6,27 @@
 ### Declare CHAR Value
 Min | Max | Length | Unit | Note
 ---|---|---|---|---|
-0 | 255 | 255 | characters | -
+0 | 255 | The `compact` family of `InnoDB` row formats optimize storage for variable-length character sets such as `utf8mb3` and `utf8mb4` [See Here](https://dev.mysql.com/doc/refman/8.0/en/innodb-physical-record.html#innodb-compact-row-format-characteristics). Otherwise, `M × w` bytes, `0 >= M <= 255`, where `w` is the number of bytes required for the maximum-length character in the character set. | bytes | CHAR(M)
 
 The `CHAR` data type is a fixed-length character type in MySQL. `CHAR(20)` can hold up to 20 characters. The length of the `CHAR` data type can be any value from **0 to 255**.
 
-When you store a `CHAR` value, MySQL pads its value with spaces to the length that you declared. Also When you query the `CHAR` value MySQL **removes the trailing spaces**.
-
-If the data that you want to store is a **fixed size**, you should use the `CHAR` data type. You’ll get a better performance in comparison with `VARCHAR` in this case.
+When you store a `CHAR` value, MySQL pads its value with spaces to the length that you declared. Also When you query the `CHAR` value MySQL **removes the trailing spaces**. Note that MySQL will not remove the trailing spaces if you enable the `PAD_CHAR_TO_FULL_LENGTH` SQL mode.
 
 ```sql
 CREATE TABLE mysql_char_test (
     status CHAR(3)
 );
 ```
-Whatever the value stored on `status` column, even empty string it'll take **3 bytes**. In single-byte character set such as `latin1`.
+Whatever the value stored on `status` column, even empty string it'll take **3 bytes**. In `single-byte character set` such as `latin1`.
+
+VARCHAR(3) | Storage Required (bytes)
+---|---|
+'' | 3
+'a' | 3
+'ab' | 3
+'abc' | 3
+
+If the data that you want to store is a **fixed size**, you should use the `CHAR` data type. You’ll get a better performance in comparison with `VARCHAR` in this case.
 
 ### INSERT And SELECT CHAR Value
 ```sql

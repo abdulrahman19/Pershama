@@ -6,8 +6,8 @@
 ### Declare VARCHAR Value
 Min | Max | Length | Unit | Note
 ---|---|---|---|---|
-0 | 255 | 255 | characters | -
-0 | - | 65,535 | bytes | >= 5.0.3 and what the character set used.
+0 | 255 | L + 1 bytes if column values require 0 − 255 bytes | bytes | VARCHAR(L)
+0 | - | L + 2 bytes if values may require more than 255 bytes | bytes | >= 5.0.3 and what the character set used.
 
 MySQL `VARCHAR` is the variable-length string whose length can be up to **255** or **65,535**. MySQL stores a `VARCHAR` value as a **1-byte** or **2-byte** length prefix plus actual data.
 
@@ -24,9 +24,9 @@ CREATE TABLE IF NOT EXISTS varchar_test (
 
 If we increase the length of the `s1` column by 1. MySQL will issue the error message.
 
-If You declared `VARCHAR(3)` In single-byte character set such as `latin1`, the data will store like:
+If You declared `VARCHAR(3)` In `single-byte character set` such as `latin1`, the data will store like:
 
-VARCHAR(3) | Storage Required
+VARCHAR(3) | Storage Required (bytes)
 ---|---|
 '' | 1
 'a' | 2
@@ -52,7 +52,7 @@ FROM
 +----+--------+--------+
 </pre>
 
-MySQL will truncate the trailing spaces when inserting a `VARCHAR` value that contains trailing spaces which cause the column length exceeded.
+MySQL will truncate the trailing spaces when inserting a `VARCHAR` value that contains trailing spaces which cause the column length exceeded and MySQL will issues a warning.
 
 ```sql
 INSERT INTO items(title)
@@ -73,5 +73,3 @@ FROM
 | 1  | ABC    | 3      |
 +----+--------+--------+
 </pre>
-
-MySQL will issues a warning.
