@@ -19,12 +19,12 @@ CREATE TABLE mysql_char_test (
 ```
 Whatever the value stored on `status` column, even empty string it'll take **3 bytes**. In `single-byte character set` such as `latin1`.
 
-VARCHAR(3) | Storage Required (bytes)
----|---|
-'' | 3
-'a' | 3
-'ab' | 3
-'abc' | 3
+The value | Value stored in the database ( . = space ) | Storage Required (bytes)
+---|---|---|
+'' | '...'|3
+'a' | 'a..'| 3
+'ab' | 'ab.' | 3
+'abc' | 'abc' | 3
 
 If the data that you want to store is a **fixed size**, you should use the `CHAR` data type. You’ll get a better performance in comparison with `VARCHAR` in this case.
 

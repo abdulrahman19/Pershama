@@ -34,8 +34,8 @@
 * **[* MEDIUMTEXT](./mediumtext.md)** <br>
 * **[* LONGTEXT](./longtext.md)** <br>
 ---
-* **[* BINARY](./binary.md)** <br>
-* **[* VARBINARY](./varbinary.md)** <br>
+* **[BINARY](./binary.md)** <br>
+* **[VARBINARY](./varbinary.md)** <br>
 ---
 * **[* TINYBLOB](./tinyblob.md)** <br>
 * **[* MEDIUMBLOB](./mediumblob.md)** <br>
