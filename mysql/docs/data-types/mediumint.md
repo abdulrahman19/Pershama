@@ -1,4 +1,4 @@
-# TINYINT
+# MEDIUMINT
 
 Min | Max | Length | Unit | Note
 ---|---|---|---|---|

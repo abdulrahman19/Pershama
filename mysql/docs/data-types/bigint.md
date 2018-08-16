@@ -1,4 +1,4 @@
-# TINYINT
+# BIGINT
 
 Min | Max | Length | Unit | Note
 ---|---|---|---|---|

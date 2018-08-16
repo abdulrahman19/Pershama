@@ -13,8 +13,8 @@
 ### Declare FLOAT Value
 Min | Max | Length | Unit | Note
 ---|---|---|---|---|
--3.402823466E+38 | -1.175494351E-38 | 4 |  Bytes | Signed
-1.175494351E-38 | 3.402823466E+38 | 4 |  Bytes | Unsigned
+-3.402823466E+38 | -1.175494351E-38 | `FLOAT` 4 bytes <br> <br> `FLOAT(P)`, 4 bytes if `0 <= p <= 24`, 8 bytes if `25 <= p <= 53`| Bytes | Signed
+1.175494351E-38 | 3.402823466E+38 | `FLOAT` 4 bytes <br> <br> `FLOAT(P)`, 4 bytes if `0 <= p <= 24`, 8 bytes if `25 <= p <= 53`| Bytes | Unsigned
 
 The MySQL `FLOAT` data type is **Floating-Point Types** represent **approximate numeric data values** and used to store **Scientific Notation** form in the database.
 
