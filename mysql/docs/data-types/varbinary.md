@@ -13,7 +13,9 @@ The `VARBINARY` types are similar to [VARCHAR](./varchar.md), except that they c
 
 If strict SQL mode is not enabled and you assign a value to a `VARBINARY` column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated.
 
-MySQL will truncate the trailing spaces when inserting a `VARBINARY` value, so if a column has an index that requires unique values, inserting into the column values that differ only in number of trailing pad bytes will result in a duplicate-key error. For example, if a table contains 'a', an attempt to store 'a\0' causes a duplicate-key error.
+`VARBINARY` there is no padding on insert and no bytes are stripped on select.
+
+If a `VARBINARY` column is indexed, **comparisons not ignore padded at the end**. This means that, if a table contains 'a', an attempt to store 'a\0' it will be valid.
 
 **Create a table:**
 

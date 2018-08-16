@@ -29,21 +29,21 @@
 * **[CHAR](./char.md)** <br>
 * **[VARCHAR](./varchar.md)** <br>
 ---
-* **[* TINYTEXT](./tinytext.md)** <br>
-* **[* TEXT](./text.md)** <br>
-* **[* MEDIUMTEXT](./mediumtext.md)** <br>
-* **[* LONGTEXT](./longtext.md)** <br>
+* **[TINYTEXT](./tinytext.md)** <br>
+* **[TEXT](./text.md)** <br>
+* **[MEDIUMTEXT](./mediumtext.md)** <br>
+* **[LONGTEXT](./longtext.md)** <br>
 ---
 * **[BINARY](./binary.md)** <br>
 * **[VARBINARY](./varbinary.md)** <br>
 ---
-* **[* TINYBLOB](./tinyblob.md)** <br>
-* **[* MEDIUMBLOB](./mediumblob.md)** <br>
-* **[* BLOB](./blob.md)** <br>
-* **[* LONGBLOB](./longblob.md)** <br>
+* **[TINYBLOB](./tinyblob.md)** <br>
+* **[MEDIUMBLOB](./mediumblob.md)** <br>
+* **[BLOB](./blob.md)** <br>
+* **[LONGBLOB](./longblob.md)** <br>
 ---
-* **[* ENUM](./enum.md)** <br>
-* **[* SET](./set.md)** <br>
+* **[ENUM](./enum.md)** <br>
+* **[SET](./set.md)** <br>
 
 ### Spatial
 * **[* GEOMETRY](./geometry.md)** <br>
@@ -57,3 +57,6 @@
 
 ### JSON
 * **[* JSON](./json.md)** <br>
+
+### Data Types Cheat Sheet
+* **[* Data Types Cheat Sheet](./data-types-cheat-sheet.md)** <br>

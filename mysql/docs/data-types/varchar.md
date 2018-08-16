@@ -33,6 +33,12 @@ VARCHAR(3) | Storage Required (bytes)
 'ab' | 3
 'abc' | 4
 
+Truncation of excess trailing spaces from values to be inserted into `VARCHAR` columns always generates a warning, regardless of the SQL mode.
+
+For `VARCHAR` column, there is no padding on insert and no bytes are stripped on select.
+
+If a `VARCHAR` column is indexed, comparisons ignore space-padded at the end. This means that, if the index requires unique values, duplicate-key errors will occur for values **that differ only in the number of trailing spaces**. For example, if a table contains 'a', an attempt to store 'a ' causes a **duplicate-key error**.
+
 ### INSERT And SELECT VARCHAR Value
 ```sql
 INSERT INTO items(title)
@@ -52,7 +58,7 @@ FROM
 +----+--------+--------+
 </pre>
 
-MySQL will truncate the trailing spaces when inserting a `VARCHAR` value that contains trailing spaces which cause the column length exceeded and MySQL will issues a warning.
+In case like following, MySQL will issues a warning.
 
 ```sql
 INSERT INTO items(title)

@@ -10,7 +10,9 @@ Min | Max | Length | Unit | Note
 
 The `CHAR` data type is a fixed-length character type in MySQL. `CHAR(20)` can hold up to 20 characters. The length of the `CHAR` data type can be any value from **0 to 255**.
 
-When you store a `CHAR` value, MySQL pads its value with spaces to the length that you declared. Also When you query the `CHAR` value MySQL **removes the trailing spaces**. Note that MySQL will not remove the trailing spaces if you enable the `PAD_CHAR_TO_FULL_LENGTH` SQL mode.
+When you store a `CHAR` value, MySQL **pads its value with spaces to the length that you declared**. Also **When you query the `CHAR` value MySQL removes the trailing spaces**. Note that MySQL will not remove the trailing spaces if you enable the `PAD_CHAR_TO_FULL_LENGTH` SQL mode.
+
+If a `CHAR` column is indexed, comparisons ignore space-padded at the end. This means that, if the index requires unique values, duplicate-key errors will occur for values **that differ only in the number of trailing spaces**. For example, if a table contains 'a', an attempt to store 'a ' causes a **duplicate-key error**.
 
 ```sql
 CREATE TABLE mysql_char_test (

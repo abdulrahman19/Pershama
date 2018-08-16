@@ -12,9 +12,11 @@ The `BINARY` type are similar to [CHAR](./char.md), except that they contain bin
 
 If strict SQL mode is not enabled and you assign a value to a `BINARY` column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated.
 
-When `BINARY` values are stored, they are right-padded with the pad value to the specified length. The pad value is 0x00 (the zero byte). Values are right-padded with 0x00 on insert, and no trailing bytes are removed on select. All bytes are significant in comparisons, including ORDER BY and DISTINCT operations. 0x00 bytes and spaces are different in comparisons, with 0x00 < space.
+When `BINARY` values are stored, they are right-padded with the pad value to the specified length. The pad value is 0x00 (the zero byte). Values are right-padded with 0x00 on insert, **and no trailing bytes are removed on select**. All bytes are significant in comparisons, including ORDER BY and DISTINCT operations. 0x00 bytes and spaces are different in comparisons, with 0x00 < space.
 
 Example: For a `BINARY(3)` column, 'a ' becomes 'a \0' when inserted. 'a\0' becomes 'a\0\0' when inserted. Both inserted values remain unchanged when selected.
+
+For those cases where trailing pad bytes are stripped or comparisons ignore them, like if a column has an index that requires unique values, inserting into the column values that differ only in number of trailing pad bytes will result in a duplicate-key error. For example, if a table contains 'a', an attempt to store 'a\0' causes a duplicate-key error.
 
 **Create a table:**
 
