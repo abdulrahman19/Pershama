@@ -45,7 +45,7 @@
 * **[ENUM](./enum.md)** <br>
 * **[SET](./set.md)** <br>
 
-### Spatial
+### Spatial [Under Preparation]
 * **[* GEOMETRY](./geometry.md)** <br>
 * **[* POINT](./point.md)** <br>
 * **[* LINESTRING](./linestring.md)** <br>
@@ -56,7 +56,10 @@
 * **[* GEOMETRYCOLLECTION](./geometrycollection.md)** <br>
 
 ### JSON
-* **[* JSON](./json.md)** <br>
+* **[JSON](./json.md)** <br>
 
 ### Data Types Cheat Sheet
 * **[* Data Types Cheat Sheet](./data-types-cheat-sheet.md)** <br>
+
+# ToDo
+- [ ] Spatial Data Types.

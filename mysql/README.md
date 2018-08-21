@@ -3,6 +3,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 
 # Resources
 * [MySQL Tutorial](http://www.mysqltutorial.org/)
+* [MySQL Documentation](https://dev.mysql.com/doc/)
 * [Essential SQL](https://www.essentialsql.com/)
 * [Stack Over Flow](https://stackoverflow.com/)
 
