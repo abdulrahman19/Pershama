@@ -59,7 +59,7 @@
 * **[JSON](./json.md)** <br>
 
 ### Data Types Cheat Sheet
-* **[* Data Types Cheat Sheet](./data-types-cheat-sheet.md)** <br>
+* **[Data Types Cheat Sheet](./data-types-cheat-sheet.md)** <br>
 
 # ToDo
 - [ ] Spatial Data Types.

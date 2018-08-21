@@ -1,4 +1,4 @@
-# BINARY
+# VARBINARY
 
 * [Declare VARBINARY Value](#declare-varbinary-value)
 * [INSERT And SELECT VARBINARY Value](#insert-and-select-varbinary-value)

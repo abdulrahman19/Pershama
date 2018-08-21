@@ -14,6 +14,8 @@ When you store a `CHAR` value, MySQL **pads its value with spaces to the length 
 
 If a `CHAR` column is indexed, comparisons ignore space-padded at the end. This means that, if the index requires unique values, duplicate-key errors will occur for values **that differ only in the number of trailing spaces**. For example, if a table contains 'a', an attempt to store 'a ' causes a **duplicate-key error**.
 
+If strict SQL mode is not enabled when you assign a value to a `CHAR` column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated. Otherwise, you can cause an error to occur. Truncation of excess *trailing spaces* from inserted values is performed silently, regardless of the SQL mode.
+
 ```sql
 CREATE TABLE mysql_char_test (
     status CHAR(3)

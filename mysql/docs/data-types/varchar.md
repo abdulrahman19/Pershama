@@ -33,7 +33,7 @@ VARCHAR(3) | Storage Required (bytes)
 'ab' | 3
 'abc' | 4
 
-Truncation of excess trailing spaces from values to be inserted into `VARCHAR` columns always generates a warning, regardless of the SQL mode.
+If strict SQL mode is not enabled when you assign a value to a `VARCHAR` column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated. Otherwise, you can cause an error to occur. And *trailing spaces* in excess of the column length are truncated prior to insertion and a warning is generated, regardless of the SQL mode.
 
 For `VARCHAR` column, there is no padding on insert and no bytes are stripped on select.
 

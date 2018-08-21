@@ -18,15 +18,17 @@ Min | Max | Length | Unit | Note
 
 The MySQL `FLOAT` data type is **Floating-Point Types** represent **approximate numeric data values** and used to store **Scientific Notation** form in the database.
 
-A precision from 0 to 23 ([Mantissa / Significand bits](https://en.wikipedia.org/wiki/Significand)) results in a 4-byte single-precision `FLOAT` column.
+A precision from 0 to 23 ([Mantissa / Significand precision](https://en.wikipedia.org/wiki/Significand)) results in a 4-byte single-precision `FLOAT` column. This gives from 6 to 9 significant decimal digits precision.
 
 <pre>
+1.23457e15
+
 S  EEEEEEEE FFFFFFFFFFFFFFFFFFFFFFF
 31 30    23 22                    0
 
-S = Sign = 1 bit
-E = Exponent = 8 bits
-F = Fraction = 24 bits (23 explicitly stored)
+S = Sign = 1 bit (+)
+E = Exponent = 8 bits (15)
+F = Fraction = 24 bits (23 explicitly stored) (1.23457)
 </pre>
 
 ```sql
@@ -37,7 +39,7 @@ column_name FLOAT(P,D);
 
 **Scientific Notations**
 
-Scientific Notations is a pattern like X.xxxxxx Ex , Ex = 10^x.
+Scientific Notations is a pattern like X.xxxxxx Ex , where Ex = 10^x.
 
 For example: 1234567890000000 number will represent like that in scientific notation **1.23456789E^15**.
 

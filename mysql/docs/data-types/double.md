@@ -7,7 +7,7 @@ Min | Max | Length | Unit | Note
 
 It's like a [FLOAT](./float.md) data type, but `DOUBLE` can work with larger numbers and it can represent 15 digits before convert the value to scientific notation and 16 before approximate the value.
 
-A precision from 24 to 53 ([Mantissa / Significand bits](https://en.wikipedia.org/wiki/Significand)) results in an 8-byte double-precision `DOUBLE` column.
+A precision from 24 to 53 ([Mantissa / Significand precision](https://en.wikipedia.org/wiki/Significand)) results in an 8-byte double-precision `DOUBLE` column. The 53-bit Significand precision gives from 15 to 17 significant decimal digits precision.
 
 <pre>
 S  EEEEEEEEEEE FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
