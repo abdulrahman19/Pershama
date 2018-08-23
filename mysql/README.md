@@ -13,6 +13,7 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 * [Data Modeling](./docs/data-modeling)
 * **MySQL Basics**
     * [Data Types](./docs/data-types)
+    * [Data Definition](./docs/data-definition)
     * [Data Manipulation](./docs/data-manipulation)
 * **MySQL Advanced**
     * [MySQL Functions](./docs/functions)
