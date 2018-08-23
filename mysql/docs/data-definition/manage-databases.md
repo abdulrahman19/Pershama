@@ -8,9 +8,8 @@
 ### Creating Database
 To create a database in MySQL, you use the `CREATE DATABASE` statement as follows:
 ```sql
-CREATE DATABASE IF NOT EXISTS database_name;
+CREATE DATABASE [IF NOT EXISTS] database_name;
 ```
-[`IF NOT EXISTS`] is an optional.
 
 ### Displaying Databases
 The `SHOW DATABASES` statement displays all databases in the MySQL database server
@@ -27,6 +26,5 @@ USE database_name;
 ### Removing Databases
 Removing database means you delete the database physically. All the data and associated objects inside the database are permanently deleted and this cannot be undone.
 ```sql
-DROP DATABASE IF EXISTS database_name;
+DROP DATABASE [IF EXISTS] database_name;
 ```
-[`IF EXISTS`] is an optional.

@@ -5,7 +5,11 @@
 ### Data Definition
 * **[Manage Databases](./manage-databases.md)** <br>
 * **[Table Types](./table-types.md)** <br>
+* **[Create a Table](./create-a-table.md)** <br>
 
 ### MySql Globalization
 
 ### MySql Import & Export
+
+# ToDo
+- [ ] Table types in details.
