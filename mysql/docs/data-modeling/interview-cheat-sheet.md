@@ -3,6 +3,8 @@
 ### Key Definition
 A key is a single or combination of multiple fields in a table. Its is used to fetch or retrieve records/data-rows from data table, also used to create relationship among different database tables or views.
 
+Also the key is usually a synonym for `INDEX`. You use the key when you want to create an index for a column or a set of columns that is not the part of a `primary key` or `unique key`.
+
 ### Key Types
 * Super Key
 * Candidate Key
