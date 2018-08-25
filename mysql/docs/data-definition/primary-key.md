@@ -1,4 +1,4 @@
-# Create a Table
+# Primary Key
 
 * [Defining a PRIMARY KEY](#defining-a-primary-key)
 * [ALTER TABLE with PRIMARY KEY](#alter-table-with-primary-key)
