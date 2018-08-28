@@ -10,6 +10,7 @@
 * **[Foreign Key](./foreign-key.md)** <br>
 * **[Unique Constraint](./unique-constraint.md)** <br>
 * **[Not Null Constraint](./not-null-constraint.md)** <br>
+* **[Sequence](./sequence.md)** <br>
 
 ### MySql Globalization
 
