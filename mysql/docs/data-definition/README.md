@@ -9,6 +9,7 @@
 * **[Primary Key](./primary-key.md)** <br>
 * **[Foreign Key](./foreign-key.md)** <br>
 * **[Unique Constraint](./unique-constraint.md)** <br>
+* **[Not Null Constraint](./not-null-constraint.md)** <br>
 
 ### MySql Globalization
 
@@ -16,3 +17,4 @@
 
 # ToDo
 - [ ] Table types in details.
+- [ ] [MySQL CHECK Constraint Emulation](http://www.mysqltutorial.org/mysql-check-constraint/).
