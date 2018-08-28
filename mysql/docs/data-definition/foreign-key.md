@@ -7,7 +7,7 @@
 
 A `foreign key` can be a column or a set of columns. The columns in the child table often refer to the `primary key` columns in the parent table.
 
-A table may have more than one `foreign key`, and each `foreign key` in the child table may refer to a different parent table.
+A table may have more than one `foreign key`, and each `foreign key` in the child table may refer to a different parent tables.
 
 Sometimes, the child and parent tables are the same. The `foreign key` refers back to the `primary key` of the table. Please check [self join](../data-manipulation/join.md#self-join).
 
@@ -16,6 +16,16 @@ Sometimes, the child and parent tables are the same. The `foreign key` refers ba
 In addition, you can set up a `cascade on delete` action for the `foreign key` column so that when you delete a parent column in the parent table, all the child column associated with the parent column are also deleted. This saves you time and efforts of using multiple `DELETE` statements or a `DELETE JOIN` statement.
 
 The same as deletion, you can also define a `cascade on update` action for the `foreign key` column to perform the cross-table update without using multiple` UPDATE` statements or an `UPDATE JOIN` statement.
+
+#### `ON [DELETE/UPDATE]` options:
+
+Option | Description
+---|---|
+`NO ACTION` | `InnoDB` rejects the delete or update operation for the parent table.
+`RESTRICT` | `RESTRICT` is synonymous to `NO ACTION` and those are default behavior.
+`SET NULL` | Delete or update the row from the parent table and set the foreign key column or columns in the child table to `NULL`.
+`CASCADE` | Delete or update the row from the parent table and automatically delete or update the matching rows in the child table.
+`SET DEFAULT` | This action is recognized by the parser, but `InnoDB` rejects table definitions containing `ON [DELETE/UPDATE] SET DEFAULT` clauses.
 
 Please check also this [summary](../data-modeling/database-keys.md)
 
@@ -64,17 +74,6 @@ ON UPDATE action;
 ```
 Example:
 ```sql
-USE dbdemo;
-
-CREATE TABLE vendors(
-    vdr_id int not null auto_increment primary key,
-    vdr_name varchar(255)
-)ENGINE=InnoDB;
-
-ALTER TABLE products
-ADD COLUMN vdr_id int not null AFTER cat_id;
-
-# or
 ALTER TABLE products
 ADD FOREIGN KEY fk_vendor(vdr_id)
 REFERENCES vendors(vdr_id)
@@ -93,7 +92,10 @@ To see the `foreign keys` of a table
 ```sql
 SHOW CREATE TABLE table_name;
 ```
-To Disabling `foreign key` checks
+
+Sometimes, it is very useful to disable foreign key checks e.g., when you import data from a CSV file into a table. If you don’t disable foreign key checks, you have to load data into a proper order i.e., you have to load data into parent tables first and then child tables, which can be tedious
+
+So to Disabling `foreign key` checks
 ```sql
 SET foreign_key_checks = 0;
 

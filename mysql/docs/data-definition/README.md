@@ -8,6 +8,7 @@
 * **[Create a Table](./create-a-table.md)** <br>
 * **[Primary Key](./primary-key.md)** <br>
 * **[Foreign Key](./foreign-key.md)** <br>
+* **[Unique Constraint](./unique-constraint.md)** <br>
 
 ### MySql Globalization
 
