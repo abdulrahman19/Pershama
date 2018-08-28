@@ -11,11 +11,13 @@
 * **[Unique Constraint](./unique-constraint.md)** <br>
 * **[Not Null Constraint](./not-null-constraint.md)** <br>
 * **[Sequence](./sequence.md)** <br>
+* **[Alter Table](./alter-table.md)** <br>
 
 ### MySql Globalization
 
 ### MySql Import & Export
 
 # ToDo
+- [ ] \[Rename/Update\] database.
 - [ ] Table types in details.
 - [ ] [MySQL CHECK Constraint Emulation](http://www.mysqltutorial.org/mysql-check-constraint/).
