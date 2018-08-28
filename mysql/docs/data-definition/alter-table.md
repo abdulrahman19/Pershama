@@ -29,6 +29,7 @@ ALTER TABLE tasks
 ADD COLUMN complete DECIMAL(2,1) NULL
 AFTER description;
 ```
+More information [here](./add-columns.md)
 
 ### Changing Columns
 ```sql

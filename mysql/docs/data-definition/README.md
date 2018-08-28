@@ -12,6 +12,7 @@
 * **[Not Null Constraint](./not-null-constraint.md)** <br>
 * **[Sequence](./sequence.md)** <br>
 * **[Alter Table](./alter-table.md)** <br>
+* **[Add Columns](./add-columns.md)** <br>
 
 ### MySql Globalization
 
