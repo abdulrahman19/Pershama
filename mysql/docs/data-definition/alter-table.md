@@ -42,3 +42,4 @@ CHANGE COLUMN task_id task_id INT(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE tasks
 DROP COLUMN description;
 ```
+More information [here](./drop-columns.md)

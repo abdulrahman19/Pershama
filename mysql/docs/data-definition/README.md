@@ -13,6 +13,7 @@
 * **[Sequence](./sequence.md)** <br>
 * **[Alter Table](./alter-table.md)** <br>
 * **[Add Columns](./add-columns.md)** <br>
+* **[Drop Columns](./drop-columns.md)** <br>
 
 ### MySql Globalization
 
