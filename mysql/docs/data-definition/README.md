@@ -15,6 +15,7 @@
 * **[Add Columns](./add-columns.md)** <br>
 * **[Drop Columns](./drop-columns.md)** <br>
 * **[Rename Tables](./rename-table.md)** <br>
+* **[Drop Tables](./drop-tables.md)** <br>
 
 ### MySql Globalization
 
