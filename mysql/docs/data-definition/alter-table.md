@@ -22,6 +22,7 @@ To change the structure an existing table:
 ALTER TABLE tasks
 RENAME TO work_items;
 ```
+More information [here](./rename-table.md)
 
 ### Add a New Column
 ```sql
