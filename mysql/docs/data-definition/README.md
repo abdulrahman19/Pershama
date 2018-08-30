@@ -16,6 +16,7 @@
 * **[Drop Columns](./drop-columns.md)** <br>
 * **[Rename Tables](./rename-table.md)** <br>
 * **[Drop Tables](./drop-tables.md)** <br>
+* **[Temporary Table](./temporary-table.md)** <br>
 
 ### MySql Globalization
 
