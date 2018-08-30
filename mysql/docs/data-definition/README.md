@@ -20,6 +20,7 @@
 * **[Temporary Table](./temporary-table.md)** <br>
 
 ### MySql Globalization
+* **[Character Set](./character-set.md)** <br>
 
 ### MySql Import & Export
 
