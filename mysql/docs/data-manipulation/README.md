@@ -17,6 +17,7 @@
 * **[UPDATE](./update.md)** <br>
 * **[DELETE](./delete.md)** <br>
 * **[REPLACE](./replace.md)** <br>
+* **[Prepared Statement](./prepared-statement.md)** <br>
 * **[Interview Cheat Sheet](./interview-cheat-sheet.md)** <br>
 
 ## ToDo

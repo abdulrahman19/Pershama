@@ -23,8 +23,6 @@
 * **[Character Set](./character-set.md)** <br>
 * **[Character Set Collations](./character-set-collations.md)** <br>
 
-### MySql Import & Export
-
 # ToDo
 - [ ] \[Rename/Update\] database.
 - [ ] Table types in details.
