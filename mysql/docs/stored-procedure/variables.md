@@ -1,4 +1,4 @@
-# Variables
+# Stored Procedure Variables
 
 * [Declaring Variables](#declaring-variables)
 * [Assigning Variables](#assigning-variables)

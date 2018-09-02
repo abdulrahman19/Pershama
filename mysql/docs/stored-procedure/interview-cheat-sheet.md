@@ -2,6 +2,7 @@
 
 * [Introduction](#introduction)
 * [Variables](#variables)
+* [Parameters](#parameters)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -57,3 +58,15 @@ FROM
 **Variables Scope**
 * If you declare a variable inside `BEGIN END` block, it will be out of scope if the `END` is reached.
 * A variable whose name begins with the `@` sign is a session variable. It is available and accessible until the session ends.
+
+### Parameters
+The parameters make the stored procedure more flexible and useful. In MySQL, a parameter has one of three modes: `IN`,`OUT`, or `INOUT`.
+* `IN` – is the default mode. When you define an `IN` parameter in a stored procedure, the calling program has to pass an argument to the stored procedure. In addition, the stored procedure only works on the copy of the `IN` parameter. That's mean its original value is retained after the stored procedure ends.
+* `OUT` [return] – the value of an `OUT` parameter can be changed inside the stored procedure and its new value is passed back to the calling program. Notice that the stored procedure cannot access the initial value of the `OUT` parameter when it starts.
+* `INOUT` – an `INOUT` parameter is a combination of `IN` and `OUT` parameters. It means that the calling program may pass the argument, and the stored procedure can modify the `INOUT` parameter, and pass the new value back to the calling program.
+
+```sql
+MODE param_name param_type(param_size)
+
+IN countryName VARCHAR(255)
+```
