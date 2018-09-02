@@ -5,6 +5,7 @@
 * [Parameters](#parameters)
 * [IF Statement](#if-statement)
 * [CASE Statement](#case-statement)
+* [Loops Statements](#loops-statements)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -108,3 +109,26 @@ CASE
 END CASE;
 ```
 
+### Loops Statements
+**WHILE loop**
+```sql
+WHILE expression DO
+   statements
+END WHILE
+```
+**REPEAT loop**
+```sql
+REPEAT
+    statements;
+UNTIL expression
+END REPEAT
+```
+**LOOP With LEAVE And ITERATE**
+* `LEAVE` = break
+* `ITERATE` = continue
+```sql
+loop_label:  LOOP
+    expression
+      [LEAVE loop_label / ITERATE loop_label / statements ]
+END LOOP
+```
