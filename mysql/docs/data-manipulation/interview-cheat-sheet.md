@@ -12,6 +12,9 @@
 * [UPDATE](#update) <br>
 * [DELETE](#delete) <br>
 * [REPLACE](#replace) <br>
+* [Prepared Statement](#prepared-statement) <br>
+* [Transaction](#transaction) <br>
+* [Table Locking](#table-locking) <br>
 
 ### SELECT
 * You can `SELECT` all columns by `*` symbol.
@@ -157,3 +160,63 @@ The MySQL `REPLACE` statement is a MySQL extension to the standard SQL. The MySQ
 To determine whether the new row already exists in the table, MySQL uses `PRIMARY KEY` or `UNIQUE KEY` index. If the table does not have one of these indexes, the `REPLACE` statement is equivalent to the `INSERT` statement.
 
 You can use `REPLACE` statement with returned date from `SELECT` statement.
+
+### Prepared Statement
+The prepared statement takes advantage of client/server binary protocol. That's more powerful then textual format, the textual protocol has serious performance implication.
+
+In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
+* `PREPARE` – Prepares statement for execution.
+* `EXECUTE` – Executes a prepared statement preparing by a `PREPARE` statement.
+* `DEALLOCATE PREPARE` – Releases a prepared statement.
+
+```sql
+PREPARE stmt1 FROM 'SELECT productCode, productName
+                    FROM products
+                    WHERE productCode = ?';
+
+SET @pc = 'S10_1678';
+EXECUTE stmt1 USING @pc;
+
+DEALLOCATE PREPARE stmt1;
+```
+
+### Transaction
+MySQL transaction allows you to execute a set of MySQL operations to ensure that the database never contains the result of partial operations. In a set of operations, if one of them fails, the rollback occurs to restore the database to its original state. If no error occurs, the entire set of statements is committed to the database.
+
+And you need to ensure the database engine support the transaction.
+
+To disable or enable the auto-commit mode for the current transaction, you use the `SET autocommit` statement.
+
+Please note, if you didn't `COMMIT` your changes, the changes will effect only the current session but other sessions will not effect at all.
+
+```sql
+-- 1. start a new transaction
+START TRANSACTION;
+
+...
+-- Queries
+...
+
+-- 5. commit or ROLLBACK changes
+COMMIT;
+ROLLBACK;
+```
+
+### Table Locking
+A lock is a flag associated with a table. MySQL allows a client session to explicitly acquire a table lock for preventing other sessions from accessing the same table during a specific period. A client session can acquire or release table locks only for itself. It cannot acquire or release table locks for other sessions.
+
+```sql
+LOCK TABLES table_name [READ | WRITE]
+
+UNLOCK TABLES;
+```
+
+* Read locks are “shared” locks which prevent a write lock is being acquired but not other read locks.
+* Write locks are “exclusive” locks that prevent any other lock of any kind.
+
+When insert operation happened from second session it'll be in the waiting state because a `READ` or `WRITE` lock is already acquired on the table by the first session and it has not released yet.
+
+You can see the detailed information from the `SHOW PROCESSLIST` statement.
+```sql
+SHOW PROCESSLIST;
+```

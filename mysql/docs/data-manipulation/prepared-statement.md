@@ -13,7 +13,7 @@ When MySQL executes this query with different `productcode` values, it does not 
 In order to use MySQL prepared statement, you need to use other three MySQL statements as follows:
 * `PREPARE` – Prepares statement for execution.
 * `EXECUTE` – Executes a prepared statement preparing by a `PREPARE` statement.
-* `DEALLOCATE` PREPARE – Releases a prepared statement.
+* `DEALLOCATE PREPARE` – Releases a prepared statement.
 ```sql
 PREPARE stmt1 FROM 'SELECT productCode, productName
                     FROM products
