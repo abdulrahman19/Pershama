@@ -1,4 +1,4 @@
-# Interview Cheat Sheet
+# Data Definition Cheat Sheet
 
 * [Manage Databases](#manage-databases) <br>
 * [InnoDB vs MyISAM](#innodb-vs-myisam) <br>

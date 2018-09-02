@@ -1,4 +1,4 @@
-# Interview Cheat Sheet
+# Data Modeling Cheat Sheet
 
 ### Key Definition
 A key is a single or combination of multiple fields in a table. Its is used to fetch or retrieve records/data-rows from data table, also used to create relationship among different database tables or views.

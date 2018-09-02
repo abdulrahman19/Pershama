@@ -18,7 +18,7 @@
 * **[Truncate Table](./truncate-table.md)** <br>
 * **[Drop Tables](./drop-tables.md)** <br>
 * **[Temporary Table](./temporary-table.md)** <br>
-* **[Interview Cheat Sheet](./interview-cheat-sheet.md)** <br>
+* **[Data Definition Cheat Sheet](./interview-cheat-sheet.md)** <br>
 
 ### MySql Globalization
 * **[Character Set](./character-set.md)** <br>

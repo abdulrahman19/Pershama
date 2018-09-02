@@ -1,4 +1,4 @@
-# Interview Cheat Sheet
+# Data Manipulation Cheat Sheet
 
 * [SELECT](#select) <br>
 * [WHERE](#where) <br>
