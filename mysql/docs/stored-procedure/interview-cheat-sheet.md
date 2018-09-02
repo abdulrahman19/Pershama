@@ -4,6 +4,7 @@
 * [Variables](#variables)
 * [Parameters](#parameters)
 * [IF Statement](#if-statement)
+* [CASE Statement](#case-statement)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -85,3 +86,25 @@ ELSE
 ]
 END IF;
 ```
+
+### CASE Statement
+There are two forms of the `CASE` statements:
+* simple : check the value of an expression against a set of unique values.
+```sql
+CASE case_expression
+   WHEN when_expression_1 THEN commands
+   WHEN when_expression_2 THEN commands
+   ...
+   [ELSE commands]
+END CASE;
+```
+* searched : In order to perform more complex matches such as ranges.
+```sql
+CASE
+    WHEN condition_1 THEN commands
+    WHEN condition_2 THEN commands
+   ...
+   [ELSE commands]
+END CASE;
+```
+
