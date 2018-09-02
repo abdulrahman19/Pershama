@@ -3,6 +3,7 @@
 * [Introduction](#introduction)
 * [Variables](#variables)
 * [Parameters](#parameters)
+* [IF Statement](#if-statement)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -69,4 +70,18 @@ The parameters make the stored procedure more flexible and useful. In MySQL, a p
 MODE param_name param_type(param_size)
 
 IN countryName VARCHAR(255)
+```
+
+### IF Statement
+```sql
+IF expression THEN
+   statements;
+[
+ELSEIF elseif-expression THEN
+   elseif-statements;
+...
+ELSE
+   else-statements;
+]
+END IF;
 ```
