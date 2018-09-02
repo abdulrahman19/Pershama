@@ -1,6 +1,7 @@
 # Stored Procedure Cheat Sheet
 
 * [Introduction](#introduction)
+* [Variables](#variables)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -34,3 +35,25 @@ DELIMITER $$
 ```sql
 CALL GetAllProducts();
 ```
+
+### Variables
+**Declaring Variables**
+```sql
+DECLARE variable_name[, variable_name2 ..] datatype(size) DEFAULT default_value;
+```
+
+**Assigning Variables**
+```sql
+DECLARE total_count INT DEFAULT 0;
+
+SET total_count = 10;
+# or by using select into
+SELECT
+   COUNT(*) INTO total_count
+FROM
+   products;
+```
+
+**Variables Scope**
+* If you declare a variable inside `BEGIN END` block, it will be out of scope if the `END` is reached.
+* A variable whose name begins with the `@` sign is a session variable. It is available and accessible until the session ends.
