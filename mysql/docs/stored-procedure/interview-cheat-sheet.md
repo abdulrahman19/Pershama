@@ -6,6 +6,7 @@
 * [IF Statement](#if-statement)
 * [CASE Statement](#case-statement)
 * [Loops Statements](#loops-statements)
+* [Cursor](#cursor)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -131,4 +132,36 @@ loop_label:  LOOP
     expression
       [LEAVE loop_label / ITERATE loop_label / statements ]
 END LOOP
+```
+
+### Cursor
+A cursor allows you to iterate a set of rows returned by a query and process each row accordingly. It's like `foreach` functionality in PHP.
+
+MySQL cursor is read-only, non-scrollable and asensitive.
+
+* **Read-only**: you cannot update data in the underlying table through the cursor.
+* **Non-scrollable**: you can only fetch rows in the order determined by the `SELECT` statement.
+* **Asensitive**: An asensitive cursor points to the actual data, whereas an insensitive cursor uses a temporary copy of the data. any change that made to the data from other connections will affect the data that is being used by an asensitive cursor.
+
+**How To Create Cursor**
+
+1- Declare the cursor after any variable declaration.
+```sql
+DECLARE cursor_name CURSOR FOR SELECT_statement;
+```
+2- declare a `NOT FOUND` handler.
+```sql
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET finished = 1;
+```
+3- You open the cursor by using the `OPEN` statement.
+```sql
+OPEN cursor_name;
+```
+4- you use the `FETCH` statement to retrieve the next row pointed by the cursor and move the cursor to the next row in the result.
+```sql
+FETCH cursor_name INTO variables list;
+```
+5- `CLOSE` statement to deactivate the cursor and release the memory associated with it.
+```sql
+CLOSE cursor_name;
 ```
