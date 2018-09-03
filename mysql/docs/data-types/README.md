@@ -58,7 +58,7 @@
 ### JSON
 * **[JSON](./json.md)** <br>
 
-### Data Types Cheat Sheet
+## The Brief
 * **[Data Types Cheat Sheet](./data-types-cheat-sheet.md)** <br>
 
 # ToDo

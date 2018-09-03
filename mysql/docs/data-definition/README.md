@@ -18,11 +18,13 @@
 * **[Truncate Table](./truncate-table.md)** <br>
 * **[Drop Tables](./drop-tables.md)** <br>
 * **[Temporary Table](./temporary-table.md)** <br>
-* **[Data Definition Cheat Sheet](./interview-cheat-sheet.md)** <br>
 
 ### MySql Globalization
 * **[Character Set](./character-set.md)** <br>
 * **[Character Set Collations](./character-set-collations.md)** <br>
+
+## The Brief
+* **[Data Definition Cheat Sheet](./data-definition-cheat-sheet.md)** <br>
 
 # ToDo
 - [ ] \[Rename/Update\] database.

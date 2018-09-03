@@ -20,7 +20,9 @@
 * **[Prepared Statement](./prepared-statement.md)** <br>
 * **[Transaction](./transaction.md)** <br>
 * **[Table Locking](./table-locking.md)** <br>
-* **[Data Manipulation Cheat Sheet](./interview-cheat-sheet.md)** <br>
+
+## The Brief
+* **[Data Manipulation Cheat Sheet](./data-manipulation-cheat-sheet.md)** <br>
 
 ## ToDo
 - [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.

@@ -14,7 +14,7 @@
 * **[Stored Function](./stored-function.md)** <br>
 
 ## The Brief
-* **[Stored Procedure Cheat Sheet](./interview-cheat-sheet.md)** <br>
+* **[Stored Procedure Cheat Sheet](./stored-procedure-cheat-sheet.md)** <br>
 * **[Terminologies In This Chapter](./terminology.md)** <br>
 
 # ToDo
