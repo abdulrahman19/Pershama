@@ -10,6 +10,7 @@
 * [Listing Stored Procedures](#listing-stored-procedures)
 * [Error Handling](#error-handling)
 * [Raising Error Conditions](#raising-error-conditions)
+* [Stored Functions](#stored-functions)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -252,3 +253,22 @@ SIGNAL [SQLSTATE | condition_name]
 [SET condition_information_item_name_1 = value_1,
     condition_information_item_name_1 = value_2, etc;]
 ```
+
+### Stored Functions
+A stored function is a special kind stored program that **returns a single value**. You use stored functions to encapsulate common formulas or business rules that are reusable among SQL statements or stored programs.
+
+Different from a stored procedure:
+* You can use a stored function in SQL statements wherever an expression is used. This helps improve the readability and maintainability of the procedural code.
+* Also User-defined functions cannot be used to perform actions that modify the database state. for that we can't use stored procedure inside stored function but the opposite is right.
+```sql
+CREATE FUNCTION function_name(param1,param2,…) RETURNS datatype
+    [NOT] DETERMINISTIC
+    statements
+    ...
+```
+
+**DETERMINISTIC**
+
+The main purpose of the `DETERMINISTIC` flag is to tell MySQL the stored function will Returns same result for same input.
+
+`DETERMINISTIC` flag declare for replication operations.
