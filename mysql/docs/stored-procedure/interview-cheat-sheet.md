@@ -9,6 +9,7 @@
 * [Cursor](#cursor)
 * [Listing Stored Procedures](#listing-stored-procedures)
 * [Error Handling](#error-handling)
+* [Raising Error Conditions](#raising-error-conditions)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -224,4 +225,30 @@ CREATE PROCEDURE insert_article_tags(IN article_id INT, IN tag_id INT)
         SELECT COUNT(*) FROM article_tags;
     END
 DELIMITER ;
+```
+
+### Raising Error Conditions
+With `SIGNAL` and `RESIGNAL` you can handle your own errors and warnings. To raise a condition, use the `SIGNAL` statement. To modify condition information within a condition handler, use `RESIGNAL`.
+
+**SIGNAL**
+
+`SIGNAL` is the way to “return” an error. `SIGNAL` provides error or warning information to a handler, to an outer portion of the application, or to the client. Also, it provides control over the error's characteristics (`error number`, `SQLSTATE value`, `message`).
+```sql
+SIGNAL SQLSTATE | condition_name
+SET condition_information_item_name_1 = value_1,
+    condition_information_item_name_1 = value_2, etc;
+```
+Notice that the `SIGNAL` statement must always specify a `SQLSTAT` value or a named condition that defined with an `SQLSTATE` value.
+
+**RESIGNAL**
+
+`RESIGNAL` is so useful if you will use the same message in many places inside the procedure. instead of write them many times by `SIGNAL` you can put them in one place with `RESIGNAL`.
+
+The `RESIGNAL` statement is similar to `SIGNAL` statement in term of functionality and syntax, except that:
+* You must use the `RESIGNAL` statement within an error or warning handler, otherwise, you will get an error message saying that `RESIGNAL` when handler is not active. Notice that you can use `SIGNAL` statement anywhere inside a stored procedure.
+* You can omit all attributes of the `RESIGNAL` statement, even the `SQLSTATE` value.
+```sql
+SIGNAL [SQLSTATE | condition_name]
+[SET condition_information_item_name_1 = value_1,
+    condition_information_item_name_1 = value_2, etc;]
 ```
