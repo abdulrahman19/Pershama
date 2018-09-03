@@ -7,6 +7,7 @@
 * [CASE Statement](#case-statement)
 * [Loops Statements](#loops-statements)
 * [Cursor](#cursor)
+* [Listing Stored Procedures](#listing-stored-procedures)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -164,4 +165,14 @@ FETCH cursor_name INTO variables list;
 5- `CLOSE` statement to deactivate the cursor and release the memory associated with it.
 ```sql
 CLOSE cursor_name;
+```
+
+### Listing Stored Procedures
+**Displaying Characteristics Of Stored Procedures**
+```sql
+SHOW PROCEDURE STATUS [LIKE 'pattern' | WHERE expr];
+```
+**Displaying Stored Procedure’s Source Code**
+```sql
+SHOW CREATE PROCEDURE stored_procedure_name;
 ```
