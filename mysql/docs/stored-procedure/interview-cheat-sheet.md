@@ -8,6 +8,7 @@
 * [Loops Statements](#loops-statements)
 * [Cursor](#cursor)
 * [Listing Stored Procedures](#listing-stored-procedures)
+* [Error Handling](#error-handling)
 
 ### Introduction
 A stored procedure is a segment of declarative SQL statements stored inside the database catalog. <br>
@@ -175,4 +176,52 @@ SHOW PROCEDURE STATUS [LIKE 'pattern' | WHERE expr];
 **Displaying Stored Procedure’s Source Code**
 ```sql
 SHOW CREATE PROCEDURE stored_procedure_name;
+```
+
+### Error Handling
+To declare a handler, you use the `DECLARE HANDLER` statement as follows:
+```sql
+DECLARE action HANDLER FOR condition_value statement;
+```
+The `action` accepts one of the following values:
+* **CONTINUE** :  the execution of the enclosing code block ( `BEGIN … END` ) continues.
+* **EXIT** : the execution of the enclosing code block, where the handler is declared, terminates.
+
+The `condition_value` accepts one of the following values:
+* A MySQL error code.
+* A standard `SQLSTATE` value. Or it can be an `SQLWARNING` , `NOTFOUND` or `SQLEXCEPTION` condition, which is shorthand for the class of `SQLSTATE` values. The `NOTFOUND` condition is used for a `cursor` or `SELECT INTO variable_list` statement.
+* A named condition associated with either a MySQL error code or `SQLSTATE` value.
+
+**Error Handler Precedence**
+
+Based on the handler precedence’s rules, this is the order for calling:
+* MySQL error code handler
+* `SQLSTATE` handler
+* `SQLEXCEPTION` handler
+
+**Named Error Condition**
+
+Fortunately, MySQL provides us with the `DECLARE CONDITION` statement that declares a named error condition, which associates with a condition.
+```sql
+DECLARE condition_name CONDITION FOR condition_value;
+```
+Notice that the condition declaration must appear before handler or cursor declarations.
+
+Example
+```sql
+DELIMITER $$
+CREATE PROCEDURE insert_article_tags(IN article_id INT, IN tag_id INT)
+    BEGIN
+        DECLARE duplicate_keys CONDITION for 1062;
+        DECLARE CONTINUE HANDLER FOR duplicate_keys
+                SELECT CONCAT('duplicate keys (',article_id,',',tag_id,') found') AS msg;
+
+        -- insert a new record into article_tags
+        INSERT INTO article_tags(article_id,tag_id)
+        VALUES(article_id,tag_id);
+
+        -- return tag count for the article
+        SELECT COUNT(*) FROM article_tags;
+    END
+DELIMITER ;
 ```
