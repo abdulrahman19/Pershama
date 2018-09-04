@@ -3,6 +3,7 @@
 * [Introduction](#introduction)
 * [Create Views](#create-views)
 * [WITH CHECK OPTION Clause](#with-check-option-clause)
+* [Managing Views](#managing-views)
 
 ### Introduction
 A database view is a virtual table or logical table which is defined as a SQL `SELECT` query with `joins`. MySql allow you to update data in the underlying tables through the database view with some prerequisites. And when the data of the tables changes, the view reflects that changes as well.
@@ -106,3 +107,35 @@ When a view uses a `WITH CASCADED CHECK OPTION`, MySQL checks the rules of the v
 **WITH LOCAL CHECK OPTION**
 
 When a view uses a `WITH LOCAL CHECK OPTION`, MySQL only checks the rules of the current view and it does not check the rules of the underlying views.
+
+### Managing Views
+
+**Showing View Definition**
+```sql
+SHOW CREATE VIEW [database_name].[view_ name];
+```
+Also from following path: `\data\classicmodels\xxx.frm`, `xxx` is the view name.
+
+**Modifying Views**
+
+With `ALTER VIEW`.
+```sql
+ALTER
+    [ALGORITHM =  {MERGE | TEMPTABLE | UNDEFINED}]
+VIEW [database_name].[view_name]
+AS
+[SELECT  statement]
+```
+With `CREATE OR REPLACE VIEW`.
+```sql
+CREATE OR REPLACE VIEW contacts AS
+    SELECT
+        firstName, lastName, extension, email
+    FROM
+        employees;
+```
+
+**Removing Views**
+```sql
+DROP VIEW [IF EXISTS] [database_name].[view_name];
+```
