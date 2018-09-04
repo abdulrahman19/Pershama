@@ -15,7 +15,4 @@
 
 ## The Brief
 * **[Stored Procedure Cheat Sheet](./stored-procedure-cheat-sheet.md)** <br>
-* **[Terminologies In This Chapter](./terminology.md)** <br>
-
-# ToDo
-- [ ] bla
+* **[Stored Procedure Chapter Terminologies](./stored-procedure-terminology.md)** <br>
