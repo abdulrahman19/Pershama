@@ -2,6 +2,7 @@
 
 * [Introduction](#introduction)
 * [Create Views](#create-views)
+* [WITH CHECK OPTION Clause](#with-check-option-clause)
 
 ### Introduction
 A database view is a virtual table or logical table which is defined as a SQL `SELECT` query with `joins`. MySql allow you to update data in the underlying tables through the database view with some prerequisites. And when the data of the tables changes, the view reflects that changes as well.
@@ -64,3 +65,14 @@ In the `SELECT` statement, you can query data from any table or view that exists
 SHOW FULL TABLE;
 ```
 The `table_type` column in the result set specifies which object is view and which object is a table.
+
+### WITH CHECK OPTION Clause
+`WITH CHECK OPTION` clause use to ensure consistency of the views. Consistency of the view means prevents user from updating or inserting rows that are not visible through the view.
+
+The following illustrates the syntax of the `WITH CHECK OPTION` clause.
+```sql
+CREATE OR REPLACE VIEW view_name
+AS
+    select_statement
+    WITH CHECK OPTION;
+```
