@@ -66,6 +66,26 @@ SHOW FULL TABLE;
 ```
 The `table_type` column in the result set specifies which object is view and which object is a table.
 
+### Creating Updatable Views
+Views are not only query-able but also updatable. It means that you can use the `INSERT`, `UPDATE` or `DELETE` statement to effect rows of the base table.
+
+A simple view can be updatable. but the complex one like `SELECT` statement with `join`, `Aggregate functions`, or `subquery`, etc., cannot be updatable.
+
+Also if you create a view with the `TEMPTABLE algorithm`, you cannot update the view.
+
+**Checking Updatable View Information**
+
+You can check if a view in a database in updatable by querying the `is_updatable` column from the views table in the `information_schema` database.
+```sql
+SELECT
+    table_name,
+    is_updatable
+FROM
+    information_schema.views
+WHERE
+    table_schema = 'classicmodels';
+```
+
 ### WITH CHECK OPTION Clause
 `WITH CHECK OPTION` clause use to ensure consistency of the views. Consistency of the view means prevents user from updating or inserting rows that are not visible through the view.
 

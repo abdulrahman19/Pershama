@@ -3,6 +3,7 @@
 ## Index
 * **[Introduction](./introduction.md)** <br>
 * **[Create Views](./create-views.md)** <br>
+* **[Creating Updatable Views](./creating-updatable-views.md)** <br>
 * **[WITH CHECK OPTION Clause](./with-check-option-clause.md)** <br>
 
 ## The Brief
