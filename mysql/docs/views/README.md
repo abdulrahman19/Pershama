@@ -2,6 +2,7 @@
 
 ## Index
 * **[Introduction](./introduction.md)** <br>
+* **[Create Views](./create-views.md)** <br>
 
 ## The Brief
 * **[Views Cheat Sheet](./views-cheat-sheet.md)** <br>

@@ -1,9 +1,10 @@
 # Views Cheat Sheet
 
 * [Introduction](#introduction)
+* [Create Views](#create-views)
 
 ### Introduction
-A database view is a virtual table or logical table which is defined as a SQL `SELECT` query with `joins`. MySQL allow you to update data in the underlying tables through the database view with some prerequisites. And when the data of the tables changes, the view reflects that changes as well.
+A database view is a virtual table or logical table which is defined as a SQL `SELECT` query with `joins`. MySql allow you to update data in the underlying tables through the database view with some prerequisites. And when the data of the tables changes, the view reflects that changes as well.
 
 **Views Advantages**
 * A database view allows you to simplify complex queries.
@@ -24,8 +25,42 @@ MySql processes query against the views in two ways:
 
 MySql supports versioning system for views, that means MySql takes a back up in `arc` (archive) directory. Also MySql allows you to create a view based on other views.
 
-**MySQL View’s Restrictions**
+**MySql View’s Restrictions**
 * You cannot create an index on a view.
-* If you `drop` or `rename` tables to which a view references, MySQL does not issue any error. You can use the `CHECK TABLE` statement to check whether the view is valid or not.
+* If you `drop` or `rename` tables to which a view references, MySql does not issue any error. You can use the `CHECK TABLE` statement to check whether the view is valid or not.
 * A simple view can be updatable. but the complex one like `SELECT` statement with `join`, `subquery`, etc., cannot be updatable.
-* MySQL does not support materialized view.
+* MySql does not support materialized view.
+
+### Create Views
+To create a new view in MySql, you use the `CREATE VIEW` statement. The syntax of creating a view in MySql is as follows:
+```sql
+CREATE
+    [ALGORITHM = {MERGE  | TEMPTABLE | UNDEFINED}]
+VIEW [database_name].[view_name]
+AS
+[SELECT  statement]
+```
+
+**View Processing Algorithms**
+
+Feature | MERGE Algorithm | TEMPTABLE Algorithm
+---|---|---|
+Mechanism | Combines the incoming query with the query defined the view into one query. | Creates a temporary table based on the view definition.
+Efficient | More efficient | Less efficient
+Indexing | Yes | No
+Viwe can be updatable | Yes | No
+Work with aggregate functions, Unions and LIMIT | No | Yes
+Work with no refers to tables | No | Yes
+
+**SELECT statement**
+
+In the `SELECT` statement, you can query data from any table or view that exists in the database. There are several rules that the `SELECT` statement must follow:
+* The `SELECT` statement can contain a `subquery` in `WHERE` clause but not in the `FROM` clause.
+* The `SELECT` statement cannot refer to any variables including local variables, user variables, and session variables.
+* The `SELECT` statement cannot refer to the parameters of prepared statements.
+
+**Show Views**
+```sql
+SHOW FULL TABLE;
+```
+The `table_type` column in the result set specifies which object is view and which object is a table.
