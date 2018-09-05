@@ -19,4 +19,5 @@ Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 * **MySQL Advanced**
     * [Stored Procedure](./docs/stored-procedure)
     * [Views](./docs/views)
+    * [Triggers](./docs/triggers)
     * [MySQL Functions](./docs/functions)
