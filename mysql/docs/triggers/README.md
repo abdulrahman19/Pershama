@@ -4,6 +4,7 @@
 * **[Introduction](./introduction.md)** <br>
 * **[Create Triggers](./create-trigger.md)** <br>
 * **[Managing Triggers](./managing-triggers.md)** <br>
+* **[Scheduled Events](./scheduled-events.md)** <br>
 
 
 ## The Brief

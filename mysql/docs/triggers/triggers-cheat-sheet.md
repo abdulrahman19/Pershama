@@ -3,6 +3,7 @@
 * [Introduction](#introduction)
 * [Create Triggers](#create-triggers)
 * [Managing Triggers](#managing-triggers)
+* [Scheduled Events](#scheduled-events)
 
 ### Introduction
 A SQL trigger is a set of SQL statements stored in the database catalog. A SQL trigger is executed or fired automatically whenever an event associated with a table occurs e.g., `insert`, `update` or `delete`.
@@ -113,3 +114,63 @@ DROP TRIGGER table_name.trigger_name;
 **Modify a Trigger**
 
 To modify a trigger, you have to delete it first and recreate it with the new code.
+
+### Scheduled Events
+You can see the status of event scheduler thread.
+```sql
+SHOW PROCESSLIST;
+```
+To enable and start the event scheduler thread.
+```sql
+SET GLOBAL event_scheduler = ON;
+```
+
+**Show Events**
+```sql
+SHOW EVENTS FROM database_name;
+```
+
+**Creating New Events**
+```sql
+CREATE EVENT [IF NOT EXIST]  event_name
+ON SCHEDULE schedule
+DO
+event_body
+```
+* `schedule` for once `AT timestamp [+ INTERVAL]`.
+* `schedule` for recurring event `EVERY interval STARTS timestamp [+INTERVAL] ENDS timestamp [+INTERVAL]`.
+
+MySql automatically drop the event when it is expired, To keep the event after finished use the `ON COMPLETION PRESERVE` clause.
+```sql
+CREATE EVENT test_event_02
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 MINUTE
+ON COMPLETION PRESERVE
+DO
+...
+```
+It is important to notice that you can call a `stored procedure` inside the body of the event. In case you have compound SQL statements, you can wrap them in a `BEGIN END` block.
+
+**Modify Events**
+
+you use the `ALTER EVENT` statement as follows:
+```sql
+ALTER EVENT event_name
+ON SCHEDULE schedule
+ON COMPLETION [NOT] PRESERVE
+RENAME TO new_event_name
+ENABLE | DISABLE
+DO
+    event_body
+```
+You can use any part to change what you want, you don't need to use the complete syntax.
+* `ENABLE | DISABLE` use to enable a disabled event.
+* `RENAME` can use to rename the event or move it to another database.
+```sql
+ALTER EVENT oldDb.test_event_05
+RENAME TO newDb.test_event_05
+```
+
+**Drop Events**
+```sql
+DROP EVENT [IF EXIST] event_name;
+```
