@@ -3,6 +3,7 @@
 ## Index
 * **[Introduction](./introduction.md)** <br>
 * **[Create Triggers](./create-trigger.md)** <br>
+* **[Managing Triggers](./managing-triggers.md)** <br>
 
 
 ## The Brief
