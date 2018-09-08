@@ -1,6 +1,6 @@
 # Stored Procedure Chapter Terminologies
 
-<br>Term<img width=450/> | Meaning
+<br>Term<img width=520/> | Meaning
 ---|---|
 Stored Procedure | A stored procedure is a segment of declarative SQL statements stored inside the database catalog. A stored procedure can be invoked by `triggers`, other `stored procedures`, and applications such as `Java`, `Python`, `PHP`.
 Recursive Stored Procedure | A stored procedure that calls itself.
@@ -15,3 +15,5 @@ Stored Function | A stored function is a special kind stored program that define
 Deterministic | Is a flag to tell MySQL the stored function will Returns same result for same input. It used for replication operations.
 Non-Deterministic | Is a flag to tell MySQL the stored function will Returns different result for same input.
 Database Replication | Database replication is the frequent electronic copying of data from a database in one computer or server to a database in another so that all users share the same level of information.
+UDF | is abbreviation to user-defined functions.
+DML | is abbreviation of Data Manipulation Language. It is used to retrieve, store, modify, delete, insert and update data in database.

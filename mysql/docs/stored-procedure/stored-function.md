@@ -1,12 +1,9 @@
 # Stored Function
 
 * [Stored Function Example](#stored-function-example)
+* [Function vs Procedure](#function-vs-procedure)
 
 A stored function is a special kind stored program that **returns a single value**. You use stored functions to encapsulate common formulas or business rules that are reusable among SQL statements or stored programs.
-
-Different from a stored procedure:
-* You can use a stored function in SQL statements wherever an expression is used. This helps improve the readability and maintainability of the procedural code.
-* Also User-defined functions cannot be used to perform actions that modify the database state. for that we can't use stored procedure inside stored function but the opposite is right.
 ```sql
 CREATE FUNCTION function_name(param1,param2,…) RETURNS datatype
     [NOT] DETERMINISTIC
@@ -14,6 +11,8 @@ CREATE FUNCTION function_name(param1,param2,…) RETURNS datatype
     ...
 ```
 You must specify the data type of the return value in the `RETURNS` statement. It can be any valid MySQL data types.
+
+Unlike SQL standard, You can call stored procedure inside stored function and use DML statements.
 
 **DETERMINISTIC**
 
@@ -64,3 +63,11 @@ FROM
 ORDER BY
     customerName;
 ```
+
+### Function vs Procedure
+Function | Procedure
+---|---|
+Normally used for computations | normally used for executing business logic.
+Must returns one value using the return statement | May return zero, one or more values through parameters (max 1024).
+Doesn't have pre-compiled execution plan. | Has a pre-compiled execution plan.
+Can be called directly by SQL statement | cannot

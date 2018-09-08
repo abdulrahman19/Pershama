@@ -19,9 +19,9 @@ A stored procedure that calls itself is known as a `recursive stored procedure`.
 **Stored Procedures Advantages**
 
 * Stored procedures help increase the performance of the applications. Once created, stored procedures are compiled and stored in the database. MySQL stored procedures are compiled on demand. After compiling a stored procedure, MySQL puts it into a cache and maintains its own stored procedure cache for every single connection. If an application uses a stored procedure multiple times in a single connection, the compiled version is used, otherwise, the stored procedure works like a query.
-* Stored procedures help reduce the traffic between application and database server.
+* Stored procedures help reduce the traffic between application and database server. because you send only the name and parameters of the stored procedure
 * Stored procedures are reusable and transparent to any applications.
-* Stored procedures are secure.
+* Stored procedures are secure. because you can remove application's permissions from underlying database tables.
 
 **Stored Procedures Disadvantages**
 
@@ -256,19 +256,25 @@ SIGNAL [SQLSTATE | condition_name]
 
 ### Stored Functions
 A stored function is a special kind stored program that **returns a single value**. You use stored functions to encapsulate common formulas or business rules that are reusable among SQL statements or stored programs.
-
-Different from a stored procedure:
-* You can use a stored function in SQL statements wherever an expression is used. This helps improve the readability and maintainability of the procedural code.
-* Also User-defined functions cannot be used to perform actions that modify the database state. for that we can't use stored procedure inside stored function but the opposite is right.
 ```sql
 CREATE FUNCTION function_name(param1,param2,…) RETURNS datatype
     [NOT] DETERMINISTIC
     statements
     ...
 ```
+Unlike SQL standard, You can call stored procedure inside stored function and use DML statements.
 
 **DETERMINISTIC**
 
 The main purpose of the `DETERMINISTIC` flag is to tell MySQL the stored function will Returns same result for same input.
 
 `DETERMINISTIC` flag declare for replication operations.
+
+**Function vs Procedure**
+
+Function | Procedure
+---|---|
+Normally used for computations | normally used for executing business logic.
+Must returns one value using the return statement | May return zero, one or more values through parameters (max 1024).
+Doesn't have pre-compiled execution plan. | Has a pre-compiled execution plan.
+Can be called directly by SQL statement | cannot

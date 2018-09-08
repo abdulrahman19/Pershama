@@ -61,7 +61,10 @@ How MySQL sequence works !
 * If you use the `DELETE` statement to delete the last inserted row, MySQL may or may not reuse the deleted sequence number depending on the storage engine of the table. `ISAM` and `InnoDB` tables do not reuse sequence number.
 
 **Temporary Tables**<br>
-Temporary Tables, or temp tables for short, allow you to create a short-term storage place within the database for a set of data that you need to use several times in a single series of operations. Temp tables come into play when it isn’t possible to retrieve all the data that you require using one `SELECT` statement or when you want to work with subsets of the same, larger result set over several successive operations.
+* Temporary Tables, or temp tables for short, allow you to create a short-term storage place within the database for a set of data that you need to use several times in a single series of operations. Temp tables come into play when it isn’t possible to retrieve all the data that you require using one `SELECT` statement or when you want to work with subsets of the same, larger result set over several successive operations.
+* MySQL removes the temporary table automatically when the session ends, the connection is terminated or you can use the `DROP TABLE` statement.
+* A temporary table is only available and accessible to the client that creates it.
+* A temporary table can have the same name as a normal table in a database. but every query will refer to the temporary table
 ```sql
 CREATE TEMPORARY TABLE [IF NOT EXISTS] table_name(
     column_list

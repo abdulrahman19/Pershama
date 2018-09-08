@@ -52,12 +52,12 @@ Efficient | More efficient | Less efficient
 Indexing | Yes | No
 Viwe can be updatable | Yes | No
 Work with aggregate functions, Unions and LIMIT | No | Yes
-Work with no refers to tables | No | Yes
+`SELECT` Work without refers to tables | No | Yes
 
 **SELECT statement**
 
 In the `SELECT` statement, you can query data from any table or view that exists in the database. There are several rules that the `SELECT` statement must follow:
-* The `SELECT` statement can contain a `subquery` in `WHERE` clause but not in the `FROM` clause.
+* The `SELECT` statement can contain a subquery in `WHERE` clause but not in the `FROM` clause.
 * The `SELECT` statement cannot refer to any variables including local variables, user variables, and session variables.
 * The `SELECT` statement cannot refer to the parameters of prepared statements.
 

@@ -32,7 +32,7 @@ MySQL triggers cannot:
 * Use `SHOW`, `LOAD DATA`, `LOAD TABLE`, `BACKUP DATABASE`, `RESTORE`, `FLUSH` and `RETURN` statements.
 * Use statements that commit or rollback implicitly or explicitly such as `COMMIT` , `ROLLBACK` , `START TRANSACTION` , `LOCK/UNLOCK TABLES` , `ALTER` , `CREATE` , `DROP` , `RENAME`.
 * Use prepared statements such as `PREPARE` and `EXECUTE`.
-* Use dynamic SQL statements.
+* Use dynamic SQL statements (work with variables).
 
 ### Create Triggers
 In order to create a new trigger, you use the `CREATE TRIGGER` statement.
