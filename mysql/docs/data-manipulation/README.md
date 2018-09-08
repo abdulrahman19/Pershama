@@ -23,8 +23,9 @@
 
 ## The Brief
 * **[Data Manipulation Cheat Sheet](./data-manipulation-cheat-sheet.md)** <br>
+* **[Data Manipulation Chapter Terminologies](./data-manipulation-terminology.md)** <br>
 
 ## ToDo
 - [ ] Search how can use `Aliases` With `JOIN` but not `WHERE`.
-- [ ] JOIN in deeps
+- [ ] JOIN type in deeps
 - [ ] Transaction in deeps [Youtube list](https://www.youtube.com/playlist?list=PLnpfWqvEvRCfYRq-l9AmeL6zUGITtPkZA)

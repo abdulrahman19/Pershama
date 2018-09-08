@@ -13,3 +13,4 @@
 
 ## The Brief
 * **[Data Modeling Cheat Sheet](./data-modeling-cheat-sheet.md)** <br>
+* **[Data Modeling Chapter Terminologies](./data-modeling-terminology.md)** <br>

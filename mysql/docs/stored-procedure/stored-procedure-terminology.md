@@ -1,6 +1,6 @@
 # Stored Procedure Chapter Terminologies
 
-Term | Meaning
+<br>Term<img width=450/> | Meaning
 ---|---|
 Stored Procedure | A stored procedure is a segment of declarative SQL statements stored inside the database catalog. A stored procedure can be invoked by `triggers`, other `stored procedures`, and applications such as `Java`, `Python`, `PHP`.
 Recursive Stored Procedure | A stored procedure that calls itself.
