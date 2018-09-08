@@ -7,6 +7,7 @@
 * [Foreign Key](#foreign-key) <br>
 * [Unique Constraint](#unique-constraint) <br>
 * [Not Null Constraint](#not-null-constraint) <br>
+* [Emulate CHECK Constraint](#emulate-check-constraint) <br>
 * [Alter Table](#alter-table) <br>
 * [Character Set](#character-set) <br>
 * [Character Set Collations](#character-set-collations) <br>
@@ -188,6 +189,17 @@ column_name data_type NOT NULL;
 ALTER TABLE table_name
 CHANGE end_date end_date DATE NOT NULL;
 ```
+
+### Emulate CHECK Constraint
+**Emulate CHECK With Triggers**
+
+1- Create a `stored procedure` to check the values of columns with `IF` statement. <br>
+2- Create `BEFORE INSERT` and `BEFORE UPDATE` triggers. Inside the triggers, call the stored procedure.
+
+**Emulate CHECK With Views**
+
+The idea is to create a filter layer by creating a view with `WITH CHECK OPTION` clause between the applications and the base table. <br>
+Form this point, we need to make all the `INSERT` operations are done from the view `parts` not from the base table `parts_data` to be sure from satisfy the conditions.
 
 ### Alter Table
 You use the `ALTER TABLE` statement to change the structure of existing tables. The `ALTER TABLE` statement allows you to add a column, drop a column, change the data type of column, add primary key, rename table, and many more.

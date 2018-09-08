@@ -10,6 +10,7 @@
 * **[Foreign Key](./foreign-key.md)** <br>
 * **[Unique Constraint](./unique-constraint.md)** <br>
 * **[Not Null Constraint](./not-null-constraint.md)** <br>
+* **[Emulate CHECK Constraint](./emulate-check-constraint.md)** <br>
 * **[Sequence](./sequence.md)** <br>
 * **[Alter Table](./alter-table.md)** <br>
 * **[Add Columns](./add-columns.md)** <br>
@@ -25,8 +26,8 @@
 
 ## The Brief
 * **[Data Definition Cheat Sheet](./data-definition-cheat-sheet.md)** <br>
+* **[Data Definition Chapter Terminologies](./data-definition-terminology.md)** <br>
 
 # ToDo
 - [ ] \[Rename/Update\] database.
 - [ ] Table types in details.
-- [ ] [MySQL CHECK Constraint Emulation](http://www.mysqltutorial.org/mysql-check-constraint/).
