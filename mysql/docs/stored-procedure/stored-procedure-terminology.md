@@ -16,4 +16,3 @@ Deterministic | Is a flag to tell MySQL the stored function will Returns same re
 Non-Deterministic | Is a flag to tell MySQL the stored function will Returns different result for same input.
 Database Replication | Database replication is the frequent electronic copying of data from a database in one computer or server to a database in another so that all users share the same level of information.
 UDF | is abbreviation to user-defined functions.
-DML | is abbreviation of Data Manipulation Language. It is used to retrieve, store, modify, delete, insert and update data in database.

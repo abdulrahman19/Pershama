@@ -3,6 +3,7 @@
 * [Show Indexes](#show-indexes)
 * [Create Index](#create-index)
 * [EXPLAIN Clause](#explain-clause)
+* [Drop Index](#drop-index)
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
 
@@ -48,3 +49,35 @@ EXPLAIN SELECT
         WHERE
             condition = something
 ```
+
+### Drop Index
+To remove an existing index from a table, you use the `DROP INDEX` statement as follows:
+```sql
+DROP INDEX index_name ON table_name
+[algorithm_option | lock_option];
+```
+
+**Algorithm**
+
+The `algorithm_option` allows you to specify a specific algorithm used for the index removal. The following shows the syntax of the `algorithm_option` clause:
+```sql
+ALGORITHM [=] {DEFAULT|INSTANT|INPLACE|COPY}
+```
+
+<br> Function <img width=250/>| INSTANT | INPLACE | COPY
+---|---|---|---|
+Mechanism | Operations only modify metadata in the data dictionary. | The table is rebuilt in place instead of copied to the new one. | The table is copied to new table row by row.
+Allow DML Statements | Yes | Yes | No
+Allow DDL Statements | Yes | No | No
+Note | version 8 | - | - | -
+
+**Lock**
+
+The `lock_option` controls the level of concurrent reads and writes on the table while the index is being removed.
+```sql
+LOCK [=] {DEFAULT|NONE|SHARED|EXCLUSIVE}
+```
+* `DEFAULT`: First, it allows concurrent reads and writes if supported. If not, allow concurrent reads if supported. If not, enforce exclusive access.
+* `NONE`: if supported, you can have concurrent reads and writes. Otherwise, MySQL issues an error.
+* `SHARED`: if supported, you can have concurrent reads, but not writes. MySQL issues an error if the concurrent reads are not supported.
+* `EXCLUSIVE`: this enforces exclusive access.

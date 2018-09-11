@@ -10,3 +10,8 @@ SQL | is abbreviation for Structured Query Language. <br> SQL is a domain-specif
 FD | is abbreviation for Functional Dependency. <br> FD is a relationship that exists when one attribute uniquely determines another attribute.
 Trivial FD | We call a relationship trivial FD if some attribute/s is subset from the relationship.
 Database Normalization | is process used to organize a database into tables and columns. Which minimize data redundancy.
+DDL | is abbreviation of **D**ata **D**efinition **L**anguage. Like `CREATE`, `ALTER` and `DROP` statements
+DML | is abbreviation of **D**ata **M**anipulation **L**anguage. It is used to retrieve `SELECT`, store `INSERT`, modify `UPDATE`, delete `DELETE` in database, and so many other.
+DQL | is abbreviation of **D**ata **Q**uery **L**anguage. Like `SELECT`, `SHOW` and `HELP` statements.
+DCL | is abbreviation of **D**ata **C**ontrol **L**anguage. Like `GRANT` and `REVOKE` statements.
+DTL | is abbreviation of **D**ata **T**ransaction **L**anguage. Like START `TRANSACTION` and `COMMIT` statements.
