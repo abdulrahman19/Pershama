@@ -4,6 +4,7 @@
 * [Create Index](#create-index)
 * [EXPLAIN Clause](#explain-clause)
 * [Drop Index](#drop-index)
+* [Unique Index](#unique-index)
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
 
@@ -81,3 +82,24 @@ LOCK [=] {DEFAULT|NONE|SHARED|EXCLUSIVE}
 * `NONE`: if supported, you can have concurrent reads and writes. Otherwise, MySQL issues an error.
 * `SHARED`: if supported, you can have concurrent reads, but not writes. MySQL issues an error if the concurrent reads are not supported.
 * `EXCLUSIVE`: this enforces exclusive access.
+
+### Unique Index
+To create a `UNIQUE` index, you use the `CREATE UNIQUE INDEX` statement as follows:
+```sql
+CREATE UNIQUE INDEX index_name
+ON table_name(index_column_1,index_column_2,...);
+```
+Another way to enforce the uniqueness of value in one or more columns is to use the `UNIQUE` constraint. MySQL creates a `UNIQUE` index behind the scenes.
+```sql
+CREATE TABLE table_name(
+...
+   UNIQUE KEY(index_column_,index_column_2,...)
+);
+```
+If you want to add a unique constraint to an existing table.
+```sql
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name UNIQUE KEY(column_1,column_2,...);
+```
+
+Unlike other database systems, MySQL considers `NULL` values as distinct values. Therefore, you can have multiple `NULL` values in the `UNIQUE` index.
