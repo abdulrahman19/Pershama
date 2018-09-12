@@ -5,6 +5,7 @@
 * **[Create Index](./create-index.md)** <br>
 * **[Drop Index](./drop-index.md)** <br>
 * **[Unique Index](./unique-index.md)** <br>
+* **[Clustered Index](./clustered-index.md)** <br>
 * **[Prefix Index](./prefix-index.md)** <br>
 * **[Composite Index](./composite-index.md)** <br>
 
