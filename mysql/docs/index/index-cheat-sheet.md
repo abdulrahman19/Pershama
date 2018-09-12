@@ -5,6 +5,7 @@
 * [EXPLAIN Clause](#explain-clause)
 * [Drop Index](#drop-index)
 * [Unique Index](#unique-index)
+* [Prefix Index](#prefix-index)
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
 
@@ -103,3 +104,41 @@ ADD CONSTRAINT constraint_name UNIQUE KEY(column_1,column_2,...);
 ```
 
 Unlike other database systems, MySQL considers `NULL` values as distinct values. Therefore, you can have multiple `NULL` values in the `UNIQUE` index.
+
+### Prefix Index
+Prefix Index is a index used to not consume a lot of disk space and speed operations when use `INSERT` statement, also increase the performance when use `SELECT` statement by decreasing the number of rows it searches on.
+
+MySQL allows you to optionally create column prefix key parts for `CHAR`, `VARCHAR`, `BINARY`, and `VARBINARY` columns. If you create indexes for `BLOB` and `TEXT` columns, you must specify the column prefix key parts.
+
+**Notice that**: the prefix support and the length of prefix is dependent on storage engine.
+
+```sql
+CREATE TABLE table_name(
+    column_list,
+    INDEX(column_name(length))
+);
+```
+Or add an index to an existing table:
+```sql
+CREATE INDEX index_name
+ON table_name(column_name(length));
+```
+
+**Evaluate Prefix Index Length**
+
+you can investigate the existing data. The goal is to maximize the uniqueness of the values in the column when you use the prefix.
+
+Step 1. Find the number of rows in the table:
+```sql
+SELECT
+   COUNT(*)
+FROM
+   products;
+```
+Step2. Evaluate different prefix length until you can achieve the reasonable uniqueness of rows near to previous number:
+```sql
+SELECT
+   COUNT(DISTINCT LEFT(productName, 20)) unique_rows
+FROM
+   products;
+```
