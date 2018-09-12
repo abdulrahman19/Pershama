@@ -6,6 +6,7 @@
 * [Drop Index](#drop-index)
 * [Unique Index](#unique-index)
 * [Prefix Index](#prefix-index)
+* [Composite Index](#composite-index)
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
 
@@ -142,3 +143,16 @@ SELECT
 FROM
    products;
 ```
+
+### Composite Index
+A composite index is an index on multiple columns. MySQL allows you to create a composite index that consists of up to 16 columns.
+```sql
+INDEX index_name (c2,c3,c4)
+```
+Or you can add a composite index to an existing table.
+```sql
+CREATE INDEX index_name
+ON table_name(c2,c3,c4);
+```
+
+The query optimizer uses the composite indexes for queries that test all columns in the index, or queries that test the first columns, the first two columns, and so on. **The query optimizer cannot use the index to perform lookups if the columns do not form a leftmost prefix of the index**.
