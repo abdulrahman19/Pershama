@@ -8,6 +8,7 @@
 * [Clustered Index](#clustered-index)
 * [Prefix Index](#prefix-index)
 * [Composite Index](#composite-index)
+* [Descending Index](#descending-index)
 
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
@@ -169,3 +170,16 @@ ON table_name(c2,c3,c4);
 ```
 
 The query optimizer uses the composite indexes for queries that test all columns in the index, or queries that test the first columns, the first two columns, and so on. **The query optimizer cannot use the index to perform lookups if the columns do not form a leftmost prefix of the index**.
+
+### Descending Index
+A descending index is an index that stores key values in the descending order.
+
+Before MySQL 8.0, you can specify the `DESC` in an index definition but MySQL will ignored it. In the meantime, MySQL could scan the index in reverse order but it comes at a high cost.
+
+```sql
+CREATE TABLE t(
+    a INT NOT NULL,
+    b INT NOT NULL,
+    INDEX a_asc_b_desc (a ASC, b DESC)
+);
+```
