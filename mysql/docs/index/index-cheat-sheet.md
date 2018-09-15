@@ -6,6 +6,7 @@
 * [Drop Index](#drop-index)
 * [Unique Index](#unique-index)
 * [Clustered Index](#clustered-index)
+* [Index Cardinality](#index-cardinality)
 * [Prefix Index](#prefix-index)
 * [Composite Index](#composite-index)
 * [Descending Index](#descending-index)
@@ -119,6 +120,15 @@ A clustered index is an index that enforces the ordering on the rows of the tabl
 * When you define a primary key for an `InnoDB` table, MySQL uses the primary key as the clustered index.
 * If you do not have a primary key for a table, MySQL will search for the first `UNIQUE` index where all the key columns are `NOT NULL` and use this `UNIQUE` index as the clustered index.
 * In case the `InnoDB` table has no primary key or suitable `UNIQUE` index, MySQL internally generates a hidden clustered index named `GEN_CLUST_INDEX` on a synthetic column which contains the row `ID` values.
+
+### Index Cardinality
+Index cardinality refers to the uniqueness of values stored in a specified column within an index.
+
+The query optimizer uses the index cardinality to generate an optimal query plan for a given query. It also uses the index cardinality to decide whether to use the index or not in the join operations.
+
+The low cardinality indexes negatively impact the performance.
+
+To view the index cardinality, you use the `SHOW INDEXES` command.
 
 ### Prefix Index
 Prefix Index is a index used to not consume a lot of disk space and speed operations when use `INSERT` statement, also increase the performance when use `SELECT` statement by decreasing the number of rows it searches on.
