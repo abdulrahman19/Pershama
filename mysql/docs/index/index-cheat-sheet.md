@@ -9,7 +9,7 @@
 * [Prefix Index](#prefix-index)
 * [Composite Index](#composite-index)
 * [Descending Index](#descending-index)
-
+* [Invisible Index](#invisible-index)
 
 An index is a data structure such as `B-Tree` that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.
 
@@ -182,4 +182,29 @@ CREATE TABLE t(
     b INT NOT NULL,
     INDEX a_asc_b_desc (a ASC, b DESC)
 );
+```
+
+### Invisible Index
+The invisible indexes allow you to mark indexes as unavailable for the query optimizer.
+
+By default, indexes are visible. To make them invisible, you have to explicitly declare its visibility at the time of creation.
+```sql
+CREATE INDEX index_name
+ON table_name( c1, c2, ...) INVISIBLE;
+```
+Or by using the `ALTER TABLE` command.
+```sql
+ALTER TABLE table_name
+ALTER INDEX index_name [VISIBLE | INVISIBLE];
+```
+
+**Invisible Index and Primary Key**
+
+The index on the primary key column cannot be invisible. Also an implicit primary key index also cannot be invisible. Like when you defines a `UNIQUE` index on a `NOT NULL` column of a table that does not have a primary key.
+
+**Invisible Index System Variables**
+
+To control visible indexes used by the query optimizer, MySQL uses the `use_invisible_indexes` flag of the `optimizer_switch` system variable. By default, the `use_invisible_indexes` is off:
+```sql
+SELECT @@optimizer_switch;
 ```

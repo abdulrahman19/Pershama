@@ -9,6 +9,7 @@
 * **[Prefix Index](./prefix-index.md)** <br>
 * **[Composite Index](./composite-index.md)** <br>
 * **[Descending Index](./descending-index.md)** <br>
+* **[Invisible Index](./invisible-index.md)** <br>
 
 ## The Brief
 * **[Index Cheat Sheet](./index-cheat-sheet.md)** <br>
