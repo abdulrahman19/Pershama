@@ -3,6 +3,7 @@
 ## Index
 * **[Introduction](./introduction.md)** <br>
 * **[Natural Language FTS](./natural-language.md)** <br>
+* **[Boolean FTS](./boolean-fts.md)** <br>
 
 ## The Brief
 * **[Full-Text Search Cheat Sheet](./full-text-cheat-sheet.md)** <br>
