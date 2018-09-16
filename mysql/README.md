@@ -1,24 +1,25 @@
 # MySQL & Relational Database:
-Let's understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
+Let's try to understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
 
 # Resources
 * [MySQL Tutorial](http://www.mysqltutorial.org/)
 * [MySQL Documentation](https://dev.mysql.com/doc/)
 * [Essential SQL](https://www.essentialsql.com/)
-* [Stack Over Flow](https://stackoverflow.com/)
 * [YouTube](https://www.youtube.com/)
+* [Stack Over Flow](https://stackoverflow.com/)
+* [Vertabelo Blog](http://www.vertabelo.com/blog)
 
 # Index
-> If you find a link in episode title that means there are some explanations in there, otherwise the episode summary you will find them in the code, you can use commits history to know what happened specifically.
-
 * [Data Modeling](./docs/data-modeling)
 * **MySQL Basics**
     * [Data Types](./docs/data-types)
-    * [Data Definition](./docs/data-definition)
-    * [Data Manipulation](./docs/data-manipulation)
+    * [Data Definition (DDL)](./docs/data-definition)
+    * [Data Manipulation (DML)](./docs/data-manipulation)
 * **MySQL Advanced**
     * [Stored Procedure](./docs/stored-procedure)
     * [Views](./docs/views)
     * [Triggers](./docs/triggers)
     * [Indexes](./docs/index)
+    * [Full-Text Search Index](./docs/full-text)
+* **Other Stuff**
     * [MySQL Functions](./docs/functions)
