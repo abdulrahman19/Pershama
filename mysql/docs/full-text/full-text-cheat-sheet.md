@@ -3,12 +3,13 @@
 * [Introduction](#introduction)
 * [Defining FULLTEXT Index](#defining-fulltext-index)
 * [Removing FULLTEXT Index](#removing-fulltext-index)
+* [Natural Language FTS](#natural-language-fts)
 
 MySQL Full-Text search provides a simple way to implement various advanced search techniques such as `natural language search`, `Boolean text search` and `query expansion`.
 
 ### Introduction
 
-**Why you need to use Full-Text index?**
+**> Why you need to use Full-Text index?**
 
 When you search by using the `LIKE` operator and regular expression you will face some limitations like:
 * **Bad Performance**: MySQL has to scan the whole table to find the search result.
@@ -21,9 +22,13 @@ The following are some important features of MySQL full-text search:
 * **Moderate index size**: it doesn’t take much memory to store the index.
 * **Flexible search**.
 
-**How Full-Text search index works?**
+**> How Full-Text search index works?**
 
 Technically, MySQL creates an index from the words of the enabled full-text search columns and performs searches on this index. MySQL uses a sophisticated algorithm to determine the rows matched against the search query.
+
+**> There are some important points you should remember when using the full-text search:**
+* The minimum length of the search term defined in MySQL full-text search engine is 4.
+* Stop words are ignored. like `a`, `an` and `about`.
 
 ### Defining FULLTEXT Index
 ```sql
@@ -53,4 +58,25 @@ ON table_name(idx_column_name,...)
 ```sql
 ALTER TABLE table_name
 DROP INDEX index_name;
+```
+
+### Natural Language FTS
+In natural language full-text searches, MySQL looks for rows or documents that are relevant to the free-text natural human language query, for example, “How to use MySQL natural language full-text searches”.
+
+MySQL computes the relevance based on various factors including:
+* The number of words in the document.
+* The number of unique words in the document.
+* The total number of words in the collection.
+* The number of documents (rows) that contain a particular word.
+
+```sql
+SELECT productName, productline
+FROM products
+WHERE MATCH(productName) AGAINST('1932 Ford' IN NATURAL LANGUAGE MODE);
+```
+The `AGAINST()` function uses `IN NATURAL LANGUAGE MODE` search modifier by default therefore you can omit it in the query.
+```sql
+SELECT productName, productline
+FROM products
+WHERE MATCH(productline) AGAINST('1932 Ford');
 ```
