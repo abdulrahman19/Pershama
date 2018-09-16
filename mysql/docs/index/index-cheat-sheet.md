@@ -7,6 +7,7 @@
 * [Unique Index](#unique-index)
 * [Clustered Index](#clustered-index)
 * [Index Cardinality](#index-cardinality)
+* [Index Hints](#index-hints)
 * [Prefix Index](#prefix-index)
 * [Composite Index](#composite-index)
 * [Descending Index](#descending-index)
@@ -111,7 +112,6 @@ ADD CONSTRAINT constraint_name UNIQUE KEY(column_1,column_2,...);
 Unlike other database systems, MySQL considers `NULL` values as distinct values. Therefore, you can have multiple `NULL` values in the `UNIQUE` index.
 
 ### Clustered Index
-
 **What is a clustered index?**
 
 A clustered index is an index that enforces the ordering on the rows of the table physically. Once a clustered index is created, all rows in the table will be stored according to the key columns used to create the clustered index. each table have only one clustered index.
@@ -128,7 +128,39 @@ The query optimizer uses the index cardinality to generate an optimal query plan
 
 The low cardinality indexes negatively impact the performance.
 
+The cardinality may be not accurate for example in case the table has been modified heavily with many inserts or deletes.
+To solve this issue, you should run the `ANALYZE TABLE` statement periodically to update the cardinality.
+
 To view the index cardinality, you use the `SHOW INDEXES` command.
+
+### Index Hints
+**USE INDEX**
+
+MySQL provides way that allows you to recommend the indexes that the query optimizer should by using an index hint called `USE INDEX`.
+
+The `USE INDEX` is useful in case the `EXPLAIN` shows that the Query Optimizer uses the wrong index from the list of possible indexes.
+
+The following illustrates syntax of the MySQL `USE INDEX` hint:
+```sql
+SELECT select_list
+FROM table_name
+USE INDEX(index_list)
+WHERE condition;
+```
+
+**FORCE INDEX**
+
+In the other hand, Sometimes the query optimizer can decide to ignores some indexes, may be because it sees that the full table scan is the most efficient way to execute the query.
+
+In case the query optimizer ignores the index, you can use the `FORCE INDEX` hint to instruct it to use the index instead.
+
+The following illustrates the `FORCE INDEX` hint syntax:
+```sql
+SELECT select_list
+FROM table_name
+FORCE INDEX(index_list)
+WHERE condition;
+```
 
 ### Prefix Index
 Prefix Index is a index used to not consume a lot of disk space and speed operations when use `INSERT` statement, also increase the performance when use `SELECT` statement by decreasing the number of rows it searches on.

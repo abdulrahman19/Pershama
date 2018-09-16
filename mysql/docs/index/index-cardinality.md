@@ -10,6 +10,9 @@ The low cardinality indexes negatively impact the performance.
 
 If the query optimizer chooses the index with a low cardinality, it is may be more effective than scan rows without using the index.
 
+The cardinality may be not accurate for example in case the table has been modified heavily with many inserts or deletes.
+To solve this issue, you should run the `ANALYZE TABLE` statement periodically to update the cardinality.
+
 To view the index cardinality, you use the `SHOW INDEXES` command.
 
 **More References:**

@@ -7,3 +7,4 @@ Clustered Index | is an index that enforces the ordering on the rows of the tabl
 Prefix Index | is a index used to not consume a lot of disk space and speed operations when use `INSERT` statement, also increase the performance when use `SELECT` statement by decreasing the number of rows it searches on.
 Invisible Index | The invisible indexes allow you to mark indexes as unavailable for the query optimizer.
 Index Cardinality | refers to the uniqueness of values stored in a specified column within an index.
+Index Hints | is a way that allows you to recommend or force the indexes that the query optimizer should use by an index hint called `USE INDEX` or `FORCE INDEX`.
