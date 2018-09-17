@@ -6,6 +6,7 @@
 * [Natural Language FTS](#natural-language-fts)
 * [Boolean FTS](#boolean-fts)
 * [FTS Query Expansion](#fts-query-expansion)
+* [Ngram FT Parser (not important)](#ngram-ft-parser)
 
 
 MySQL Full-Text search provides a simple way to implement various advanced search techniques such as `natural language search`, `Boolean text search` and `query expansion`.
@@ -20,10 +21,10 @@ When you search by using the `LIKE` operator and regular expression you will fac
 * **Can't specify relevance ranking**.
 
 The following are some important features of MySQL full-text search:
-* **Native SQL-like interface**: you use the SQL-like statement to use the full-text search.
 * **Fully dynamic index**: MySQL automatically updates the index.
 * **Moderate index size**: it doesn’t take much memory to store the index.
 * **Flexible search**.
+* **Can specify relevance ranking**.
 
 **> How Full-Text search index works?**
 
@@ -31,7 +32,7 @@ Technically, MySQL creates an index from the words of the enabled full-text sear
 
 **> There are some important points you should remember when using the full-text search:**
 * The minimum length of the search term defined in MySQL full-text search engine is 4.
-* Stop words are ignored. like `a`, `an` and `about`.
+* Stop words are ignored. like `a`, `an` and `about`. Note that you must define your own stopword list if the language is other than English.
 
 ### Defining FULLTEXT Index
 ```sql
@@ -133,4 +134,27 @@ SELECT column1, column2
 FROM table1
 WHERE MATCH(column1,column2)
       AGAINST('keyword',WITH QUERY EXPANSION);
+```
+
+### Ngram FT Parser
+MySQL use ngram full-text parser to support full-text searches for ideographic languages such as Chinese, Japanese, Korean, etc.
+
+MySQL included ngram full-text parser as a built-in server plugin. The main function of ngram full-text parser is tokenizing a sequence of text into a contiguous sequence of `n` characters.
+
+The Ngram parser excludes tokens that contain the stopword in the stopword list. Note that you must define your own stopword list if the language is other than English. In addition, the stopwords with lengths that are greater than `ngram_token_size` are ignored.
+
+The token size (`n`) in the Ngram by default is `2`. To change the token size, you use the `ngram_token_size` configuration option, which has a value between `1` and `10`.
+
+Note that a smaller token size makes smaller full-text search index and allows you to search faster.
+
+**Create FT with Ngram Parser**
+
+You add the `WITH PARSER ngram` in the `CREATE TABLE`, `ALTER TABLE`, or `CREATE INDEX` statements.
+```sql
+CREATE TABLE posts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    body TEXT,
+    FULLTEXT ( title , body ) WITH PARSER NGRAM
+)  ENGINE=INNODB CHARACTER SET UTF8MB4;
 ```
