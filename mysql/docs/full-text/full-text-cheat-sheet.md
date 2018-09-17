@@ -5,6 +5,8 @@
 * [Removing FULLTEXT Index](#removing-fulltext-index)
 * [Natural Language FTS](#natural-language-fts)
 * [Boolean FTS](#boolean-fts)
+* [FTS Query Expansion](#fts-query-expansion)
+
 
 MySQL Full-Text search provides a simple way to implement various advanced search techniques such as `natural language search`, `Boolean text search` and `query expansion`.
 
@@ -116,3 +118,19 @@ no operator | By default (when neither `+` nor `-` is specified), the word is op
 `~` | Negate a word’s ranking value.
 `*` | Wildcard at the end of the word.
 `"` | A phrase that is enclosed within double quote (`"`) characters matches only rows that contain the phrase literally, as it was typed.
+
+### FTS Query Expansion
+The query expansion is used to widen the search result of the full-text searches based on `Automatic Relevance Feedback` (or `blind query expansion`).
+
+Technically, MySQL full-text search engine performs the following steps when the query expansion is used:
+* First, MySQL full-text search engine looks for all rows that match the search query.
+* Second, it checks all rows in the search result and finds the relevant words.
+* Third, it performs a search again based on the relevant words instead of the original keywords provided by the users.
+
+The following illustrates the syntax of the query using the `WITH QUERY EXPANSION` search modifier.
+```sql
+SELECT column1, column2
+FROM table1
+WHERE MATCH(column1,column2)
+      AGAINST('keyword',WITH QUERY EXPANSION);
+```
