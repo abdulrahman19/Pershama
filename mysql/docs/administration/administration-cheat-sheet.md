@@ -2,6 +2,7 @@
 
 * [Access Control System](#access-control-system)
 * [Create User Accounts](#create-user-accounts)
+* [Change User Password](#change-user-password)
 
 ### Access Control System
 MySQL implements a sophisticated access control and privilege system that allows you to create comprehensive access rules for handling client operations and effectively preventing unauthorized clients from accessing the database system.
@@ -35,4 +36,31 @@ CREATE USER admin@localhost IDENTIFIED BY 'secret';
 **Show User Privileges**
 ```sql
 SHOW GRANTS FOR admin@localhost;
+```
+
+### Change User Password
+**Note:**
+
+In case you want to reset the password of the MySQL `root` account, you need to force the MySQL database server to stop and restart without using grant table validation.
+
+**Using UPDATE Statement**
+```sql
+USE mysql;
+
+UPDATE user
+SET authentication_string = PASSWORD('password')
+WHERE user = 'admin' AND
+      host = 'localhost';
+
+FLUSH PRIVILEGES;
+```
+
+**Using SET PASSWORD Statement**
+```sql
+SET PASSWORD FOR 'dbadmin'@'localhost' = password;
+```
+
+**Using ALTER USER Statement**
+```sql
+ALTER USER admin@localhost IDENTIFIED BY 'password';
 ```
