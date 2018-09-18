@@ -3,6 +3,7 @@
 * [Access Control System](#access-control-system)
 * [Create User Accounts](#create-user-accounts)
 * [Change User Password](#change-user-password)
+* [Delete Users Accounts](#delete-users-accounts)
 
 ### Access Control System
 MySQL implements a sophisticated access control and privilege system that allows you to create comprehensive access rules for handling client operations and effectively preventing unauthorized clients from accessing the database system.
@@ -64,3 +65,10 @@ SET PASSWORD FOR 'dbadmin'@'localhost' = password;
 ```sql
 ALTER USER admin@localhost IDENTIFIED BY 'password';
 ```
+
+### Delete Users Accounts
+To use `DROP USER`, you must have the global `CREATE USER` privilege, or the `DELETE` privilege for the `mysql` system database.
+```sql
+DROP USER [IF EXISTS] user [, user] ...
+```
+`DROP USER` does not automatically close any open user sessions. the statement does not take effect until that user's session is closed.
