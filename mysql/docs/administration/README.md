@@ -11,6 +11,7 @@
 * **[Delete Users Accounts](./delete-users.md)** <br>
 * **[Manage The Databases](./manage-databases.md)** <br>
 * **[Maintaining Database Tables](./maintaining-database-tables.md)** <br>
+* **[Backup Databases](./backup-databases.md)** <br>
 
 ## The Brief
 * **[Administration Cheat Sheet](./administration-cheat-sheet.md)** <br>
