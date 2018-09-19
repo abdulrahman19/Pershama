@@ -37,3 +37,4 @@ Result
 +-------------------------------------------+
 1 row in set (0.00 sec)
 </pre>
+Note that `USAGE` privilege means no privileges in MySQL.

@@ -5,6 +5,7 @@
 * [Change User Password](#change-user-password)
 * [Delete Users Accounts](#delete-users-accounts)
 * [GRANT Statement](#grant-statement)
+* [REVOKE Statement](#revoke-statement)
 
 ### Access Control System
 MySQL implements a sophisticated access control and privilege system that allows you to create comprehensive access rules for handling client operations and effectively preventing unauthorized clients from accessing the database system.
@@ -88,3 +89,18 @@ TO user [IDENTIFIED BY password]
 * The `user` that you want to grant privileges.  If user already exists, the `GRANT` statement modifies its privilege. Otherwise, the `GRANT` statement creates a new user.
 * The `REQUIRE` you specify whether the user has to connect to the database server over a secure connection such as SSL, X059, etc.
 * The optional `WITH GRANT OPTION` clause allows you to grant other users or remove from other users the privileges that you possess. In addition, you can use the `WITH` clause to allocate MySQL database server’s resource e.g., to set how many connections or statements that the user can use per hour.
+
+### REVOKE Statement
+MySQL allows you to revoke one or more privileges or all privileges from a user.
+
+The following illustrates the syntax of revoking specific privileges from a user:
+```sql
+REVOKE  privilege_type [(column_list)] [, priv_type [(column_list)]]...
+ON [object_type] privilege_level
+FROM user [, user]...
+```
+
+**When the MySQL GRANT / REVOKE command takes effect?**
+* The changes that are made to the global privileges only take effect when the client connects to the MySQL in the subsequent sessions. The changes are not applied to all currently connected users.
+* The changes of the database privileges are applied after the next `USE` statement.
+* The changes of table and column privilege are applied to all queries issued after the changes were made.

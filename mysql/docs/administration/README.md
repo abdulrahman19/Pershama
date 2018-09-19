@@ -6,6 +6,7 @@
 * **[Change User Password](./change-user-password.md)** <br>
 * **[Delete Users Accounts](./delete-users.md)** <br>
 * **[GRANT Statement](./grant-statement.md)** <br>
+* **[REVOKE Statement](./revoke-statement.md)** <br>
 
 ## The Brief
 * **[Administration Cheat Sheet](./administration-cheat-sheet.md)** <br>
