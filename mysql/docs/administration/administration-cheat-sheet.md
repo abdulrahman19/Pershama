@@ -6,6 +6,7 @@
 * [Change User Password](#change-user-password)
 * [GRANT Statement](#grant-statement)
 * [REVOKE Statement](#revoke-statement)
+* [MySQL Roles](#mysql-roles)
 * [Delete Users Accounts](#delete-users-accounts)
 
 ### Access Control System
@@ -112,6 +113,65 @@ FROM user [, user]...
 * The changes that are made to the global privileges only take effect when the client connects to the MySQL in the subsequent sessions. The changes are not applied to all currently connected users.
 * The changes of the database privileges are applied after the next `USE` statement.
 * The changes of table and column privilege are applied to all queries issued after the changes were made.
+
+### MySQL Roles
+MySQL role is an object that can grant the same set of privileges to multiple users.
+
+If you want to create a role, you should do it as follows:
+* First, create a new role.
+```sql
+CREATE ROLE crm_dev;
+```
+* Second, grant privileges to the role.
+```sql
+GRANT ALL ON crm.* TO crm_dev;
+```
+* Third, grant the role to the users.
+```sql
+GRANT crm_dev TO crm_dev1@localhost;
+```
+
+**Show Users Privileges when use Roles**
+```sql
+SHOW GRANTS FOR crm_dev1@localhost USING crm_dev;
+```
+
+**Setting Default Roles**
+
+When you granted roles to a user account, it did not automatically make the roles to become active when the user account connects to the database server.
+
+To specify which roles should be active each time a user account connects to the database server, you use the `SET DEFAULT ROLE` statement.
+```sql
+SET DEFAULT ROLE ALL TO crm_read1@localhost;
+```
+To see active roles use `CURRENT_ROLE()` function.
+```sql
+SELECT current_role();
+```
+
+**Setting Active Roles**
+
+A user account can modify the current user’s effective privileges within the current session by specifying which granted role are active. Like the following statement set the active role to `NONE`, meaning no active role.
+```sql
+SET ROLE NONE;
+```
+
+**Revoking Privileges From Roles**
+```sql
+REVOKE INSERT, UPDATE, DELETE ON crm.* FROM crm_write;
+```
+
+**Removing Roles**
+```sql
+DROP ROLE role_name, role_name, ...;
+```
+
+**Copying Privileges From a User Account to Another**
+
+MySQL treats user account like a role, therefore, you can grant a user account to another user account like granting a role to that user account. This allows you to copy privileges from a user to another user.
+```sql
+GRANT crm_dev1@localhost TO crm_dev2@localhost;
+```
 
 ### Delete Users Accounts
 To use `DROP USER`, you must have the global `CREATE USER` privilege, or the `DELETE` privilege for the `mysql` system database.

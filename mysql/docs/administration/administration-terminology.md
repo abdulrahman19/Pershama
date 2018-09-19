@@ -1,5 +1,5 @@
 # MySQL Administration Chapter Terminologies
 
-<br> Term <img width=510/>| Meaning
+Term| Meaning
 ---|---|
-Full-Text Index | dfg
+MySQL Role | is an object that can grant the same set of privileges to multiple users.

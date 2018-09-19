@@ -7,6 +7,7 @@
 * **[Change User Password](./change-user-password.md)** <br>
 * **[GRANT Statement](./grant-statement.md)** <br>
 * **[REVOKE Statement](./revoke-statement.md)** <br>
+* **[MySQL Roles](./mysql-roles.md)** <br>
 * **[Delete Users Accounts](./delete-users.md)** <br>
 
 ## The Brief
