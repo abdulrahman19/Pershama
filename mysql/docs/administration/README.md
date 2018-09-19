@@ -9,6 +9,7 @@
 * **[REVOKE Statement](./revoke-statement.md)** <br>
 * **[MySQL Roles](./mysql-roles.md)** <br>
 * **[Delete Users Accounts](./delete-users.md)** <br>
+* **[Manage The Databases](./manage-databases.md)** <br>
 
 ## The Brief
 * **[Administration Cheat Sheet](./administration-cheat-sheet.md)** <br>

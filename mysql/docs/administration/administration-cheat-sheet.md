@@ -8,6 +8,7 @@
 * [REVOKE Statement](#revoke-statement)
 * [MySQL Roles](#mysql-roles)
 * [Delete Users Accounts](#delete-users-accounts)
+* [Manage The Databases](#manage-the-databases)
 
 ### Access Control System
 MySQL implements a sophisticated access control and privilege system that allows you to create comprehensive access rules for handling client operations and effectively preventing unauthorized clients from accessing the database system.
@@ -181,3 +182,24 @@ DROP USER [IF EXISTS] user [, user] ...
 `DROP USER` does not automatically close any open user sessions. the statement does not take effect until that user's session is closed.
 
 Typically, in this case, you should shutdown user’s session immediately right before executing the `DROP USER` statement.
+
+### Manage The Databases
+**Show Databases**
+```sql
+SHOW DATABASES [LIKE pattern];
+```
+**Querying database data from `information_schema` database**
+```sql
+SELECT schema_name
+FROM information_schema.schemata
+WHERE schema_name LIKE '%schema' OR
+      schema_name LIKE '%s';
+```
+**Show Tables**
+```sql
+SHOW [FULL] TABLES [LIKE pattern / WHERE expression];
+```
+**Show Columns**
+```sql
+SHOW [FULL] COLUMNS FROM table_name [LIKE pattern / WHERE expression];
+```
