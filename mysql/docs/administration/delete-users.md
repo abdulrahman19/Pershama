@@ -15,3 +15,6 @@ DROP USER 'jeffrey'@'localhost';
 **Note**
 
 `DROP USER` does not automatically close any open user sessions. Rather, in the event that a user with an open session is dropped, the statement does not take effect until that user's session is closed.
+
+Typically, in this case, you should shutdown user’s session immediately right before executing the `DROP USER` statement.
+

@@ -1,9 +1,5 @@
 # Create Users Accounts
 
-* [CREATE USER Statement](#create-user-statement)
-* [Show User Privileges](#show-user-privileges)
-
-### CREATE USER Statement
 MySQL provides the `CREATE USER` statement that allows you to create a new user account. The syntax of the `CREATE USER` statement is as follows:
 ```sql
 CREATE USER user_account@hostname IDENTIFIED BY password;
@@ -22,19 +18,3 @@ CREATE USER admin@localhost IDENTIFIED BY 'secret';
 * If you omit the `hostname` part of the user account, MySQL will accept it and allow the user to connect from any host.
 * If you accidentally quote the user account like `'username@hostname'`, MySQL will create a user with the `username@hostname` name and allows the user to connect from any host.
 * If you create a user that already exists, MySQL will issue an error.
-
-### Show User Privileges
-To view the privileges of a user account, you use the SHOW GRANTS statement as follows:
-```sql
-SHOW GRANTS FOR admin@localhost;
-```
-Result
-<pre>
-+-------------------------------------------+
-| Grants for admin@localhost                |
-+-------------------------------------------+
-| GRANT USAGE ON *.* TO `admin`@`localhost` |
-+-------------------------------------------+
-1 row in set (0.00 sec)
-</pre>
-Note that `USAGE` privilege means no privileges in MySQL.

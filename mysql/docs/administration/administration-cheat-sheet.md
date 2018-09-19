@@ -2,10 +2,11 @@
 
 * [Access Control System](#access-control-system)
 * [Create User Accounts](#create-user-accounts)
+* [Show Users Accounts](#show-user-accounts)
 * [Change User Password](#change-user-password)
-* [Delete Users Accounts](#delete-users-accounts)
 * [GRANT Statement](#grant-statement)
 * [REVOKE Statement](#revoke-statement)
+* [Delete Users Accounts](#delete-users-accounts)
 
 ### Access Control System
 MySQL implements a sophisticated access control and privilege system that allows you to create comprehensive access rules for handling client operations and effectively preventing unauthorized clients from accessing the database system.
@@ -35,6 +36,20 @@ CREATE USER admin@localhost IDENTIFIED BY 'secret';
 * If you omit the `hostname` part of the user account, MySQL will accept it and allow the user to connect from any host.
 * If you accidentally quote the user account like `'username@hostname'`, MySQL will create a user with the `username@hostname` name and allows the user to connect from any host.
 * If you create a user that already exists, MySQL will issue an error.
+
+### Show Users Accounts
+```sql
+SELECT user, host FROM mysql.user;
+```
+
+**Show Users Processes (sessions)**
+```sql
+SHOW PROCESSLIST;
+```
+And you can end any active session by using session id.
+```sql
+KILL 40;
+```
 
 **Show User Privileges**
 ```sql
@@ -68,13 +83,6 @@ SET PASSWORD FOR 'dbadmin'@'localhost' = password;
 ALTER USER admin@localhost IDENTIFIED BY 'password';
 ```
 
-### Delete Users Accounts
-To use `DROP USER`, you must have the global `CREATE USER` privilege, or the `DELETE` privilege for the `mysql` system database.
-```sql
-DROP USER [IF EXISTS] user [, user] ...
-```
-`DROP USER` does not automatically close any open user sessions. the statement does not take effect until that user's session is closed.
-
 ### GRANT Statement
 After creating a new user account, the user doesn’t have any privileges. To grant privileges to a user account, you use the `GRANT` statement.
 
@@ -104,3 +112,12 @@ FROM user [, user]...
 * The changes that are made to the global privileges only take effect when the client connects to the MySQL in the subsequent sessions. The changes are not applied to all currently connected users.
 * The changes of the database privileges are applied after the next `USE` statement.
 * The changes of table and column privilege are applied to all queries issued after the changes were made.
+
+### Delete Users Accounts
+To use `DROP USER`, you must have the global `CREATE USER` privilege, or the `DELETE` privilege for the `mysql` system database.
+```sql
+DROP USER [IF EXISTS] user [, user] ...
+```
+`DROP USER` does not automatically close any open user sessions. the statement does not take effect until that user's session is closed.
+
+Typically, in this case, you should shutdown user’s session immediately right before executing the `DROP USER` statement.
