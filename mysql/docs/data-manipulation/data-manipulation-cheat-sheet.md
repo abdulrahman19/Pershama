@@ -87,7 +87,7 @@ You can use the `subquery` as standalone query, or you can **uses the data** fro
 
 **You can use SubQuery with:**
 * `SELECT`
-* `FROM`
+* `FROM` - It's called also `Derived Table`.
 * `WHERE` / `HAVING`
     * `IN`
     * `EXISTS`

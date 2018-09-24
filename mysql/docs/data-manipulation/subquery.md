@@ -46,6 +46,7 @@ FROM SalesOrderDetail;
 ```
 
 ### SubQuery With FROM
+It's called also `Derived Table`, A derived table is a virtual table returned from a `SELECT` statement.
 ```sql
 SELECT
     MAX(items), MIN(items), FLOOR(AVG(items))

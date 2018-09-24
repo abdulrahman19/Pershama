@@ -76,6 +76,7 @@ WHERE user = 'admin' AND
 
 FLUSH PRIVILEGES;
 ```
+You need to execute the `FLUSH PRIVILEGES` statement to reload privileges from the grant tables into memory.
 
 **Using SET PASSWORD Statement**
 ```sql

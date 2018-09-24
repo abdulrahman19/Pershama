@@ -23,4 +23,5 @@ Let's try to understand MySQL & Relational Database in depth. :mag_right: :flopp
     * [Full-Text Search Index](./docs/full-text)
     * [MySQL Administration](./docs/administration)
 * **Other Stuff**
-    * [MySQL Functions](./docs/functions)
+    * [Useful Tips](./docs/tips)
+
