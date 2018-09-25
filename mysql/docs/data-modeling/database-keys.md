@@ -27,7 +27,7 @@ A Candidate Key is a set of one or more fields/columns that can identify a recor
 Example: In previous diagram `ID`, `RollNo` and `EnrollNo` are Candidate Keys since all these three fields can be work as Primary Key.
 
 ### Primary Key
-Primary key is a set of one or more fields/columns of a table that uniquely identify a record in database table. It can *not accept null*, *duplicate values*. **Only one Candidate Key can be Primary Key**.
+Primary key is a set of one or more fields/columns of a table that uniquely identify a record in database table. It can *not accept* **null**, *duplicate values*. **Only one Candidate Key can be Primary Key**.
 
 ### Composite/Compound Key
 Composite Key is a combination of more than one fields/columns of a table. It can be a Candidate key, Primary key.
