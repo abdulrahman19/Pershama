@@ -5,6 +5,7 @@ I'll collect all my summaries here to remember things later. And also train myse
 
 ### Separated Courses
 * **[Git](./git/)** <br>
+* **[MySQL & Relational Databases](./mysql/)** <br>
 
 ### Laracasts
 * **[The PHP Practitioner](./laracasts/the-php-practitioner/)** <br>

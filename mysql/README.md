@@ -1,5 +1,5 @@
-# MySQL & Relational Database:
-Let's try to understand MySQL & Relational Database in depth. :mag_right: :floppy_disk:
+# MySQL & Relational Databases:
+Let's try to understand MySQL & Relational Databases in depth. :mag_right: :floppy_disk:
 
 # Resources
 * [MySQL Tutorial](http://www.mysqltutorial.org/)
