@@ -1,14 +1,14 @@
 # Git
-Hello here.
+Hello there.
 
-This is my personal git summary, to remember things and make a reference if need.
+This is my personal git summary to remember things and be a reference for me.
 
 ### Why you write a personal one? you can read or use any other resources?
 Yes, that's right. <br>
-But I believe in something, what you write is hard to forget, plus that you write it in your own way :smiley:.
+But I believe in something, what you write is hard to forget, plus that you will write it in your own way :smiley:.
 
 ### Can I help?
-If you have any suggestion or Edit, don't be shy :smile:.
+If you have any suggestion or edit, don't be shy :smile:.
 
 # Index
 > This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.

@@ -13,6 +13,8 @@ I'll collect all my summaries here to remember things later. And also train myse
 * **[Simple Rules for Simpler Code](./laracasts/simple-rules-for-simpler-code/)** <br>
 * **[Laravel 5.4](./laracasts/laravel-5/)** <br>
 
+### Note
+I wrote those summaries hurry, so if you find any language mistakes, please don't hate me, I'm an Arabic speaker and try so hard to improve my English, thanks for your understanding : )
 
 # Todo
 - [ ] TDD

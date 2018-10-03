@@ -4,7 +4,7 @@
 * [INSERT And SELECT FLOAT Value](#insert-and-select-float-value)
 * [Last Advice](#last-advice)
 
-**To well understand how MySQL deal with Floating-Point numbers check this resources:**
+**To well understand how MySQL deal with Floating-Point numbers check out those resources:**
 * [Youtube - IEEE 754 Floating Point series](https://www.youtube.com/playlist?list=PLKK11Ligqithrgou1e6_kl9HJr1jI_LcT)
 * [Wikipedia - IEEE 754](https://en.wikipedia.org/wiki/IEEE_754)
 * [Wikipedia - Single-precision floating-point](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
