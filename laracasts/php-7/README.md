@@ -6,9 +6,7 @@ This summary will cover two courses from <code>Laracasts</code>:
 
 > I'll add some more information if it necessary.
 
-# Index
-> If you find a link in episode title that means there are some explanations in there, otherwise the episode summary you will find them in the code, you can use commits to know what happened specifically.
-
+## Index
 * **[1- Scalar Typehints](docs/1-scalar-typehints.md)** <br>
 * **[2- Return Type Declarations](docs/2-return-type-declarations.md)** <br>
 * **[3- Spaceships](docs/3-spaceships.md)** <br>

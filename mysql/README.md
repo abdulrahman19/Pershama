@@ -1,7 +1,7 @@
 # MySQL & Relational Databases:
 Let's try to understand MySQL & Relational Databases in depth. :mag_right: :floppy_disk:
 
-# Resources
+## Resources
 * [MySQL Tutorial](http://www.mysqltutorial.org/)
 * [MySQL Documentation](https://dev.mysql.com/doc/)
 * [Essential SQL](https://www.essentialsql.com/)
@@ -9,7 +9,7 @@ Let's try to understand MySQL & Relational Databases in depth. :mag_right: :flop
 * [Stack Over Flow](https://stackoverflow.com/)
 * [Vertabelo Blog](http://www.vertabelo.com/blog)
 
-# Index
+## Index
 * [Data Modeling](./docs/data-modeling)
 * **MySQL Basics**
     * [Data Types](./docs/data-types)

@@ -1,9 +1,7 @@
-# Summaries:
+# Laravel 5.4
 Let's begin using Laravel. :blue_heart:
 
-# Index
-> If you find a link in episode title that means there are some explanations in there, otherwise the episode summary you will find them in the code, you can use commits history to know what happened specifically.
-
+## Index
 * **1- Basic Routing and Views.** <br>
 * **2- Pass Data to Your Views.** <br>
 * **3- Working With the Query Builder.** <br>
@@ -28,5 +26,5 @@ Let's begin using Laravel. :blue_heart:
 * **22- Tags and Pivot Tables** <br>
 * **23- Sorting Posts By Tags** <br>
 
-# Course Implementation
+## Course Implementation
 ![Laravel 5.4](./docs/images/laravel-5-implementation.png)

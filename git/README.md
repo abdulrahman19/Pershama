@@ -10,7 +10,7 @@ But I believe in something, what you write is hard to forget, plus that you will
 ### Can I help?
 If you have any suggestion or edit, don't be shy :smile:.
 
-# Index
+## Index
 > This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.
 
 ### Do it Local
@@ -55,15 +55,15 @@ Hello from the other side. <br>
 The matrix.:octocat:<br>
 <code>Fork</code>
 
-# Cheat Sheet
+## Cheat Sheet
 * **[Cheat Sheet](./docs/cheat-sheet.md)** <br>
 
-# Resources
+## Resources
 * Git Essential Training (Lynda).
 * Bitbucket Tutorials.
 * Youtube Videos.
 
-# Todo
+## Todo
 - [ ] Best practice followed to make a correct workflow
 - [ ] Advanced Rebase options
 - [ ] Explore GitHub
