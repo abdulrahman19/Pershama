@@ -1,4 +1,9 @@
+# Folders
 .phpintel/
 vendor/
 node_modules/
+.je-project-settings/
+
+# Files
 *.sublime-*
+.flowconfig

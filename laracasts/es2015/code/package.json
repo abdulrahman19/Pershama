@@ -2,7 +2,7 @@
   "name": "ES2015",
   "version": "1.0.0",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -w -d lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
