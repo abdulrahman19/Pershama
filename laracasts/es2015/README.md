@@ -5,3 +5,4 @@ ES2015 Crash Course.
 * **[Babel Setup](./docs/babel-setup.md)**
 * **To Var, Let, or Const**
 * **Arrows**
+* **Default Parameters**
