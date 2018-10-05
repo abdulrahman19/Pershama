@@ -6,3 +6,4 @@ ES2015 Crash Course.
 * **To Var, Let, or Const**
 * **Arrows**
 * **Default Parameters**
+* **Rest and Spread**
