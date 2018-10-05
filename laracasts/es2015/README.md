@@ -7,3 +7,4 @@ ES2015 Crash Course.
 * **Arrows**
 * **Default Parameters**
 * **Rest and Spread**
+* **Template Strings**
