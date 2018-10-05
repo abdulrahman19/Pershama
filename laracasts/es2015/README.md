@@ -8,3 +8,4 @@ ES2015 Crash Course.
 * **Default Parameters**
 * **Rest and Spread**
 * **Template Strings**
+* **Awesome Object Enhancements**
