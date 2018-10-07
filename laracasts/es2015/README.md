@@ -9,3 +9,4 @@ ES2015 Crash Course.
 * **Rest and Spread**
 * **Template Strings**
 * **Awesome Object Enhancements**
+* **Classes**
