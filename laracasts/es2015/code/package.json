@@ -2,11 +2,14 @@
   "name": "ES2015",
   "version": "1.0.0",
   "scripts": {
-    "build": "babel src -w -d lib"
+    "build": "webpack"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0"
+    "buble-loader": "^0.5.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "buble": "^0.19.4"
   }
 }

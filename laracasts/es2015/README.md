@@ -10,3 +10,4 @@ ES2015 Crash Course.
 * **Template Strings**
 * **Awesome Object Enhancements**
 * **Classes**
+* **Modules**
