@@ -10,7 +10,8 @@ ES2015 Crash Course.
 * **Template Strings**
 * **Awesome Object Enhancements**
 * **Classes**
-* **Modules**
+* **Modules & install WebPack**
 * **Promises 101**
 * **Useful String Additions**
 * **Array#find and Array#includes**
+* **Generators**
