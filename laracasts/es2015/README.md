@@ -11,3 +11,4 @@ ES2015 Crash Course.
 * **Awesome Object Enhancements**
 * **Classes**
 * **Modules**
+* **Promises 101**

@@ -5,11 +5,11 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "buble-loader": "^0.5.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "buble": "^0.19.4"
+    "buble": "^0.19.4",
+    "buble-loader": "^0.5.1"
   }
 }
