@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/string-additions.js',
+    entry: './src/array.js',
     devtool: 'source-map',
     output: {
         filename: './main.js'
@@ -13,5 +13,6 @@ module.exports = {
                 loader: 'buble-loader',
             }
         ]
-    }
+    },
+    watch: true
 };

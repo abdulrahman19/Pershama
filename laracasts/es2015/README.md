@@ -13,3 +13,4 @@ ES2015 Crash Course.
 * **Modules**
 * **Promises 101**
 * **Useful String Additions**
+* **Array#find and Array#includes**
