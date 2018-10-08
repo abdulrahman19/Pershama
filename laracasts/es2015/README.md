@@ -12,3 +12,4 @@ ES2015 Crash Course.
 * **Classes**
 * **Modules**
 * **Promises 101**
+* **Useful String Additions**

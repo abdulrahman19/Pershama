@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/promises.js',
+    entry: './src/string-additions.js',
     devtool: 'source-map',
     output: {
         filename: './main.js'
