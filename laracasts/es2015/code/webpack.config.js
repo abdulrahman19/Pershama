@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/generators.js',
+    entry: './src/sets.js',
     devtool: 'source-map',
     output: {
         filename: './main.js'

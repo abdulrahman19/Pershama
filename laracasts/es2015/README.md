@@ -15,3 +15,4 @@ ES2015 Crash Course.
 * **Useful String Additions**
 * **Array#find and Array#includes**
 * **Generators**
+* **Sets**
