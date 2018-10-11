@@ -1,6 +1,6 @@
 # Return Type Declarations
 
-Like scalar typehints, you can also declare the type of returned value from the function.
+Like [scalar typehints](./1-scalar-typehints.md), you can also declare the type of returned value from the function.
 ```php
 function bla(array $value) : array
 {

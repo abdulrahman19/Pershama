@@ -1,6 +1,6 @@
 # Multi-Catch Exception Handling
 
-Before when you wanna throw exception with multi-catch you used to do like:
+Before PHP 7 when you wanna throw exception with multi-catch you used to do like:
 
 ```php
 class ExOne extends Exception {}
@@ -8,7 +8,7 @@ class ExTwo extends Exception {}
 
 class ClassName
 {
-    
+
     function bla()
     {
         throw new ExOne;

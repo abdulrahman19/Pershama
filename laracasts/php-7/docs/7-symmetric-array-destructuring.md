@@ -1,6 +1,6 @@
 # Symmetric Array Destructuring
 
-Before when you wanna assign array to variables you do something like that:
+Before PHP 7 when you wanna assign array to variables you do something like that:
 ```php
 $arr = ['bla', 'bla_bla'];
 list($bla, $bla_bla) = $arr;

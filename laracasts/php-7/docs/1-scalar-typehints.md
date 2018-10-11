@@ -1,6 +1,6 @@
 # Scalar Typehints
 
-Before PHP-7 we could hint some complex types like <code>array</code>, <code>class</code> or <code>interface</code>.
+Before PHP-7, we could hint some complex types like <code>array</code>, <code>class</code> or <code>interface</code>.
 ```php
 function bla(array $value)
 {
@@ -27,7 +27,7 @@ To avoid that, you need to add following code in top of your file or application
 ```php
 declare(strict_types=1);
 ```
-You can catch type errors by use <code>TypeError</code> exception type.
+You can catch the error type by use <code>TypeError</code> exception type.
 ```php
 try {
     bla('30');

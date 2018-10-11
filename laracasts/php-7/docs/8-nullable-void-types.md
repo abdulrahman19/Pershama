@@ -1,6 +1,6 @@
 # Nullable and Void Types
 
-Now we talk about [return types](./2-return-type-declarations.md) here, but what if you want return <code>int</code> or <code>null</code> value?!
+We talked about [return types](./2-return-type-declarations.md) here, but what if you want return <code>int</code> or <code>null</code> value?!
 ```php
 function bla($age) : int
 {
@@ -18,7 +18,7 @@ bla($class->method());
 ```
 Now it'll work!
 
-Same thing with [Scalar typehints](./1-scalar-typehints.md)
+Same thing here with [Scalar typehints](./1-scalar-typehints.md)
 ```php
 function bla(int $age)
 {
@@ -36,7 +36,7 @@ bla($class->method()); // null param
 ```
 It'll work!
 
-But what if you don't pass any argument & you wanna make it totally optional with value or null behavior, so, you can make it like:
+But what if you don't pass any arguments & you wanna make it totally optional with value or null behavior, so, you can make it like:
 ```php
 function bla(?int $age = null)
 {
