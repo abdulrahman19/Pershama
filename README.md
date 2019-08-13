@@ -6,9 +6,9 @@ Collective summaries for fast remembering and preparing for interviews.
 > This is because cheat sheet saves student's life like medical tablet saves patient's life. :smiley:
 
 ## Index
-* **[Git](./git/)** <br>
-* **[PHP](./php/)** <br>
-* **[Relational Databases & MySQL](./mysql/)** <br>
+* **[Git](./summaries/git/)** <br>
+* **[PHP](./summaries/php/)** <br>
+* **[Relational Databases & MySQL](./summaries/mysql/)** <br>
 
 ## Contributing
 * Check the open issues or open a new issue to start a discussion around your new idea or any grammatical mistakes you found
