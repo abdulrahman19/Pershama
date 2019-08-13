@@ -48,10 +48,10 @@ To determine the scope of check, MySQL provides two options: `LOCAL` and `CASCAD
 
 When a view uses a `WITH CASCADED CHECK OPTION`, MySQL checks the rules of the view and also the rules of the underlying views recursively.
 
-![with cascaded check option](./files/with-cascaded-check-option.jpg)
+![with cascaded check option](../files/with-cascaded-check-option.jpg)
 
 **WITH LOCAL CHECK OPTION**
 
 When a view uses a `WITH LOCAL CHECK OPTION`, MySQL only checks the rules of the current view and it does not check the rules of the underlying views.
 
-![with local check option](./files/with-local-check-option.jpg)
+![with local check option](../files/with-local-check-option.jpg)

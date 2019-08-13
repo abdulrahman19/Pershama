@@ -10,18 +10,18 @@ Let's try to understand MySQL & Relational Databases in depth. :mag_right: :flop
 * [Vertabelo Blog](http://www.vertabelo.com/blog)
 
 ## Index
-* [Data Modeling](./docs/data-modeling)
+* [Data Modeling](./docs/data-modeling/)
 * **MySQL Basics**
-    * [Data Types](./docs/data-types)
-    * [Data Definition (DDL)](./docs/data-definition)
-    * [Data Manipulation (DML)](./docs/data-manipulation)
+    * [Data Types](./docs/data-types/)
+    * [Data Definition (DDL)](./docs/data-definition/)
+    * [Data Manipulation (DML)](./docs/data-manipulation/)
 * **MySQL Advanced**
-    * [Stored Procedure](./docs/stored-procedure)
-    * [Views](./docs/views)
-    * [Triggers](./docs/triggers)
-    * [Indexes](./docs/index)
-    * [Full-Text Search Index](./docs/full-text)
-    * [MySQL Administration](./docs/administration)
+    * [Stored Procedure](./docs/stored-procedure/)
+    * [Views](./docs/views/)
+    * [Triggers](./docs/triggers/)
+    * [Indexes](./docs/index/)
+    * [Full-Text Search Index](./docs/full-text/)
+    * [MySQL Administration](./docs/administration/)
 * **Other Stuff**
-    * [Useful Tips](./docs/tips)
+    * [Useful Tips](./docs/tips/)
 

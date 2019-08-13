@@ -20,7 +20,7 @@ SELECT column_list
 ...
 ```
 
-![MySQL UNION](./images/MySQL-UNION.png)
+![MySQL UNION](../images/MySQL-UNION.png)
 
 **Example** <br>
 We have those tables.
@@ -89,7 +89,7 @@ MINUS
 SELECT columns_list_2 FROM table_2;
 ```
 
-![MySQL UNION](./images/MySQL-MINUS.png)
+![MySQL UNION](../images/MySQL-MINUS.png)
 
 **Unfortunately, MySQL does not support `MINUS` operator. However, you can use the MySQL `LEFT JOIN` to simulate it.**
 
@@ -107,7 +107,7 @@ WHERE
     t2.id IS NULL;
 ```
 
-![MySQL UNION](./images/MySQL-MINUS-Example.png)
+![MySQL UNION](../images/MySQL-MINUS-Example.png)
 
 ### Simulate INTERSECT
 The `INTERSECT` operator is a set operator that returns only **distinct** rows of two queries or more queries.
@@ -120,7 +120,7 @@ INTERSECT
 FROM table_2);
 ```
 
-![MySQL UNION](./images/MySQL-INTERSECT.png)
+![MySQL UNION](../images/MySQL-INTERSECT.png)
 
 **Unfortunately, MySQL does not support `INTERSECT` operator. However, you can use the MySQL `INNER JOIN` or `SubQuery with IN` to simulate it.**
 

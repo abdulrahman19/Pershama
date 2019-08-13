@@ -1,12 +1,12 @@
 # Triggers
 
 ## Index
-* **[Introduction](./introduction.md)** <br>
-* **[Create Triggers](./create-trigger.md)** <br>
-* **[Managing Triggers](./managing-triggers.md)** <br>
-* **[Scheduled Events](./scheduled-events.md)** <br>
+* **[Introduction](./docs/introduction.md)** <br>
+* **[Create Triggers](./docs/create-trigger.md)** <br>
+* **[Managing Triggers](./docs/managing-triggers.md)** <br>
+* **[Scheduled Events](./docs/scheduled-events.md)** <br>
 
 
 ## The Brief
-* **[Triggers Cheat Sheet](./triggers-cheat-sheet.md)** <br>
-* **[Triggers Chapter Terminologies](./triggers-terminology.md)** <br>
+* **[Triggers Cheat Sheet](./docs/triggers-cheat-sheet.md)** <br>
+* **[Triggers Chapter Terminologies](./docs/triggers-terminology.md)** <br>

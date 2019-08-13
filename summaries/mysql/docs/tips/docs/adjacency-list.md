@@ -12,7 +12,7 @@ There are many ways to manage hierarchical data in MySQL and the `adjacency list
 
 We use adjacency list model when the value of one column corresponds to another row in the same table. When the correspondence is missing, it means that the row with the missing value should be considered as the `root` element.
 
-![Adjacency List Model Example](./files/mysql-adjacency-list.png)
+![Adjacency List Model Example](../files/mysql-adjacency-list.png)
 
 **Pros**
 * You will have a well designed database.
@@ -23,7 +23,7 @@ We use adjacency list model when the value of one column corresponds to another 
 
 
 ### Table Structure
-![Adjacency List Table Structure](./files/adjacency-list-table-structure.png)
+![Adjacency List Table Structure](../files/adjacency-list-table-structure.png)
 
 ### Finding The Root Node
 ```sql

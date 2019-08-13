@@ -9,20 +9,20 @@ The table be in the 2N if:
 * There are not `repeating groups` of columns.
 * The table stores information in rows and columns where one or more columns, called the `primary key`, uniquely identify each row.
 
-![Table Not Normalized](./images/N1-summary.png)
+![Table Not Normalized](../images/N1-summary.png)
 
 Once a table is in first normal form it is easier to `search`, `filter`, and `sort` the information.
 
 > Main purpose from 1N is eliminate data redundancy.
 
 ### Apply In Our Example
-![Table Not Normalized](./images/Intro-Table-Not-Normalized.png)
+![Table Not Normalized](../images/Intro-Table-Not-Normalized.png)
 
-![First Normal Form Repeating Groups](./images/FirstNormalFormRepeatingGroups.png)
+![First Normal Form Repeating Groups](../images/FirstNormalFormRepeatingGroups.png)
 
-![First Normal Form digram](./images/FirstNormalForm.png)
+![First Normal Form digram](../images/FirstNormalForm.png)
 
-![First Normal Form Data Example](./images/FirstNormalFormDataExample.png)
+![First Normal Form Data Example](../images/FirstNormalFormDataExample.png)
 
 **This design is superior to our original table in several ways:**
 

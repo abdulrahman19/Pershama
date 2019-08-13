@@ -23,26 +23,26 @@ Or
     CourseID    CourseName    Semester    SubjectID    SubjectName    SubjectGrade
 </pre>
 
-![Table Not Normalized](./images/N2-summary.png)
+![Table Not Normalized](../images/N2-summary.png)
 
 > Main purpose from 2N is make a single purpose table to avoid modification anomalies.
 
 ### Apply In Our Example
 
-![Table Not Normalized](./images/FirstNormalFormDataExample.png)
+![Table Not Normalized](../images/FirstNormalFormDataExample.png)
 
 Now let's fix that!
 
-![Table Not Normalized](./images/SecondNormalFormIssues.png)
+![Table Not Normalized](../images/SecondNormalFormIssues.png)
 
-![Table Not Normalized](./images/SecondNormalFormDataModel.png)
+![Table Not Normalized](../images/SecondNormalFormDataModel.png)
 
-![Table Not Normalized](./images/SecondNormalFormSampleData1.png)
+![Table Not Normalized](../images/SecondNormalFormSampleData1.png)
 
-![Table Not Normalized](./images/SecondNormalFormSampleData2.png)
+![Table Not Normalized](../images/SecondNormalFormSampleData2.png)
 
 > An **intersection table** is useful when you need to model a many-to-many relationship.
 
-![Table Not Normalized](./images/SecondNormalFormSampleData3.png)
+![Table Not Normalized](../images/SecondNormalFormSampleData3.png)
 
 Three out of the four tables are even in third normal form, but there is one table which still has a minor issue.

@@ -6,7 +6,7 @@
 **Why the nested set is revolutionary ?**
 
 It's because of its way of thinking about hierarchical data. In fact, it doesn't consider the data as a tree but as a nested set. Take a look of the picture and the SQL table with family members :
-![Nested Sets Explanation](./files/nested-set-explanation.png)
+![Nested Sets Explanation](../files/nested-set-explanation.png)
 
 **How it works?**
 
@@ -14,10 +14,10 @@ Each comment encodes its descendants using two numbers:
 * A comment’s `left number` is **less than** all numbers used by the comment’s descendants.
 * A comment’s `right number` is **greater than** all numbers used by the comment’s descendants.
 * A comment’s numbers are **between** all numbers used by the comment’s ancestors.
-![Nested Sets Example](./files/nested-set-example.png)
+![Nested Sets Example](../files/nested-set-example.png)
 
 ### Table Structure
-![Nested Sets Example](./files/nested-set-table-structure.png)
+![Nested Sets Example](../files/nested-set-table-structure.png)
 
 **Pros**
 * Single non-recursive query to get a tree or subtree.

@@ -15,7 +15,7 @@ To write this relation as a path enumeration, we concatenate all ids in ascendin
 * Numbers are stored in a string no referential integrity.
 
 ### Table Structure
-![Path Enumeration Table Structure](./files/path_enumeration_data_structure.png)
+![Path Enumeration Table Structure](../files/path_enumeration_data_structure.png)
 
 ### Path Enumeration Examples
 Get ancestors for comment #7:

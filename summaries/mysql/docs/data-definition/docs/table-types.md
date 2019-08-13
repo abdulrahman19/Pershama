@@ -53,4 +53,4 @@ The `CSV` storage engine stores data in comma-separated values (CSV) file format
 ### FEDERATED
 The `FEDERATED` storage engine allows you to manage data from a remote MySQL server without using the cluster or replication technology. The local federated table stores no data. When you query data from a local federated table, the data is pulled automatically from the remote federated tables.
 
-**This [Cheat Sheet](./files/MySQL-Storage-Engines-Feature-Summary.pdf) will help you to select appropriate engine**
+**This [Cheat Sheet](../files/MySQL-Storage-Engines-Feature-Summary.pdf) will help you to select appropriate engine**

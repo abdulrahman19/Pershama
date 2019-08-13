@@ -4,7 +4,7 @@
 * [Closure Table Examples](#closure-table-examples)
 
 Closure table is a simple and elegant way of storing and querying hierarchical data in any RDBMS. The Closure Table is a design for representing trees in a relational database by storing all the paths between tree nodes.
-![Closure Table Example](./files/closure-table-example.png)
+![Closure Table Example](../files/closure-table-example.png)
 
 **Pros:**
 * Single non-recursive query to get a tree or a subtree
@@ -26,7 +26,7 @@ CREATE TABLE Closure (
     FOREIGN KEY(descendant) REFERENCES Comments(comment_id)
 );
 ```
-![Closure Table Table Structure](./files/closure-table-table-structure.png)
+![Closure Table Table Structure](../files/closure-table-table-structure.png)
 
 
 ### Closure Table Examples

@@ -1,15 +1,15 @@
 # Views
 
 ## Index
-* **[Introduction](./introduction.md)** <br>
-* **[Create Views](./create-views.md)** <br>
-* **[Creating Updatable Views](./creating-updatable-views.md)** <br>
-* **[WITH CHECK OPTION Clause](./with-check-option-clause.md)** <br>
-* **[Managing Views](./managing-views.md)** <br>
+* **[Introduction](./docs/introduction.md)** <br>
+* **[Create Views](./docs/create-views.md)** <br>
+* **[Creating Updatable Views](./docs/creating-updatable-views.md)** <br>
+* **[WITH CHECK OPTION Clause](./docs/with-check-option-clause.md)** <br>
+* **[Managing Views](./docs/managing-views.md)** <br>
 
 ## The Brief
-* **[Views Cheat Sheet](./views-cheat-sheet.md)** <br>
-* **[Views Chapter Terminologies](./views-terminology.md)** <br>
+* **[Views Cheat Sheet](./docs/views-cheat-sheet.md)** <br>
+* **[Views Chapter Terminologies](./docs/views-terminology.md)** <br>
 
 ## ToDo
 - [ ] Read about materialized views.

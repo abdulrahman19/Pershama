@@ -158,7 +158,7 @@ WHERE  SafetyStockLevel > ALL (SELECT   AVG(SafetyStockLevel)
 
 **Summary of Various Comparison Modifiers**
 
-![ANY and ALL Comparison Modifiers](./images/ANY-and-ALL-Comparison-Modifiers.png)
+![ANY and ALL Comparison Modifiers](../images/ANY-and-ALL-Comparison-Modifiers.png)
 
 ### SubQuery vs JOIN
 Use JOIN when:

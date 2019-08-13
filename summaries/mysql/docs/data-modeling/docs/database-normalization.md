@@ -15,7 +15,7 @@ There are three main reasons to normalize a database.
 * The second is to minimize or avoid `data modification anomalies`.
 * And the third is to `simplify queries`.
 
-![Table Not Normalized](./images/Intro-Table-Not-Normalized.png)
+![Table Not Normalized](../images/Intro-Table-Not-Normalized.png)
 
 ### Reasons in details
 **1- Data Duplication**
@@ -28,15 +28,15 @@ Duplicated information presents two problems:
 
 * **Insert Anomaly** <br>
 There are facts we cannot record until we know information for the entire row.
-![Insert Anomaly](./images/Intro-Insert-Anomaly.png)*
+![Insert Anomaly](../images/Intro-Insert-Anomaly.png)*
 
 * **Update Anomaly** <br>
 The same information is recorded in multiple rows. Then there are multiple updates that need to be made. If these updates are not successfully completed across all rows, then an inconsistency occurs.
-![Update Anomaly](./images/Intro-Update-Anomaly.png)
+![Update Anomaly](../images/Intro-Update-Anomaly.png)
 
 * **Deletion Anomaly** <br>
 Deletion of a row can cause more than one set of facts to be removed.
-![Deletion Anomaly](./images/Intro-Deletion-Anomaly.png)
+![Deletion Anomaly](../images/Intro-Deletion-Anomaly.png)
 
 **3- Search and Sort Issues**
 

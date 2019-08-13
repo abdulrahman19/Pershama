@@ -65,7 +65,7 @@ In addition, the recursive member can only reference the `CTE` name once and in 
 * Use of materialized temporary tables may cause performance problems
 
 ### Table Structure
-![Adjacency List Table Structure](./files/adjacency-list-table-structure.png)
+![Adjacency List Table Structure](../files/adjacency-list-table-structure.png)
 
 ### Recursive CTE Examples
 Query ancestors of comment #7

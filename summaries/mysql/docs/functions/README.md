@@ -1,4 +1,5 @@
 # MySQL Functions
+> This summary under construction. :rotating_light: :construction: :rotating_light:
 
 ## Index
 

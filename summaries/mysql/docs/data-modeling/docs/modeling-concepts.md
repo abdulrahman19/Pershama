@@ -4,7 +4,7 @@
 * [Table Relationships](#table-relationships)
 
 ### Table Elements
-![DataModel Table](./images/DataModel-Table.png)
+![DataModel Table](../images/DataModel-Table.png)
 
 * **The Table Name:** which is located at the top of the table.
 * **The Primary Keys:** Remember the primary keys uniquely identify each row in a table.  A table typically has one primary key, but can have more. When the key has more than one column, it is called a **compound key**.
@@ -12,7 +12,7 @@
 * **Foreign Key:** This is a column or set of columns which match a primary key in another table.
 
 ### Table Relationships
-![DataModel Relations](./images/DataModel-Relations.png)
+![DataModel Relations](../images/DataModel-Relations.png)
 
 Cardinality | Notation
 ---|---
