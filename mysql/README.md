@@ -1,4 +1,4 @@
-# MySQL & Relational Databases:
+# Relational Databases & MySQL
 Let's try to understand MySQL & Relational Databases in depth. :mag_right: :floppy_disk:
 
 ## Resources

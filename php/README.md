@@ -1,7 +1,7 @@
-# PHP Cheat Sheet:
-PHP Cheat Sheet.
+# PHP
+PHP Cheat Sheets.
 
-> This summary under construction.
+> This summary under construction. :rotating_light: :construction: :rotating_light:
 
 ## Index
 * **PHP OOP**

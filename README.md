@@ -1,12 +1,16 @@
-# Summaries:
-I'll collect all my summaries here to remember things later. And also train myself to write MD syntax.
+# Pershama
+Collective summaries for fast remembering and preparing for interviews.
+
+> Pershama is an Arabic word, written like this `برشامة` which is mean in literal English a `medical tablet`.
+> But, there is another meaning for it, which is a `Cheat Sheet`.
+> This is because cheat sheet saves student's life like medical tablet saves patient's life. :smiley:
 
 ## Index
-> If you find a link in the episode title that means there are some explanations in there you need to have a look on them, otherwise the episode summary you will find them in the code, you can use `History` tab on the Github or `git log -- path/to/folder-name` on your local to know what happened specifically.
-
 * **[Git](./git/)** <br>
-* **[PHP Cheat Sheet](./php/)** <br>
-* **[MySQL & Relational Databases](./mysql/)** <br>
+* **[PHP](./php/)** <br>
+* **[Relational Databases & MySQL](./mysql/)** <br>
 
-### Note
-I wrote those summaries hurry, so if you find any language mistakes, please don't hate me, I'm an Arabic speaker and try so hard to improve my English, thanks for your understanding : )
+## Contributing
+* Check the open issues or open a new issue to start a discussion around your new idea or any grammatical mistakes you found
+* Fork the repository and make your changes
+* Open a new pull request

@@ -1,14 +1,10 @@
 # Git
-Hello there.
+Git cheat sheet.
 
-This is my personal git summary to remember things and be a reference for me.
-
-### Why you write a personal one? you can read or use any other resources?
-Yes, that's right. <br>
-But I believe in something, what you write is hard to forget, plus that you will write it in your own way :smiley:.
-
-### Can I help?
-If you have any suggestion or edit, don't be shy :smile:.
+## Resources
+* Git Essential Training (Lynda).
+* Bitbucket Tutorials.
+* Youtube Videos.
 
 ## Index
 > This label <code>bla</code> will help you if you need to read about specific command, and <code>^bla</code> you will find more important command options.
@@ -57,11 +53,6 @@ The matrix.:octocat:<br>
 
 ## Cheat Sheet
 * **[Cheat Sheet](./docs/cheat-sheet.md)** <br>
-
-## Resources
-* Git Essential Training (Lynda).
-* Bitbucket Tutorials.
-* Youtube Videos.
 
 ## Todo
 - [ ] Best practice followed to make a correct workflow
