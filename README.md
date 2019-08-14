@@ -9,6 +9,7 @@ Collective summaries for fast remembering and preparing for interviews.
 * **[Git](./summaries/git/)** <br>
 * **[PHP](./summaries/php/)** <br>
 * **[Relational Databases & MySQL](./summaries/mysql/)** <br>
+* **[Linux](./summaries/linux/)** <br>
 
 ## Contributing
 * Check the open issues or open a new issue to start a discussion around your new idea or any grammatical mistakes you found
