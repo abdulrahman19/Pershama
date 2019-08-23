@@ -1,13 +1,13 @@
-# Pershama
-Collective summaries for fast remembering and preparing for interviews.
-
 <p align="center">
-  <img src="./tablet.png">
+  <img height="200" src="./pershama.png">
 </p>
 
-> Pershama is an Arabic word, written like this `برشامة` which is mean in literal English a `medical tablet`.
-> But, there is another meaning for it, which is a `Cheat Sheet`.
-> This is because cheat sheet saves student's life like medical tablet saves patient's life. :smiley:
+---
+
+#### Collective summaries for fast remembering and preparing for interviews.
+Pershama is an Arabic word, written like this `برشامة` which is mean in literal English a `medical tablet`.
+But, there is another meaning for it, which is a `Cheat Sheet`.
+This is because cheat sheet saves student's life like medical tablet saves patient's life. :smiley:
 
 ## Index
 * **[Git](./summaries/git/)** <br>
