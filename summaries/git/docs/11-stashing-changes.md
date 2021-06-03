@@ -9,9 +9,16 @@
 Stash is a place we can save files in it temporarily, without need to commit them. <br>
 You can save things in the stash and move free between branches.
 ```bash
+git stash
 git stash save "bla bla bla"
 ```
 In this way we can save files inside the stash.
+
+you can add also untracked files using `--include-untracked`
+
+```bash
+git stash --include-untracked
+```
 
 ## Viewing stash
 To show what in the stash.
